@@ -1,0 +1,31 @@
+/*-- Page Grid --*/
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.navbar__top {
+    grid-column: span 12;
+    padding: 0 2rem;
+}
+
+/*--  --*/
+.navbar__bottom {
+    grid-column: span 12;
+    padding: 0 2rem;
+}
+
+/*--  --*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem auto;
+    max-width: 1200px;
+}
+
+/*--  --*/
+.navbar__nav {
+    display: flex;
+    align-items: center;
+}

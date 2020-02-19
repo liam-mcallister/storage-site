@@ -1,0 +1,61 @@
+
+/*-- Links --*/
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+/*-- Nav Links --*/
+.nav__link {
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 0.9em;
+
+    &:hover {
+        color: $color4;
+        background: $white;
+    }
+}
+
+/*-- Buttons --*/
+button {
+    border: none;
+    background: $color1;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0.9rem 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+        background: darken($color: $color1, $amount: 10%)
+    }
+
+    &:active {
+        transform: translateY(3px);
+    }
+}
+
+.nav__btn {
+    margin-left: 1.5rem;
+}
+
+/*-- Nav Logo --*/
+.navbar__logo {
+    width: 150px;
+    height: auto;
+}
+
+/*-- Burger Button --*/
+.burger-btn {
+    display: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: none;
+
+    &:focus, &:active, &:hover {
+        border: none;
+        outline: none;
+    }
+}

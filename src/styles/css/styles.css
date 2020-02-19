@@ -1,0 +1,154 @@
+/*-- Page Grid --*/
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+.navbar__top {
+  grid-column: span 12;
+  padding: 0 2rem;
+}
+
+/*--  --*/
+.navbar__bottom {
+  grid-column: span 12;
+  padding: 0 2rem;
+}
+
+/*--  --*/
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem auto;
+  max-width: 1200px;
+}
+
+/*--  --*/
+.navbar__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*-- Links --*/
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*-- Nav Links --*/
+.nav__link {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.nav__link:hover {
+  color: #16324f;
+  background: #ffffff;
+}
+
+/*-- Buttons --*/
+button {
+  border: none;
+  background: #dd6e42;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #c85324;
+}
+
+button:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.nav__btn {
+  margin-left: 1.5rem;
+}
+
+/*-- Nav Logo --*/
+.navbar__logo {
+  width: 150px;
+  height: auto;
+}
+
+/*-- Burger Button --*/
+.burger-btn {
+  display: none;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border: none;
+}
+
+.burger-btn:focus, .burger-btn:active, .burger-btn:hover {
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  .burger-btn {
+    display: block;
+  }
+  .burger-btn:checked ~ .navbar__nav {
+    display: block;
+  }
+  .navbar__nav {
+    display: none;
+    position: absolute;
+    background: #16324f;
+    height: 100vh;
+    width: 14rem;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+/*-- Universal --*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*-- General --*/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/*-- Navbar --*/
+.navbar__top {
+  background: #dd6e42;
+  color: #292929;
+}
+
+.navbar__bottom {
+  background: #16324f;
+  color: #ffffff;
+}
+
+.navbar__phone {
+  color: #ffffff;
+  font-weight: bold;
+}
+/*# sourceMappingURL=styles.css.map */
