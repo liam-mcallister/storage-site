@@ -107,6 +107,7 @@ button:active {
 @media (max-width: 991px) {
   .burger-btn {
     display: block;
+    z-index: 999;
   }
   .burger-btn:checked ~ .navbar__nav {
     display: block;
@@ -116,7 +117,7 @@ button:active {
     position: absolute;
     background: #16324f;
     height: 100vh;
-    width: 14rem;
+    width: 100vw;
     top: 0px;
     left: 0px;
   }
