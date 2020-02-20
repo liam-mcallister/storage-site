@@ -1,11 +1,24 @@
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
 
-/*-- Links --*/
+1. Links
+    1.1. Nav Links
+2.Buttons
+    2.1. Nav Button
+    2.2. Burger Button
+3. Logo
+
+*/
+
+/*------------------------------------ 1. Links ----*/
+
 a {
     text-decoration: none;
     color: $white;
 }
 
-/*-- Nav Links --*/
+/*-- 1.1. Nav Links --*/
 .nav__link {
     padding: 1rem;
     text-transform: uppercase;
@@ -17,7 +30,7 @@ a {
     }
 }
 
-/*-- Buttons --*/
+/*---------------------------------- 1. Buttons ----*/
 button {
     border: none;
     background: $color1;
@@ -28,7 +41,7 @@ button {
     font-weight: bold;
 
     &:hover {
-        background: darken($color: $color1, $amount: 10%)
+        background: darken($color: $color1, $amount: 10%);
     }
 
     &:active {
@@ -36,17 +49,12 @@ button {
     }
 }
 
+/*-- 2.1. Nav Button --*/
 .nav__btn {
     margin-left: 1.5rem;
 }
 
-/*-- Nav Logo --*/
-.navbar__logo {
-    width: 150px;
-    height: auto;
-}
-
-/*-- Burger Button --*/
+/*-- 2.2. Burger Button --*/
 .burger-btn {
     display: none;
     height: 30px;
@@ -54,8 +62,16 @@ button {
     cursor: pointer;
     border: none;
 
-    &:focus, &:active, &:hover {
+    &:focus,
+    &:active,
+    &:hover {
         border: none;
         outline: none;
     }
+}
+
+/*------------------------------------- 3. Logo ----*/
+.navbar__logo {
+    width: 150px;
+    height: auto;
 }

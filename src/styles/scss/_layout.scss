@@ -1,21 +1,41 @@
-/*-- Page Grid --*/
-body {
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
+
+1. Home Page
+    1.1. Home Page Template
+    1.2. Navigation
+        1.2.1. Navbar Top
+        1.2.2. Navbar Bottom
+        1.2.3. Navbar Container
+        1.2.4. Navbar Menu
+    1.3. Hero Section
+
+*/
+
+/*-------------------------------- 1. Home Page ----*/
+
+/*-- 1.1. Home Page Template --*/
+.body-home {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 
+/*------------------- 1.2. Navigation ----*/
+
+/*-- 1.2.1. Navbar Top --*/
 .navbar__top {
     grid-column: span 12;
     padding: 0 2rem;
 }
 
-/*--  --*/
+/*-- 1.2.2. Navbar Bottom --*/
 .navbar__bottom {
     grid-column: span 12;
     padding: 0 2rem;
 }
 
-/*--  --*/
+/*-- 1.2.3 Navbar Container --*/
 .container {
     display: flex;
     justify-content: space-between;
@@ -24,8 +44,14 @@ body {
     max-width: 1200px;
 }
 
-/*--  --*/
+/*-- 1.2.4 Navbar Menu --*/
 .navbar__nav {
     display: flex;
     align-items: center;
+}
+
+/*----------------- 1.3. Hero Section ----*/
+.hero {
+    grid-column: span 12;
+    height: 800px;
 }

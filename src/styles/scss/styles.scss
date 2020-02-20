@@ -1,5 +1,20 @@
 @import "variables", "mixins", "layout", "components", "media-queries";
 
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
+
+1. Universal
+2. Body
+3. Navbar
+    3.1. Navbar Top
+    3.2. Navbar Bottom
+    3.3. Navbar Phone
+4. Home Page
+    4.1. Hero Section
+
+*/
+
 /*-- Universal --*/
 *,
 *:before,
@@ -7,9 +22,9 @@
     box-sizing: border-box;
 }
 
-/*-- General --*/
+/*-- Body --*/
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
 }
 
@@ -27,4 +42,11 @@ body {
 .navbar__phone {
     color: $white;
     font-weight: bold;
+}
+
+/*-- Hero --*/
+.hero {
+    background: url("/src/images/1.jpg") center center no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
 }
