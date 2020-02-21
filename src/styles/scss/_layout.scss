@@ -2,18 +2,21 @@
 ------------------------------- Table of Contents ----
 ------------------------------------------------------
 
-1. Home Page
+1. Page Templates
     1.1. Home Page Template
-    1.2. Navigation
-        1.2.1. Navbar Top
-        1.2.2. Navbar Bottom
-        1.2.3. Navbar Container
-        1.2.4. Navbar Menu
-    1.3. Hero Section
+2. Navigation
+    2.1. Navbar Top
+    2.2. Navbar Bottom
+    2.3. Navbar Container
+    2.4. Navbar Menu
+3. Home Page Sections
+    3.1. Hero Section
+    3.2. Hero Container
 
 */
 
-/*-------------------------------- 1. Home Page ----*/
+
+/*--------------------------- 1. Page Templates ----*/
 
 /*-- 1.1. Home Page Template --*/
 .body-home {
@@ -21,37 +24,60 @@
     grid-template-columns: repeat(12, 1fr);
 }
 
-/*------------------- 1.2. Navigation ----*/
 
-/*-- 1.2.1. Navbar Top --*/
+/*------------------------------- 2. Navigation ----*/
+
+/*-- 2.1. Navbar Top --*/
 .navbar__top {
     grid-column: span 12;
     padding: 0 2rem;
 }
 
-/*-- 1.2.2. Navbar Bottom --*/
+/*-- 2.2. Navbar Bottom --*/
 .navbar__bottom {
     grid-column: span 12;
     padding: 0 2rem;
 }
 
-/*-- 1.2.3 Navbar Container --*/
-.container {
+/*-- 2.3. Navbar Container --*/
+.navbar__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5rem auto;
+    margin: 0.8rem auto;
     max-width: 1200px;
 }
 
-/*-- 1.2.4 Navbar Menu --*/
+/*-- 2.4. Navbar Menu --*/
 .navbar__nav {
     display: flex;
     align-items: center;
 }
 
-/*----------------- 1.3. Hero Section ----*/
+
+/*----------------------- 3. Home Page Sections ----*/
+
+/*-- 3.1. Hero Section ----*/
 .hero {
     grid-column: span 12;
-    height: 800px;
+}
+
+.hero__container-outer {
+    padding: 0 2rem;
+}
+
+/*-- 3.2. Hero Container --*/
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 6rem auto;
+    max-width: 1200px;
+}
+
+/*-- Services Section --*/
+.services {
+    grid-column: span 12;
+    height: 5500px;
+    background: $color5;
 }

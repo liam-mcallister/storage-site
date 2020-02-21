@@ -1,4 +1,4 @@
-@import "variables", "mixins", "layout", "components", "media-queries";
+@import "variables", "mixins", "layout", "components", "animations", "media-queries";
 
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
@@ -6,7 +6,7 @@
 
 1. Universal
 2. Body
-3. Navbar
+3. Navigation
     3.1. Navbar Top
     3.2. Navbar Bottom
     3.3. Navbar Phone
@@ -15,38 +15,56 @@
 
 */
 
-/*-- Universal --*/
+/*-------------------------------- 1. Universal ----*/
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/*-- Body --*/
+/*------------------------------------- 2. Body ----*/
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
 }
 
-/*-- Navbar --*/
+/*------------------------------- 3. Navigation ----*/
+
+/*-- 3.1. Navbar Top --*/
 .navbar__top {
-    background: $color1;
-    color: $grey;
+  background: $color1;
+  color: $grey;
 }
 
+/*-- 3.2. Navbar Bottom --*/
 .navbar__bottom {
-    background: $color4;
-    color: $white;
+  background: $color4;
+  color: $white;
 }
 
+/*-- 3.3. Navbar Phone --*/
 .navbar__phone {
-    color: $white;
-    font-weight: bold;
+  color: $white;
+  font-weight: bold;
 }
 
-/*-- Hero --*/
+/*-------------------------------- 4. Home Page ----*/
+
+/*-- 4.1. Hero --*/
 .hero {
-    background: url("/src/images/1.jpg") center center no-repeat;
-    background-size: cover;
-    filter: grayscale(100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient($grey-opac),
+    url("/src/images/1.jpg") center center no-repeat;
+  background-size: cover;
+  animation: bg-scale 20s linear infinite;
 }

@@ -2,17 +2,19 @@
 ------------------------------- Table of Contents ----
 ------------------------------------------------------
 
-1. Home Page
+1. Page Templates
     1.1. Home Page Template
-    1.2. Navigation
-        1.2.1. Navbar Top
-        1.2.2. Navbar Bottom
-        1.2.3. Navbar Container
-        1.2.4. Navbar Menu
-    1.3. Hero Section
+2. Navigation
+    2.1. Navbar Top
+    2.2. Navbar Bottom
+    2.3. Navbar Container
+    2.4. Navbar Menu
+3. Home Page Sections
+    3.1. Hero Section
+    3.2. Hero Container
 
 */
-/*-------------------------------- 1. Home Page ----*/
+/*--------------------------- 1. Page Templates ----*/
 /*-- 1.1. Home Page Template --*/
 .body-home {
   display: -ms-grid;
@@ -21,21 +23,21 @@
       grid-template-columns: repeat(12, 1fr);
 }
 
-/*------------------- 1.2. Navigation ----*/
-/*-- 1.2.1. Navbar Top --*/
+/*------------------------------- 2. Navigation ----*/
+/*-- 2.1. Navbar Top --*/
 .navbar__top {
   grid-column: span 12;
   padding: 0 2rem;
 }
 
-/*-- 1.2.2. Navbar Bottom --*/
+/*-- 2.2. Navbar Bottom --*/
 .navbar__bottom {
   grid-column: span 12;
   padding: 0 2rem;
 }
 
-/*-- 1.2.3 Navbar Container --*/
-.container {
+/*-- 2.3. Navbar Container --*/
+.navbar__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,11 +47,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0.5rem auto;
+  margin: 0.8rem auto;
   max-width: 1200px;
 }
 
-/*-- 1.2.4 Navbar Menu --*/
+/*-- 2.4. Navbar Menu --*/
 .navbar__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,10 +61,37 @@
           align-items: center;
 }
 
-/*----------------- 1.3. Hero Section ----*/
+/*----------------------- 3. Home Page Sections ----*/
+/*-- 3.1. Hero Section ----*/
 .hero {
   grid-column: span 12;
-  height: 800px;
+}
+
+.hero__container-outer {
+  padding: 0 2rem;
+}
+
+/*-- 3.2. Hero Container --*/
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 6rem auto;
+  max-width: 1200px;
+}
+
+/*-- Services Section --*/
+.services {
+  grid-column: span 12;
+  height: 5500px;
+  background: #d7cdcc;
 }
 
 /*----------------------------------------------------
@@ -88,6 +117,7 @@ a {
   padding: 1rem;
   text-transform: uppercase;
   font-size: 0.9em;
+  font-weight: 700;
 }
 
 .nav__link:hover {
@@ -103,7 +133,9 @@ button {
   text-transform: uppercase;
   padding: 0.9rem 1.5rem;
   cursor: pointer;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 button:hover {
@@ -113,6 +145,14 @@ button:hover {
 button:active {
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
+}
+
+/*-- 2.1. Large Button --*/
+.btn-large {
+  padding: 1.5rem 3rem;
+  margin-top: 4rem;
+  -webkit-animation: btn-translate 1s linear 1;
+          animation: btn-translate 1s linear 1;
 }
 
 /*-- 2.1. Nav Button --*/
@@ -134,16 +174,139 @@ button:active {
   outline: none;
 }
 
+/*-- To Top Button --*/
+.btn-to-top {
+  position: fixed;
+  background: #13293d;
+  right: 10px;
+  bottom: 10px;
+  line-height: 0.5rem;
+  padding: 1rem;
+}
+
 /*------------------------------------- 3. Logo ----*/
 .navbar__logo {
   width: 150px;
   height: auto;
 }
 
+/*---------------------------------- 4. Headers ----*/
+h1, h2, h3 {
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.header-top {
+  -webkit-animation: header-translate 1s linear 1;
+          animation: header-translate 1s linear 1;
+}
+
+.header-middle {
+  -webkit-animation: header-translate 1s linear 1;
+          animation: header-translate 1s linear 1;
+}
+
+.header-bottom {
+  -webkit-animation: header-translate 1s linear 1;
+          animation: header-translate 1s linear 1;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@-webkit-keyframes bg-scale {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes bg-scale {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes btn-translate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes btn-translate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes header-translate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes header-translate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 575px) {
+  h1, h2, h3 {
+    font-size: 12vw;
+  }
+  .btn-large {
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+  }
+}
+
 @media (max-width: 991px) {
   .burger-btn {
     display: block;
-    z-index: 999;
+    z-index: 2;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -168,7 +331,7 @@ button:active {
   .burger-label {
     background-color: transparent;
     cursor: pointer;
-    z-index: 3;
+    z-index: 2;
     position: absolute;
     right: 35px;
   }
@@ -178,7 +341,6 @@ button:active {
     height: 3px;
     margin: 5px 0;
     background-color: #ffffff;
-    z-index: 1000;
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
   }
@@ -199,6 +361,7 @@ button:active {
     width: 100vw;
     top: -100vh;
     left: 0px;
+    z-index: 1;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
@@ -210,13 +373,31 @@ button:active {
   }
 }
 
+@media (min-width: 576px) {
+  h1, h2, h3 {
+    font-size: 10vw;
+  }
+}
+
+@media (min-width: 992px) {
+  h1, h2, h3 {
+    font-size: 8vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1, h2, h3 {
+    font-size: 6vw;
+  }
+}
+
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
 ------------------------------------------------------
 
 1. Universal
 2. Body
-3. Navbar
+3. Navigation
     3.1. Navbar Top
     3.2. Navbar Bottom
     3.3. Navbar Phone
@@ -224,7 +405,7 @@ button:active {
     4.1. Hero Section
 
 */
-/*-- Universal --*/
+/*-------------------------------- 1. Universal ----*/
 *,
 *:before,
 *:after {
@@ -232,33 +413,49 @@ button:active {
           box-sizing: border-box;
 }
 
-/*-- Body --*/
+/*------------------------------------- 2. Body ----*/
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
+  text-rendering: optimizeLegibility;
 }
 
-/*-- Navbar --*/
+/*------------------------------- 3. Navigation ----*/
+/*-- 3.1. Navbar Top --*/
 .navbar__top {
   background: #dd6e42;
   color: #292929;
 }
 
+/*-- 3.2. Navbar Bottom --*/
 .navbar__bottom {
   background: #16324f;
   color: #ffffff;
 }
 
+/*-- 3.3. Navbar Phone --*/
 .navbar__phone {
   color: #ffffff;
   font-weight: bold;
 }
 
-/*-- Hero --*/
+/*-------------------------------- 4. Home Page ----*/
+/*-- 4.1. Hero --*/
 .hero {
-  background: url("/src/images/1.jpg") center center no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.733))), url("/src/images/1.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.733)), url("/src/images/1.jpg") center center no-repeat;
   background-size: cover;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-animation: bg-scale 20s linear infinite;
+          animation: bg-scale 20s linear infinite;
 }
 /*# sourceMappingURL=styles.css.map */

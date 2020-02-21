@@ -11,6 +11,7 @@
 
 */
 
+
 /*------------------------------------ 1. Links ----*/
 
 a {
@@ -23,12 +24,14 @@ a {
     padding: 1rem;
     text-transform: uppercase;
     font-size: 0.9em;
+    font-weight: 700;
 
     &:hover {
         color: $color4;
         background: $white;
     }
 }
+
 
 /*---------------------------------- 1. Buttons ----*/
 button {
@@ -38,7 +41,9 @@ button {
     text-transform: uppercase;
     padding: 0.9rem 1.5rem;
     cursor: pointer;
-    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
 
     &:hover {
         background: darken($color: $color1, $amount: 10%);
@@ -47,6 +52,13 @@ button {
     &:active {
         transform: translateY(3px);
     }
+}
+
+/*-- 2.1. Large Button --*/
+.btn-large {
+    padding: 1.5rem 3rem;
+    margin-top: 4rem;
+    animation: btn-translate 1s linear 1;
 }
 
 /*-- 2.1. Nav Button --*/
@@ -70,8 +82,49 @@ button {
     }
 }
 
+/*-- To Top Button --*/
+.btn-to-top {
+    position: fixed;
+    background: $color3;
+    right: 10px;
+    bottom: 10px;
+    line-height: 0.5rem;
+    padding: 1rem;
+}
+
+
 /*------------------------------------- 3. Logo ----*/
 .navbar__logo {
     width: 150px;
     height: auto;
+}
+
+
+/*---------------------------------- 4. Headers ----*/
+
+h1 {
+    font-weight: 900;
+    color: $white;
+}
+
+.header-top {
+    animation: header-translate 1s linear 1;
+}
+
+.header-middle {
+    animation: header-translate 1s linear 1;
+}
+
+.header-bottom {
+    animation: header-translate 1s linear 1;
+}
+
+h2 {
+    @extend h1;
+    font-size: 4rem;
+}
+
+h3 {
+    @extend h1;
+    font-size: 2rem;
 }
