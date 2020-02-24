@@ -1,15 +1,17 @@
+// Hero Background Image Scaling
 @keyframes bg-scale {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
+// Button Click Press
 @keyframes btn-translate {
     0% {
         opacity: 0;
@@ -20,6 +22,7 @@
     }
 }
 
+// Hero Header Fade In
 @keyframes header-translate {
     0% {
         opacity: 0;

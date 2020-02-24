@@ -11,7 +11,6 @@
 
 */
 
-
 /*------------------------------------ 1. Links ----*/
 
 a {
@@ -32,7 +31,6 @@ a {
     }
 }
 
-
 /*---------------------------------- 1. Buttons ----*/
 button {
     border: none;
@@ -42,7 +40,7 @@ button {
     padding: 0.9rem 1.5rem;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 700;
 
     &:hover {
@@ -84,6 +82,7 @@ button {
 
 /*-- To Top Button --*/
 .btn-to-top {
+    display: none;
     position: fixed;
     background: $color3;
     right: 10px;
@@ -92,13 +91,11 @@ button {
     padding: 1rem;
 }
 
-
 /*------------------------------------- 3. Logo ----*/
 .navbar__logo {
     width: 150px;
     height: auto;
 }
-
 
 /*---------------------------------- 4. Headers ----*/
 
@@ -121,10 +118,55 @@ h1 {
 
 h2 {
     @extend h1;
-    font-size: 4rem;
+    font-size: 3em;
 }
 
 h3 {
     @extend h1;
-    font-size: 2rem;
+    font-size: 2em;
+}
+
+.header-margin {
+    margin-left: 2rem;
+}
+
+/*---------------------------------- 5. Cards ----*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0.5rem 1rem 0.5rem;
+    cursor: pointer;
+
+    &:hover .card__img {
+        filter: brightness(20%);
+    }
+
+    &:hover .card__hidden {
+        transform: translate(300px);
+    }
+}
+
+.card__caption {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    padding-right: 1rem;
+}
+
+.card__hidden {
+    position: absolute;
+    top: 7rem;
+    left: -300px;
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem 1rem 2rem;
+    transition: all 0.5s ease-in;
+}
+
+.card__hidden-text {
+    color: $white;
+    margin-bottom: 1.2rem;
 }
