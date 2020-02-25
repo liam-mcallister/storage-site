@@ -129,21 +129,17 @@
 }
 
 .about__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
   margin: 2rem;
 }
 
 .about__video {
-  width: 50%;
-}
-
-.about__video {
+  grid-column: span 6;
   position: relative;
-  padding-bottom: 30%;
+  padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
   overflow: hidden;
@@ -160,7 +156,7 @@
 }
 
 .about__info {
-  width: 50%;
+  grid-column: span 6;
 }
 
 /*----------------------------------------------------
@@ -495,6 +491,9 @@ h3 {
   }
   .nav__btn {
     margin-left: 0;
+  }
+  .about__video, .about__info {
+    grid-column: span 12;
   }
 }
 
