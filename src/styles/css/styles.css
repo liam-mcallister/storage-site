@@ -90,37 +90,19 @@
 /*-- Services Section --*/
 .services {
   grid-column: span 12;
-}
-
-.services__container-outer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin: 6rem auto 5rem auto;
-  max-width: 1200px;
+  justify-items: center;
 }
 
 .services__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (250px)[4];
+      grid-template-columns: repeat(4, 250px);
+  grid-gap: 40px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2rem;
-}
-
-.services-header {
-  padding: 0 2rem 2rem 2rem;
+  margin: 4rem 0;
 }
 
 /*-- About Section --*/
@@ -282,7 +264,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .header-margin {
@@ -291,17 +273,11 @@ h3 {
 
 /*---------------------------------- 5. Cards ----*/
 .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  margin: 0 0.5rem 1rem 0.5rem;
+  height: auto;
+  width: 250px;
   cursor: pointer;
+  -webkit-box-shadow: 0px 0px 15px 1px #333333;
+          box-shadow: 0px 0px 15px 1px #333333;
 }
 
 .card:hover .card__img {
@@ -309,32 +285,9 @@ h3 {
           filter: brightness(20%);
 }
 
-.card:hover .card__hidden {
-  -webkit-transform: translate(300px);
-          transform: translate(300px);
-}
-
-.card__caption {
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
-  padding-right: 1rem;
-}
-
-.card__hidden {
-  position: absolute;
-  top: 7rem;
-  left: -300px;
-  height: 100%;
-  width: 100%;
-  padding: 0 1rem 1rem 2rem;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-
-.card__hidden-text {
-  color: #ffffff;
-  margin-bottom: 1.2rem;
+.card__img {
+  width: 250px;
+  height: 250px;
 }
 
 @-webkit-keyframes bg-scale {
@@ -424,6 +377,21 @@ h3 {
   }
 }
 
+@media (max-width: 767px) {
+  .services__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (max-width: 991px) {
   .burger-btn {
     display: block;
@@ -492,8 +460,20 @@ h3 {
   .nav__btn {
     margin-left: 0;
   }
-  .about__video, .about__info {
+  .about__video,
+  .about__info {
     grid-column: span 12;
+  }
+}
+
+@media (max-width: 1199px) {
+  .services__container {
+    -ms-grid-columns: (350px)[2];
+        grid-template-columns: repeat(2, 350px);
+  }
+  .card {
+    height: 350px;
+    width: 350px;
   }
 }
 
@@ -548,7 +528,7 @@ body {
 /*-- 3.1. Navbar Top --*/
 .navbar__top {
   background: #dd6e42;
-  color: #292929;
+  color: #333333;
 }
 
 /*-- 3.2. Navbar Bottom --*/
@@ -585,11 +565,11 @@ body {
 
 /*-- 4.2. Services --*/
 .services {
-  background: #16324f;
+  background: #ffffff;
 }
 
 /*-- 4.3. About --*/
 .about {
-  background: #d7cdcc;
+  background: #16324f;
 }
 /*# sourceMappingURL=styles.css.map */
