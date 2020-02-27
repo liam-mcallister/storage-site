@@ -87,22 +87,13 @@
   .nav__btn {
     margin-left: 0;
   }
-
-  .about__video,
-  .about__info {
-    grid-column: span 12;
-  }
 }
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
   .services__container {
-    grid-template-columns: repeat(2, 350px);
-  }
-
-  .card {
-    height: 350px;
-    width: 350px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
 }
 

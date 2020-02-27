@@ -101,7 +101,6 @@ button {
 
 h1 {
     font-weight: 900;
-    color: $white;
 }
 
 .header-top {
@@ -130,26 +129,45 @@ h3 {
     margin-left: 2rem;
 }
 
-/*---------------------------------- 5. Cards ----*/
+/*------------------------------------ 5. Cards ----*/
 
 .card {
     height: auto;
-    width: 250px;
+    width: 100%;
+    min-width: 250px;
     cursor: pointer;
-    box-shadow: 0px 0px 15px 1px $grey;
+    box-shadow: 0 4px 8px 0 $grey;
+    transition: box-shadow 0.3s;
 
-    &:hover .card__img {
-        filter: brightness(20%);
+    &:hover {
+        box-shadow: 0 8px 16px 0 $grey;
+    }
+
+    &:hover .card__caption {
+        background: $color1;
+        color: $white;
     }
 }
 
-.card__img {
-    width: 250px;
-    height: 250px;
+.card__img img {
+    max-width: 100%;
+    height: auto;
 }
 
 .card__caption {
+    padding: 1.2rem;
+    color: $grey;
 }
 
-.card__hidden-text {
+.card__caption__header {
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+/*-------------------------- 6. Horizontal Rule ----*/
+hr {
+    grid-column: span 12;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.178);
 }
