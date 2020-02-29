@@ -86,16 +86,45 @@ p {
 
 .services {
     background: $white;
-    
 }
 
 /*-- 4.3. How It Works --*/
 .how-works {
-  background: $white;
+    background: $white;
 }
 
-.how-works__img {
+.item__img {
     width: 100px;
     height: auto;
     margin-bottom: 1rem;
+}
+
+/*-- 4.4. About --*/
+.about {
+    background: $color5;
+}
+
+.about__img {
+    background: url("/src/images/1.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- Footer --*/
+footer {
+    background: $color4;
+    color: $white;
 }
