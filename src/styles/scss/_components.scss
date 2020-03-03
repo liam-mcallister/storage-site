@@ -97,38 +97,6 @@ button {
     height: auto;
 }
 
-/*---------------------------------- 4. Headers ----*/
-
-h1 {
-    font-weight: 900;
-}
-
-.header-top {
-    animation: header-translate 1s linear 1;
-}
-
-.header-middle {
-    animation: header-translate 1s linear 1;
-}
-
-.header-bottom {
-    animation: header-translate 1s linear 1;
-}
-
-h2 {
-    @extend h1;
-    font-size: 3rem;
-}
-
-h3 {
-    @extend h1;
-    font-size: 1.5rem;
-}
-
-.header-margin {
-    margin-left: 2rem;
-}
-
 /*------------------------------------ 5. Cards ----*/
 
 .card {
@@ -182,4 +150,47 @@ hr {
     &:first-of-type {
         margin-left: 0;
     }
+}
+
+/*-------------------------- 8. Item ----*/
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: 0 1rem;
+    position: relative;
+    background: $color4;
+    color: $white;
+    border-radius: 0 10rem 10rem 10rem;
+}
+
+.item__header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.item__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    margin: 0 1rem;
+    padding: 0 3rem;
+    background: $color4;
+    color: $white;
+    border-radius: 10rem;
+}
+
+.item__img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
 }

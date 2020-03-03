@@ -1,0 +1,34 @@
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
+
+1. Grid Mixins
+2. Flex Mixins
+
+*/
+
+/*-- Grid Template (12 Columns) --*/
+@mixin grid-template-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/*-- Grid Template (4 Columns) --*/
+@mixin grid-template-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    justify-content: center;
+}
+
+/*--  --*/
+@mixin grid-col-12 {
+    grid-column: span 12;
+}
+
+/*--  --*/
+@mixin flex-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

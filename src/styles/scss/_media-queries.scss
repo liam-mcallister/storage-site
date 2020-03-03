@@ -39,7 +39,7 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
     .services__container,
-    .how-works__inner {
+    .how-works__container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -53,7 +53,7 @@
         }
     }
 
-    .about__inner {
+    .about__container {
         flex-direction: column;
         margin: 0;
     }
@@ -153,7 +153,7 @@
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
     .services__container,
-    .how-works__inner {
+    .how-works__container {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
