@@ -194,3 +194,16 @@ hr {
     height: auto;
     margin-bottom: 1rem;
 }
+
+
+/*-------------------------- 8. Lists ----*/
+
+.why-us__list {
+    padding: 1rem;
+
+    & li {
+        background: url('/src/images/phone.svg') no-repeat;
+        background-position: left center;
+        padding: 10px 10px 10px 40px;
+    }
+}

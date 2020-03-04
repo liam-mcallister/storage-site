@@ -35,33 +35,38 @@
 
 /*-- 1.1. Home Page Template --*/
 .body-home {
-    @include grid-template-12;
+  @include grid-template-12;
+}
+
+/*-- 1.2. House Storage Page Template --*/
+.body-house {
+  @include grid-template-12;
 }
 
 /*------------------------------- 2. Navigation ----*/
 
 /*-- 2.1. Navbar Top --*/
 .navbar__top {
-    @include grid-col-12;
-    padding: 0 2rem;
+  @include grid-col-12;
+  padding: 0 2rem;
 }
 
 /*-- 2.2. Navbar Bottom --*/
 .navbar__bottom {
-    @extend .navbar__top;
+  @extend .navbar__top;
 }
 
 /*-- 2.3. Navbar Container --*/
 .navbar__container {
-    @include flex-between-center;
-    max-width: $max-width;
-    margin: 0.8rem auto;
+  @include flex-between-center;
+  max-width: $max-width;
+  margin: 0.8rem auto;
 }
 
 /*-- 2.4. Navbar Menu --*/
 .navbar__nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 /*----------------------- 3. Home Page Sections ----*/
@@ -70,89 +75,163 @@
 
 /*-- 3.1.1. Hero ----*/
 .hero {
-    @include grid-col-12;
+  @include grid-col-12;
+  padding: 0;
 }
 
 /*-- 3.1.2. Hero Container --*/
 .hero__container {
-    padding: 0 2rem;
+  padding: 6rem 2rem;
 }
 
 /*-- 3.1.3. Hero Container Inner --*/
 .hero__container__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: $max-width;
-    margin: 6rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: $max-width;
+  margin: 0 auto;
 }
-
 
 /*------------- 3.2. Services Section ----*/
 
 /*-- 3.2.1. Services --*/
 .services {
-    @include grid-col-12;
+  @include grid-col-12;
 }
 
 /*-- 3.2.2. Services Container --*/
 .services__container {
-    @include grid-template-4;
-    margin: 4rem 10%;
+  @include grid-template-4;
 }
-
 
 /*----------- 3.3. How It Works Section --*/
 
 /*-- 3.3.1. How It Works --*/
 .how-works {
-    @include grid-col-12;
-    margin: 4rem 2rem;
+  @include grid-col-12;
 }
 
 /*-- 3.3.2. How It Works Container --*/
 .how-works__container {
-    @include grid-template-4;
-    margin: 4rem 10% 0 10%;
+  @include grid-template-4;
+  margin: 4rem 10% 0 10%;
 }
-
 
 /*------------------ 3.4. About Section --*/
 
 /*-- 3.4.1. About --*/
 .about {
-    @include grid-col-12;
+  @include grid-col-12;
 }
 
 /*-- 3.4.2. About Container --*/
 .about__container {
-    display: flex;
-    max-width: $max-width;
-    margin: 2rem auto;
+  display: flex;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 /*-- 3.4.3. About Image --*/
 .about__img {
-    width: 50%;
-    height: auto;
-    margin-left: 2rem;
+  width: 50%;
+  height: auto;
+  margin-left: 2rem;
 }
 
 /*-- 3.4.4. About Info --*/
 .about__info {
-    width: 50%;
-    padding: 2rem;
+  width: 50%;
+  padding: 2rem;
 
-    & h3 {
-        margin-bottom: 2rem;
-        color: darken($color: $color1, $amount: 10%);
-    }
+  & h3 {
+    margin-bottom: 2rem;
+    color: darken($color: $color1, $amount: 10%);
+  }
 
-    & p:first-of-type {
-        margin-bottom: 1rem;
-        font-weight: bold;
-    }
+  & p:first-of-type {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
 }
+
+/*-------------- 4. House Storage Page Sections ----*/
+
+/*----------------- 4.1. Header Section --*/
+.house-header {
+  @include grid-col-12;
+  display: flex;
+  justify-self: center;
+  max-width: $max-width;
+
+  & h1 {
+    margin-bottom: 2rem;
+  }
+
+  & p:first-of-type {
+    margin-bottom: 1rem;
+  }
+}
+
+  .house-header__img {
+    width: 50%;
+    height: auto;
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
+  }
+  
+  .house-header__info {
+    width: 50%;
+  }
+
+
+/*---------------- 4.2. Why Us? Section --*/
+.why-us {
+    @include grid-col-12;
+}
+
+.why-us__container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.list-container {
+    display: flex;
+}
+
+/*---------------- 4.3. Access Section --*/
+.access {
+  @include grid-col-12;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+
+/*---------------- 4.4. Flexible Section --*/
+.flexible {
+  @include grid-col-12;
+}
+
+
+/*---------------- 4.5. Security Section --*/
+.security {
+  @include grid-col-12;
+}
+
+
+/*---------------- 4.6. Quote Section --*/
+.quote {
+  @include grid-col-12;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -162,59 +241,58 @@
 
 /*----------------------------------- ?. Footer ----*/
 footer {
-    @include grid-col-12;
-    padding: 4rem 2rem;
+  @include grid-col-12;
 }
 
 /*--------------------- ?.?. Footer Top --*/
 .footer-top {
-    @include flex-between-center;
-    max-width: $max-width;
-    margin: 0 auto;
+  @include flex-between-center;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 /*-- ?.?.?. Footer Top Left --*/
 .footer-top__left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    & span {
-        margin-left: 1rem;
-    }
+  & span {
+    margin-left: 1rem;
+  }
 
-    & span:first-of-type {
-        margin-right: 0.8rem;
-    }
+  & span:first-of-type {
+    margin-right: 0.8rem;
+  }
 }
 
 /*------------------ ?.?. Footer Middle --*/
 .footer-middle {
-    @extend .footer-top;
-    padding: 4rem 0;
+  @extend .footer-top;
+  padding: 4rem 0;
 }
 
 /*-- ?.?.?. Footer Middle Links --*/
 .footer-middle__links {
-    margin-left: 2rem;
+  margin-left: 2rem;
 
-    &:first-of-type {
-        margin-left: 0;
-    }
-    
-    & h3 {
-        margin-bottom: 1.5rem;
-    }
+  &:first-of-type {
+    margin-left: 0;
+  }
 
-    & ul li {
-        line-height: 1.7rem;
-    }
+  & h3 {
+    margin-bottom: 1.5rem;
+  }
 
-    & a:hover {
-        text-decoration: underline;
-    }
+  & ul li {
+    line-height: 1.7rem;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+  }
 }
 
 /*------------------ ?.?. Footer Bottom --*/
 .footer-bottom {
-    @extend .footer-top;
+  @extend .footer-top;
 }
