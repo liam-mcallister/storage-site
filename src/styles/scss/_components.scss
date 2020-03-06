@@ -92,7 +92,7 @@ button {
 }
 
 /*------------------------------------- 3. Logo ----*/
-.navbar__logo {
+.navbar-inner__logo {
     width: 150px;
     height: auto;
 }
@@ -197,6 +197,9 @@ hr {
 
 
 /*-------------------------- 8. Lists ----*/
+li {
+    line-height: 1.3rem;
+}
 
 .why-us__list {
     padding: 1rem;

@@ -52,6 +52,7 @@ h2 {
 h3 {
     @extend h1;
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .header-top {
@@ -79,29 +80,35 @@ small {
 /*------------------------------- 4. Navigation ----*/
 
 /*-- 4.1. Navbar Top --*/
-.navbar__top {
+.navbar-top {
     background: $color1;
     color: $grey;
 }
 
 /*-- 4.2. Navbar Bottom --*/
-.navbar__bottom {
+.navbar-bottom {
     background: $color4;
     color: $white;
 }
 
 /*-- 4.3. Navbar Phone --*/
-.navbar__phone {
+.navbar-inner__phone {
     color: $white;
     font-weight: bold;
 }
+
+
+
+
+
+
 
 /*-------------------------------- 5. Home Page ----*/
 
 /*-- 5.1. Hero Section --*/
 .hero {
-    position: relative;
     overflow: hidden;
+    color: $white;
 }
 
 .hero::before {
@@ -116,11 +123,14 @@ small {
     animation: bg-scale 20s linear infinite;
 }
 
-.header-top,
-.header-middle,
-.header-bottom {
-    color: $white;
-}
+
+
+
+
+
+
+
+
 
 /*-- 5.2. About Section --*/
 .about {
@@ -147,6 +157,11 @@ small {
 .flexible {
     background: $color4;
     color: $white;
+}
+
+.flexible__img {
+    background: url("/src/images/1.jpg") center center no-repeat;
+    background-size: cover;
 }
 
 .quote {

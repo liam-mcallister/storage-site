@@ -3,7 +3,7 @@
 ------------------------------------------------------
 
 1. Page Templates
-    1.1. Home Page Template
+    1.1. 12 Column Template
 
 2. Navigation
     2.1. Navbar Top
@@ -33,41 +33,43 @@
 
 /*--------------------------- 1. Page Templates ----*/
 
-/*-- 1.1. Home Page Template --*/
-.body-home {
-  @include grid-template-12;
-}
-
-/*-- 1.2. House Storage Page Template --*/
-.body-house {
+/*-- 1.1. 12 Column Template --*/
+.grid-12 {
   @include grid-template-12;
 }
 
 /*------------------------------- 2. Navigation ----*/
 
 /*-- 2.1. Navbar Top --*/
-.navbar__top {
+.navbar-top {
   @include grid-col-12;
   padding: 0 2rem;
 }
 
 /*-- 2.2. Navbar Bottom --*/
-.navbar__bottom {
-  @extend .navbar__top;
+.navbar-bottom {
+  @extend .navbar-top;
 }
 
-/*-- 2.3. Navbar Container --*/
-.navbar__container {
+/*-- 2.3. Navbar Inner --*/
+.navbar-inner {
   @include flex-between-center;
   max-width: $max-width;
   margin: 0.8rem auto;
 }
 
 /*-- 2.4. Navbar Menu --*/
-.navbar__nav {
+.navbar-inner__nav {
   display: flex;
   align-items: center;
 }
+
+
+
+
+
+
+
 
 /*----------------------- 3. Home Page Sections ----*/
 
@@ -76,22 +78,25 @@
 /*-- 3.1.1. Hero ----*/
 .hero {
   @include grid-col-12;
+  position: relative;
   padding: 0;
 }
 
 /*-- 3.1.2. Hero Container --*/
-.hero__container {
+.hero__inner {
+  @include flex-col-start;
+  max-width: $max-width;
+  margin: 0 auto;
   padding: 6rem 2rem;
 }
 
-/*-- 3.1.3. Hero Container Inner --*/
-.hero__container__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: $max-width;
-  margin: 0 auto;
-}
+
+
+
+
+
+
+
 
 /*------------- 3.2. Services Section ----*/
 
@@ -173,30 +178,29 @@
   }
 }
 
-  .house-header__img {
-    width: 50%;
-    height: auto;
-    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
-  }
-  
-  .house-header__info {
-    width: 50%;
-  }
+.house-header__img {
+  width: 50%;
+  height: auto;
+  clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
+}
 
+.house-header__info {
+  width: 50%;
+}
 
 /*---------------- 4.2. Why Us? Section --*/
 .why-us {
-    @include grid-col-12;
+  @include grid-col-12;
 }
 
 .why-us__container {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 2rem;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .list-container {
-    display: flex;
+  display: flex;
 }
 
 /*---------------- 4.3. Access Section --*/
@@ -204,26 +208,54 @@
   @include grid-col-12;
   max-width: $max-width;
   margin: 0 auto;
-}
+  text-align: center;
 
+  & p:last-of-type {
+    margin: 1rem 0;
+  }
+}
 
 /*---------------- 4.4. Flexible Section --*/
 .flexible {
   @include grid-col-12;
 }
 
+.flexible__inner {
+  display: flex;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.flexible__img {
+  width: 50%;
+  height: auto;
+}
+
+.flexible__info {
+  width: 50%;
+  margin-left: 2rem;
+}
 
 /*---------------- 4.5. Security Section --*/
 .security {
   @include grid-col-12;
+  max-width: $max-width;
+  margin: 0 auto;
 }
-
 
 /*---------------- 4.6. Quote Section --*/
 .quote {
   @include grid-col-12;
   text-align: center;
 }
+
+
+
+
+
+
+
 
 
 
@@ -257,7 +289,7 @@ footer {
   align-items: center;
 
   & span {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 
   & span:first-of-type {

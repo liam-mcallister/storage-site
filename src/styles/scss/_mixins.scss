@@ -9,27 +9,33 @@
 
 /*-- Grid Template (12 Columns) --*/
 @mixin grid-template-12 {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 /*-- Grid Template (4 Columns) --*/
 @mixin grid-template-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  justify-content: center;
 }
 
 /*--  --*/
 @mixin grid-col-12 {
-    grid-column: span 12;
-    padding: 4rem 2rem;
+  grid-column: span 12;
+  padding: 4rem 2rem;
 }
 
 /*--  --*/
 @mixin flex-between-center {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-col-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

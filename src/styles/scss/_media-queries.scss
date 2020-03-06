@@ -105,7 +105,7 @@
             opacity: 0;
         }
 
-        &:checked + .burger-label + .navbar__nav {
+        &:checked + .burger-label + .navbar-inner__nav {
             transform: translateY(100vh);
         }
     }
@@ -127,7 +127,7 @@
         transition: all 0.1s ease-in-out;
     }
 
-    .navbar__nav {
+    .navbar-inner__nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
