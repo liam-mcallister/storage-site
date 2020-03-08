@@ -24,7 +24,7 @@
         & span {
             margin-left: 0rem;
         }
-    
+
         & span:first-of-type {
             margin-right: 0;
             margin-bottom: 1.5rem;
@@ -38,34 +38,65 @@
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
-    .services__container,
-    .how-works__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .services__inner {
+        @include flex-col-center;
+    }
+
+    .how-works__inner {
+        @include flex-col-center;
     }
 
     .how-works {
         margin: 4rem 0;
+        padding: 0;
 
         & h2 {
             margin: 0 2rem;
         }
     }
 
-    .about__container {
+    .about__inner {
         flex-direction: column;
         margin: 0;
     }
 
-    .about__img,
-    .about__info {
+    .about__inner__img {
         width: 100%;
-    }
-
-    .about__img {
         min-height: 40vh;
         margin-left: 0;
+    }
+
+    .about__inner__info {
+        width: 100%;
+        padding: 2rem 0 0 0;
+    }
+
+    .why-us__inner {
+        padding: 0;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+
+    .list__why-us {
+        padding: 0;
+    }
+
+    .flexible__inner {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .flexible__inner__img {
+        width: 100%;
+        min-height: 40vh;
+    }
+
+    .flexible__inner__info {
+        width: 100%;
+        padding: 2rem 0 0 0;
+        margin: 0;
     }
 
     .footer-top {
@@ -148,14 +179,41 @@
     .nav__btn {
         margin-left: 0;
     }
+
+
+
+
+
+
+    .header__inner {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .house-header__img {
+        width: 100%;
+        min-height: 40vh;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .house-header__info {
+        width: 100%;
+        padding: 0;
+
+        & h1 {
+            font-size: 2.5rem;
+        }
+    }
 }
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
-    .services__container,
-    .how-works__container {
+    .services__inner,
+    .how-works__inner {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
+        grid-gap: 40px;
     }
 }
 

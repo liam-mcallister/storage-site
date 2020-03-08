@@ -159,9 +159,9 @@ hr {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 250px;
-    height: 250px;
-    margin: 0 1rem;
+    width: 100%;
+    height: auto;
+    margin: 0;
     position: relative;
     background: $color4;
     color: $white;
@@ -180,8 +180,8 @@ hr {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 0 1rem;
     padding: 0 3rem;
     background: $color4;
@@ -201,7 +201,7 @@ li {
     line-height: 1.3rem;
 }
 
-.why-us__list {
+.list__why-us {
     padding: 1rem;
 
     & li {

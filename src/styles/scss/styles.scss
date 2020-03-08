@@ -42,6 +42,7 @@ body {
 h1 {
     font-weight: 900;
     font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
@@ -52,7 +53,6 @@ h2 {
 h3 {
     @extend h1;
     font-size: 2rem;
-    margin-bottom: 1rem;
 }
 
 .header-top {
@@ -60,11 +60,11 @@ h3 {
 }
 
 .header-middle {
-    animation: header-translate 1s linear 1;
+    @extend .header-top;
 }
 
 .header-bottom {
-    animation: header-translate 1s linear 1;
+    @extend .header-top;
 }
 
 /*-- 3.2. Paragraph --*/
@@ -97,12 +97,6 @@ small {
     font-weight: bold;
 }
 
-
-
-
-
-
-
 /*-------------------------------- 5. Home Page ----*/
 
 /*-- 5.1. Hero Section --*/
@@ -123,25 +117,15 @@ small {
     animation: bg-scale 20s linear infinite;
 }
 
-
-
-
-
-
-
-
-
-
 /*-- 5.2. About Section --*/
 .about {
     background: $color5;
 }
 
-.about__img {
+.about__inner__img {
     background: url("/src/images/1.jpg") center center no-repeat;
     background-size: cover;
 }
-
 
 /*----------------------- 6. House Storage Page ----*/
 .house-header__img {
@@ -159,7 +143,7 @@ small {
     color: $white;
 }
 
-.flexible__img {
+.flexible__inner__img {
     background: url("/src/images/1.jpg") center center no-repeat;
     background-size: cover;
 }
@@ -167,12 +151,6 @@ small {
 .quote {
     background: $color5;
 }
-
-
-
-
-
-
 
 /*-------------------------------- 5. Footer ----*/
 footer {
