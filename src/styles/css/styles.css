@@ -192,12 +192,12 @@
 
 /*-------------- 4. House Storage Page Sections ----*/
 /*----------------- 4.1. Header Section --*/
-.house-header {
+.storage {
   grid-column: span 12;
   padding: 4rem 2rem;
 }
 
-.header__inner {
+.storage__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,25 +205,25 @@
   margin: 0 auto;
 }
 
-.house-header__img {
+.storage__inner__info {
+  width: 50%;
+  padding: 2rem;
+}
+
+.storage__inner__info h1, .storage__inner__info h2, .storage__inner__info h3 {
+  margin-bottom: 2rem;
+}
+
+.storage__inner__info p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.storage__inner__img {
   width: 50%;
   height: auto;
   margin-left: 2rem;
   -webkit-clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
           clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
-}
-
-.house-header__info {
-  width: 50%;
-  padding: 2rem;
-}
-
-.house-header__info h1, .house-header__info h2, .house-header__info h3 {
-  margin-bottom: 2rem;
-}
-
-.house-header__info p:first-of-type {
-  margin-bottom: 1rem;
 }
 
 /*---------------- 4.2. Why Us? Section --*/
@@ -295,6 +295,20 @@
   grid-column: span 12;
   padding: 4rem 2rem;
   text-align: center;
+}
+
+.quote button {
+  margin-top: 1rem;
+}
+
+/*------------------------ 4. FAQ Page Sections ----*/
+.faq {
+  grid-column: span 12;
+  padding: 4rem 2rem;
+}
+
+.faq h1, .faq h2, .faq h3 {
+  margin-bottom: 4rem;
 }
 
 /*----------------------------------- ?. Footer ----*/
@@ -594,6 +608,55 @@ li {
   padding: 10px 10px 10px 40px;
 }
 
+/*---------------------- 8. Accordian ----*/
+.accordian {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  background: #dd6e42;
+  position: relative;
+  cursor: pointer;
+}
+
+.question:first-of-type {
+  margin-top: 0;
+}
+
+.question:after {
+  content: "\002B";
+  color: #3f3f3f;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.active,
+.active:after,
+.question:hover,
+.question:hover:after {
+  background: #c85324;
+  color: #ffffff;
+}
+
+.answer {
+  padding: 1rem 2rem;
+  background: #d7cdcc;
+}
+
 @-webkit-keyframes bg-scale {
   0% {
     -webkit-transform: scale(1, 1);
@@ -868,25 +931,25 @@ li {
   .nav__btn {
     margin-left: 0;
   }
-  .header__inner {
+  .storage__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0;
   }
-  .house-header__img {
+  .storage__inner__info {
+    width: 100%;
+    padding: 0;
+  }
+  .storage__inner__info h1, .storage__inner__info h2, .storage__inner__info h3 {
+    font-size: 2.5rem;
+  }
+  .storage__inner__img {
     width: 100%;
     min-height: 40vh;
     margin-left: 0;
     margin-top: 2rem;
-  }
-  .house-header__info {
-    width: 100%;
-    padding: 0;
-  }
-  .house-header__info h1, .house-header__info h2, .house-header__info h3 {
-    font-size: 2.5rem;
   }
 }
 
@@ -1034,7 +1097,7 @@ small {
 }
 
 /*----------------------- 6. House Storage Page ----*/
-.house-header__img {
+.storage__inner__img {
   background: url("/src/images/1.jpg") center center no-repeat;
   background-size: cover;
 }

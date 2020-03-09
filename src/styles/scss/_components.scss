@@ -14,199 +14,243 @@
 /*------------------------------------ 1. Links ----*/
 
 a {
-    text-decoration: none;
-    color: $white;
+  text-decoration: none;
+  color: $white;
 }
 
 /*-- 1.1. Nav Links --*/
 .nav__link {
-    padding: 1rem;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    font-weight: 700;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
 
-    &:hover {
-        color: $color4;
-        background: $white;
-    }
+  &:hover {
+    color: $color4;
+    background: $white;
+  }
 }
 
 /*---------------------------------- 1. Buttons ----*/
 button {
-    border: none;
-    background: $color1;
-    color: $white;
-    text-transform: uppercase;
-    padding: 0.9rem 1.5rem;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
+  border: none;
+  background: $color1;
+  color: $white;
+  text-transform: uppercase;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
 
-    &:hover {
-        background: darken($color: $color1, $amount: 10%);
-    }
+  &:hover {
+    background: darken($color: $color1, $amount: 10%);
+  }
 
-    &:active {
-        transform: translateY(3px);
-    }
+  &:active {
+    transform: translateY(3px);
+  }
 }
 
 /*-- 2.1. Large Button --*/
 .btn-large {
-    padding: 1.5rem 3rem;
-    margin-top: 4rem;
-    animation: btn-translate 1s linear 1;
+  padding: 1.5rem 3rem;
+  margin-top: 4rem;
+  animation: btn-translate 1s linear 1;
 }
 
 /*-- 2.1. Nav Button --*/
 .nav__btn {
-    margin-left: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 /*-- 2.2. Burger Button --*/
 .burger-btn {
-    display: none;
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
-    border: none;
+  display: none;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border: none;
 
-    &:focus,
-    &:active,
-    &:hover {
-        border: none;
-        outline: none;
-    }
+  &:focus,
+  &:active,
+  &:hover {
+    border: none;
+    outline: none;
+  }
 }
 
 /*-- To Top Button --*/
 .btn-to-top {
-    display: none;
-    position: fixed;
-    background: $color3;
-    right: 10px;
-    bottom: 10px;
-    line-height: 0.5rem;
-    padding: 1rem;
+  display: none;
+  position: fixed;
+  background: $color3;
+  right: 10px;
+  bottom: 10px;
+  line-height: 0.5rem;
+  padding: 1rem;
 }
 
 /*------------------------------------- 3. Logo ----*/
 .navbar-inner__logo {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 
 /*------------------------------------ 5. Cards ----*/
 
 .card {
-    height: auto;
-    width: 100%;
-    min-width: 250px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 $grey;
-    transition: box-shadow 0.3s;
+  height: auto;
+  width: 100%;
+  min-width: 250px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 $grey;
+  transition: box-shadow 0.3s;
 
-    &:hover {
-        box-shadow: 0 8px 16px 0 $grey;
-    }
+  &:hover {
+    box-shadow: 0 8px 16px 0 $grey;
+  }
 
-    &:hover .card__caption {
-        background: $color1;
-        color: $white;
-    }
+  &:hover .card__caption {
+    background: $color1;
+    color: $white;
+  }
 }
 
 .card__img img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .card__caption {
-    padding: 1.2rem;
-    color: $grey;
+  padding: 1.2rem;
+  color: $grey;
 }
 
 .card__caption__header {
-    margin-bottom: 1rem;
-    font-weight: normal;
+  margin-bottom: 1rem;
+  font-weight: normal;
 }
 
 /*-------------------------- 6. Horizontal Rule ----*/
 hr {
-    grid-column: span 12;
-    width: 80%;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.178);
+  grid-column: span 12;
+  width: 80%;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.178);
 }
-
 
 /*-------------------------- 7. Icons ----*/
 .footer-top__icon {
-    width: 50px;
-    height: 50px;
-    margin-left: 1rem;
+  width: 50px;
+  height: 50px;
+  margin-left: 1rem;
 
-    &:first-of-type {
-        margin-left: 0;
-    }
+  &:first-of-type {
+    margin-left: 0;
+  }
 }
 
 /*-------------------------- 8. Item ----*/
 .item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    position: relative;
-    background: $color4;
-    color: $white;
-    border-radius: 0 10rem 10rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  position: relative;
+  background: $color4;
+  color: $white;
+  border-radius: 0 10rem 10rem 10rem;
 }
 
 .item__header {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .item__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    margin: 0 1rem;
-    padding: 0 3rem;
-    background: $color4;
-    color: $white;
-    border-radius: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 1rem;
+  padding: 0 3rem;
+  background: $color4;
+  color: $white;
+  border-radius: 10rem;
 }
 
 .item__img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 1rem;
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
 }
-
 
 /*-------------------------- 8. Lists ----*/
 li {
-    line-height: 1.3rem;
+  line-height: 1.3rem;
 }
 
 .list__why-us {
-    padding: 1rem;
+  padding: 1rem;
 
-    & li {
-        background: url('/src/images/phone.svg') no-repeat;
-        background-position: left center;
-        padding: 10px 10px 10px 40px;
-    }
+  & li {
+    background: url("/src/images/phone.svg") no-repeat;
+    background-position: left center;
+    padding: 10px 10px 10px 40px;
+  }
+}
+
+/*---------------------- 8. Accordian ----*/
+
+.accordian {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  background: $color1;
+  position: relative;
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.question:after {
+  content: "\002B";
+  color: $grey;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.active,
+.active:after,
+.question:hover,
+.question:hover:after {
+  background: darken($color: $color1, $amount: 10%);
+  color: $white;
+}
+
+.answer {
+  padding: 1rem 2rem;
+  background: $color5;
 }
