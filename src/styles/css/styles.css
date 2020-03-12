@@ -44,17 +44,19 @@
 */
 /*--------------------------- 1. Page Templates ----*/
 /*-- 1.1. 12 Column Template --*/
-.grid-12 {
+.grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 /*------------------------------- 2. Navigation ----*/
 /*-- 2.1. Navbar Top --*/
 .navbar-top, .navbar-bottom {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
   padding: 0 2rem;
 }
@@ -89,7 +91,9 @@
 /*----------------- 3.1. Hero Section ----*/
 /*-- 3.1.1. Hero ----*/
 .hero {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
   position: relative;
   padding: 0;
@@ -115,7 +119,9 @@
 /*------------- 3.2. Services Section ----*/
 /*-- 3.2.1. Services --*/
 .services {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 
@@ -134,7 +140,9 @@
 /*----------- 3.3. How It Works Section --*/
 /*-- 3.3.1. How It Works --*/
 .how-works {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 
@@ -154,7 +162,9 @@
 /*------------------ 3.4. About Section --*/
 /*-- 3.4.1. About --*/
 .about {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 
@@ -193,7 +203,9 @@
 /*-------------- 4. House Storage Page Sections ----*/
 /*----------------- 4.1. Header Section --*/
 .storage {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 
@@ -228,7 +240,9 @@
 
 /*---------------- 4.2. Why Us? Section --*/
 .why-us {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 
@@ -246,7 +260,9 @@
 
 /*---------------- 4.3. Access Section --*/
 .access {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -259,7 +275,9 @@
 
 /*---------------- 4.4. Flexible Section --*/
 .flexible {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 
@@ -284,7 +302,9 @@
 
 /*---------------- 4.5. Security Section --*/
 .security {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -292,7 +312,9 @@
 
 /*---------------- 4.6. Quote Section --*/
 .quote {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -303,7 +325,9 @@
 
 /*------------------------ 4. FAQ Page Sections ----*/
 .faq {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 
@@ -311,9 +335,12 @@
   margin-bottom: 4rem;
 }
 
+/*------------------------ 4. Quote Page Sections ----*/
 /*----------------------------------- ?. Footer ----*/
 footer {
-  grid-column: span 12;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 
@@ -655,6 +682,39 @@ li {
 .answer {
   padding: 1rem 2rem;
   background: #d7cdcc;
+}
+
+/*--------------------------- 8. Form ----*/
+.quote-form {
+  max-width: 1200px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #16324f;
+  color: #ffffff;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input, select {
+  width: 20rem;
+  height: 2rem;
+  border: none;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
 }
 
 @-webkit-keyframes bg-scale {

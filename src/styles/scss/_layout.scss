@@ -34,15 +34,15 @@
 /*--------------------------- 1. Page Templates ----*/
 
 /*-- 1.1. 12 Column Template --*/
-.grid-12 {
-    @include grid-template-12;
+.grid {
+    @include grid-template-1;
 }
 
 /*------------------------------- 2. Navigation ----*/
 
 /*-- 2.1. Navbar Top --*/
 .navbar-top {
-    @include grid-col-12;
+    @include grid-col-1;
     padding: 0 2rem;
 }
 
@@ -70,7 +70,7 @@
 
 /*-- 3.1.1. Hero ----*/
 .hero {
-    @include grid-col-12;
+    @include grid-col-1;
     position: relative;
     padding: 0;
 }
@@ -87,7 +87,7 @@
 
 /*-- 3.2.1. Services --*/
 .services {
-    @include grid-col-12;
+    @include grid-col-1;
 }
 
 /*-- 3.2.2. Services Container --*/
@@ -99,7 +99,7 @@
 
 /*-- 3.3.1. How It Works --*/
 .how-works {
-    @include grid-col-12;
+    @include grid-col-1;
 }
 
 /*-- 3.3.2. How It Works Container --*/
@@ -112,7 +112,7 @@
 
 /*-- 3.4.1. About --*/
 .about {
-    @include grid-col-12;
+    @include grid-col-1;
 }
 
 /*-- 3.4.2. About Container --*/
@@ -149,7 +149,7 @@
 
 /*----------------- 4.1. Header Section --*/
 .storage {
-    @include grid-col-12;
+    @include grid-col-1;
 }
 
 .storage__inner {
@@ -180,7 +180,7 @@
 
 /*---------------- 4.2. Why Us? Section --*/
 .why-us {
-    @include grid-col-12;
+    @include grid-col-1;
 }
 
 .why-us__inner {
@@ -195,7 +195,7 @@
 
 /*---------------- 4.3. Access Section --*/
 .access {
-    @include grid-col-12;
+    @include grid-col-1;
     max-width: $max-width;
     margin: 0 auto;
     text-align: center;
@@ -207,7 +207,7 @@
 
 /*---------------- 4.4. Flexible Section --*/
 .flexible {
-    @include grid-col-12;
+    @include grid-col-1;
 }
 
 .flexible__inner {
@@ -229,14 +229,14 @@
 
 /*---------------- 4.5. Security Section --*/
 .security {
-    @include grid-col-12;
+    @include grid-col-1;
     max-width: $max-width;
     margin: 0 auto;
 }
 
 /*---------------- 4.6. Quote Section --*/
 .quote {
-    @include grid-col-12;
+    @include grid-col-1;
     text-align: center;
 
     & button {
@@ -248,7 +248,7 @@
 /*------------------------ 4. FAQ Page Sections ----*/
 
 .faq {
-    @include grid-col-12;
+    @include grid-col-1;
 
     & h1 {
         margin-bottom: 4rem;
@@ -256,10 +256,16 @@
 }
 
 
+/*------------------------ 4. Quote Page Sections ----*/
+.quote-form {
+
+}
+
+
 
 /*----------------------------------- ?. Footer ----*/
 footer {
-    @include grid-col-12;
+    @include grid-col-1;
 }
 
 /*--------------------- ?.?. Footer Top --*/

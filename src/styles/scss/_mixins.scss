@@ -8,9 +8,9 @@
 */
 
 /*-- Grid Template (12 Columns) --*/
-@mixin grid-template-12 {
+@mixin grid-template-1 {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
 }
 
 /*-- Grid Template (4 Columns) --*/
@@ -22,8 +22,8 @@
 }
 
 /*--  --*/
-@mixin grid-col-12 {
-  grid-column: span 12;
+@mixin grid-col-1 {
+  grid-column: 1 / 2;
   padding: 4rem 2rem;
 }
 

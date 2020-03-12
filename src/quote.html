@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/src/styles/css/styles.css">
 </head>
 
-<body class="grid-12">
+<body class="grid">
 
     <div class="navbar-top">
         <div class="navbar-inner">
@@ -43,6 +43,56 @@
         </div>
     </nav>
 
+    <header>
+        <h1>Get a Quote</h1>
+    </header>
+
+    <div class="quote-form">
+        <form>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" />
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone">
+
+            <label for="address">Address:</label>
+            <input type="text" id="address">
+
+            <label for="sizes">Choose a size:</label>
+            <select name="sizes" id="sizes">
+                <option value="">Please select an option</option>
+                <option value="locker">Locker</option>
+                <option value="25sqft">25 square feet</option>
+                <option value="35sqft">35 square feet</option>
+                <option value="50sqft">50 square feet</option>
+                <option value="75sqft">75 square feet</option>
+                <option value="100sqft">100 square feet</option>
+                <option value="125sqft">125 square feet</option>
+                <option value="150sqft">150 square feet</option>
+            </select>
+
+            <label for="how-long">How long for?</label>
+            <select name="how-long" id="how-long">
+                <option value="">Please select an option</option>
+                <option value="1-4w">1 to 4 weeks</option>
+                <option value="1-3m">1 to 3 months</option>
+                <option value="3-6m">3 to 6 months</option>
+                <option value="6-12m">6 to 12 months</option>
+                <option value="12+m">12+ months</option>
+            </select>
+
+            <label for="date">When do you need it?</label>
+            <input type="date" id="date">
+
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </form>
+    </div>
 
 
 
@@ -58,7 +108,8 @@
 
 
 
-    
+
+
 
 
     <footer>

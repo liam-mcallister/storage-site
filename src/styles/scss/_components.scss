@@ -254,3 +254,35 @@ li {
   padding: 1rem 2rem;
   background: $color5;
 }
+
+
+/*--------------------------- 8. Form ----*/
+.quote-form {
+  max-width: $max-width;
+  justify-self: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: $color4;
+  color: $white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 20rem;
+  height: 2rem;
+  border: none;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+select {
+  @extend input;
+}
