@@ -255,34 +255,40 @@ li {
   background: $color5;
 }
 
-
 /*--------------------------- 8. Form ----*/
-.quote-form {
-  max-width: $max-width;
-  justify-self: center;
-  margin: 2rem 0;
-  padding: 2rem;
-  background: $color4;
-  color: $white;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
 label {
   margin-bottom: 0.5rem;
 }
 
 input {
-  width: 20rem;
+  width: 100%;
   height: 2rem;
   border: none;
+  border-bottom: 1px solid $grey;
   margin-bottom: 2rem;
   padding-left: 1rem;
+  background: $color5;
+
+  &:focus {
+    background: darken($color: $color5, $amount: 10%);
+  }
+
+  &[type="checkbox"],
+  &[type="checkbox"]:focus {
+    background: transparent;
+  }
 }
 
 select {
   @extend input;
+}
+
+textarea {
+  @extend input;
+  height: 150px;
+  padding: 0.5rem 1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
 }

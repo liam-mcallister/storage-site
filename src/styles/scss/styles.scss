@@ -87,7 +87,7 @@ small {
 
 /*-- 4.2. Navbar Bottom --*/
 .navbar-bottom {
-    background: $color4;
+    background: $color3;
     color: $white;
 }
 
@@ -152,8 +152,14 @@ small {
     background: $color5;
 }
 
+
+/*-------------------------------- 5. Quote Page ----*/
+.quote-form {
+    background: $color5;
+  }
+
 /*-------------------------------- 5. Footer ----*/
 footer {
-    background: $color4;
+    background: $color3;
     color: $white;
 }

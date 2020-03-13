@@ -257,10 +257,37 @@
 
 
 /*------------------------ 4. Quote Page Sections ----*/
-.quote-form {
-
+.quote-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
+.quote-info {
+    grid-column: 1 / 2;
+    padding: 4rem 2rem;
+    text-align: right;
+}
+
+.quote-form {
+    grid-column: 2 / 3;
+    padding: 4rem 2rem;
+}
+
+.quote-form__inner {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 2rem;
+}
+
+.right {
+    @extend .left;
+    padding-right: 0;
+}
 
 
 /*----------------------------------- ?. Footer ----*/

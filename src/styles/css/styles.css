@@ -336,6 +336,50 @@
 }
 
 /*------------------------ 4. Quote Page Sections ----*/
+.quote-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.quote-info {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  padding: 4rem 2rem;
+  text-align: right;
+}
+
+.quote-form {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  padding: 4rem 2rem;
+}
+
+.quote-form__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left, .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding-right: 2rem;
+}
+
+.right {
+  padding-right: 0;
+}
+
 /*----------------------------------- ?. Footer ----*/
 footer {
   -ms-grid-column: 1;
@@ -685,36 +729,35 @@ li {
 }
 
 /*--------------------------- 8. Form ----*/
-.quote-form {
-  max-width: 1200px;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin: 2rem 0;
-  padding: 2rem;
-  background: #16324f;
-  color: #ffffff;
-}
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 label {
   margin-bottom: 0.5rem;
 }
 
-input, select {
-  width: 20rem;
+input, select, textarea {
+  width: 100%;
   height: 2rem;
   border: none;
+  border-bottom: 1px solid #3f3f3f;
   margin-bottom: 2rem;
   padding-left: 1rem;
+  background: #d7cdcc;
+}
+
+input:focus, select:focus, textarea:focus {
+  background: #c1b1af;
+}
+
+input[type="checkbox"], select[type="checkbox"], textarea[type="checkbox"], input[type="checkbox"]:focus, select[type="checkbox"]:focus, textarea[type="checkbox"]:focus {
+  background: transparent;
+}
+
+textarea {
+  height: 150px;
+  padding: 0.5rem 1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
 }
 
 @-webkit-keyframes bg-scale {
@@ -823,6 +866,12 @@ input, select {
   }
   .footer-top__icon {
     margin: 0;
+  }
+  .quote-form__inner {
+    display: block;
+  }
+  .left, .right {
+    padding-right: 0;
   }
 }
 
@@ -1021,8 +1070,21 @@ input, select {
     justify-items: center;
     grid-gap: 40px;
   }
+  .quote-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .quote-info {
+    text-align: left;
+  }
 }
 
+/*--------------------------------------------------------------------------------------*/
 @media (min-width: 576px) {
   .hero h1, .hero h2, .hero h3 {
     font-size: 10vw;
@@ -1116,7 +1178,7 @@ small {
 
 /*-- 4.2. Navbar Bottom --*/
 .navbar-bottom {
-  background: #16324f;
+  background: #13293d;
   color: #ffffff;
 }
 
@@ -1181,9 +1243,14 @@ small {
   background: #d7cdcc;
 }
 
+/*-------------------------------- 5. Quote Page ----*/
+.quote-form {
+  background: #d7cdcc;
+}
+
 /*-------------------------------- 5. Footer ----*/
 footer {
-  background: #16324f;
+  background: #13293d;
   color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */

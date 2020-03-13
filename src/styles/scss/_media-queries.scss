@@ -34,6 +34,14 @@
   .footer-top__icon {
     margin: 0;
   }
+
+  .quote-form__inner {
+    display: block;
+  }
+
+  .left {
+    padding-right: 0;
+  }
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -210,7 +218,18 @@
     justify-items: center;
     grid-gap: 40px;
   }
+
+  .quote-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quote-info {
+    text-align: left;
+  }
 }
+
+/*--------------------------------------------------------------------------------------*/
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
