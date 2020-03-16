@@ -106,15 +106,19 @@ button {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 $grey;
   transition: box-shadow 0.3s;
-
+  
   &:hover {
     box-shadow: 0 8px 16px 0 $grey;
+    background: $color1;
   }
 
   &:hover .card__caption {
-    background: $color1;
     color: $white;
   }
+}
+
+.card__img {
+  overflow: hidden;
 }
 
 .card__img img {
@@ -130,6 +134,28 @@ button {
 .card__caption__header {
   margin-bottom: 1rem;
   font-weight: normal;
+}
+
+.card--packing {
+  cursor: default;
+  box-shadow: none;
+  border: 1px solid $light-grey;
+  overflow: hidden;
+
+  & h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &:hover {
+    box-shadow: none;
+    background: $white;
+  }
+
+  &:hover .card__caption {
+    background: $white;
+    color: $grey;
+  }
 }
 
 /*-------------------------- 6. Horizontal Rule ----*/

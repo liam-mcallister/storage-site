@@ -289,6 +289,18 @@
     padding-right: 0;
 }
 
+/*----------- 4. Packing Supplies Page Sections ----*/
+
+/*-- 3.2.1. Packing --*/
+.packing {
+    @include grid-col-1;
+}
+
+/*-- 3.2.2. Services Container --*/
+.packing__inner {
+    @include grid-template-4;
+}
+
 
 /*----------------------------------- ?. Footer ----*/
 footer {

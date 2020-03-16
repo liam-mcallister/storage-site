@@ -107,6 +107,10 @@
     margin: 0;
   }
 
+  .packing__inner {
+    @include flex-col-center;
+  }
+
   .footer-top {
     display: flex;
     flex-direction: column;
@@ -213,7 +217,8 @@
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
   .services__inner,
-  .how-works__inner {
+  .how-works__inner,
+  .packing__inner {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     grid-gap: 40px;

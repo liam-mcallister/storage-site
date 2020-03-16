@@ -380,6 +380,27 @@
   padding-right: 0;
 }
 
+/*----------- 4. Packing Supplies Page Sections ----*/
+/*-- 3.2.1. Packing --*/
+.packing {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  padding: 4rem 2rem;
+}
+
+/*-- 3.2.2. Services Container --*/
+.packing__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /*----------------------------------- ?. Footer ----*/
 footer {
   -ms-grid-column: 1;
@@ -562,11 +583,15 @@ button:active {
 .card:hover {
   -webkit-box-shadow: 0 8px 16px 0 #3f3f3f;
           box-shadow: 0 8px 16px 0 #3f3f3f;
+  background: #dd6e42;
 }
 
 .card:hover .card__caption {
-  background: #dd6e42;
   color: #ffffff;
+}
+
+.card__img {
+  overflow: hidden;
 }
 
 .card__img img {
@@ -582,6 +607,30 @@ button:active {
 .card__caption__header {
   margin-bottom: 1rem;
   font-weight: normal;
+}
+
+.card--packing {
+  cursor: default;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #9b9b9b;
+  overflow: hidden;
+}
+
+.card--packing h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card--packing:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #ffffff;
+}
+
+.card--packing:hover .card__caption {
+  background: #ffffff;
+  color: #3f3f3f;
 }
 
 /*-------------------------- 6. Horizontal Rule ----*/
@@ -951,6 +1000,18 @@ button[type="submit"] {
     padding: 2rem 0 0 0;
     margin: 0;
   }
+  .packing__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .footer-top, .footer-middle, .footer-bottom {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1064,7 +1125,8 @@ button[type="submit"] {
 
 @media (max-width: 1199px) {
   .services__inner,
-  .how-works__inner {
+  .how-works__inner,
+  .packing__inner {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     justify-items: center;
