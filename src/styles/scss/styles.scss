@@ -80,13 +80,13 @@ small {
 /*------------------------------- 4. Navigation ----*/
 
 /*-- 4.1. Navbar Top --*/
-.navbar-top {
+.navbar__top {
     background: $color1;
     color: $grey;
 }
 
 /*-- 4.2. Navbar Bottom --*/
-.navbar-bottom {
+.navbar__bottom {
     background: $color3;
     color: $white;
 }
@@ -117,14 +117,9 @@ small {
     animation: bg-scale 20s linear infinite;
 }
 
-/*-- 5.2. About Section --*/
-.about {
+/*-- 5.2. Info Section --*/
+.info {
     background: $color5;
-}
-
-.about__inner__img {
-    background: url("/src/images/1.jpg") center center no-repeat;
-    background-size: cover;
 }
 
 /*----------------------- 6. House Storage Page ----*/

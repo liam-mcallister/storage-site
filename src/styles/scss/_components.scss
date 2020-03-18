@@ -19,7 +19,7 @@ a {
 }
 
 /*-- 1.1. Nav Links --*/
-.nav__link {
+.nav-link {
   padding: 1rem;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -167,7 +167,7 @@ hr {
 }
 
 /*-------------------------- 7. Icons ----*/
-.footer-top__icon {
+.footer__top-icon {
   width: 50px;
   height: 50px;
   margin-left: 1rem;
@@ -225,14 +225,8 @@ li {
   line-height: 1.3rem;
 }
 
-.list__why-us {
-  padding: 1rem;
-
-  & li {
-    background: url("/src/images/phone.svg") no-repeat;
-    background-position: left center;
-    padding: 10px 10px 10px 40px;
-  }
+.about__list li {
+  list-style: disc;
 }
 
 /*---------------------- 8. Accordian ----*/
@@ -283,7 +277,7 @@ li {
 
 /*--------------------------- 8. Form ----*/
 label {
-  margin-bottom: 0.5rem;
+  //margin-bottom: 0.5rem;
 }
 
 input {

@@ -19,13 +19,11 @@
 
 <body class="grid">
 
-    <div class="navbar-top">
-        <div class="navbar-inner">
+    <nav class="navbar">
+        <div class="navbar__top">
             <p>Want to speak with a human? Call: <span class="navbar-inner__phone">028 90 111 111</span></p>
         </div>
-    </div>
-    <nav class="navbar-bottom">
-        <div class="navbar-inner">
+        <div class="navbar__bottom">
             <a href="index.html"><img class="navbar-inner__logo" src="/src/images/box-white.svg" alt="Company Logo"></a>
             <input class="burger-btn" type="checkbox" id="burger-btn" />
             <label class="burger-label" for="burger-btn">
@@ -33,12 +31,12 @@
                 <span class="bar middle"></span>
                 <span class="bar bottom"></span>
             </label>
-            <ul class="navbar-inner__nav">
-                <li class="nav__item"><a href="house.html" class="nav__link">House</a></li>
-                <li class="nav__item"><a href="business.html" class="nav__link">Business</a></li>
-                <li class="nav__item"><a href="student.html" class="nav__link">Student</a></li>
-                <li class="nav__item"><a href="packing.html" class="nav__link">Packing Supplies</a></li>
-                <li class="nav__item"><a href="faq.html" class="nav__link">FAQ's</a></li>
+            <ul class="navbar__bottom__nav">
+                <li class="nav-item"><a href="house.html" class="nav-link">House</a></li>
+                <li class="nav-item"><a href="business.html" class="nav-link">Business</a></li>
+                <li class="nav-item"><a href="student.html" class="nav-link">Student</a></li>
+                <li class="nav-item"><a href="packing.html" class="nav-link">Packing Supplies</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ's</a></li>
             </ul>
         </div>
     </nav>
@@ -141,10 +139,12 @@
         </div>
     </div>
 
-    <div class="about">
-        <div class="about__inner">
-            <div class="about__inner__img"></div>
-            <div class="about__inner__info">
+    <div class="info">
+        <div class="info__inner">
+            <div class="info__inner__img">
+                <img src="/src/images/1.jpg" alt="">
+            </div>
+            <div class="info__inner__text">
                 <h3>A storage company you can trust</h3>
                 <p>We strive to make storing your valued possessions simple and easy, which is why we offer convenient
                     storage solutions for every need, at a price you’ll love.</p>
@@ -157,23 +157,23 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer-top">
-            <div class="footer-top__left">
-                <img class="footer-top__icon" src="/src/images/phone.svg" alt="">
+    <footer class=footer>
+        <div class="footer__top">
+            <div class="footer__top__left">
+                <img class="footer__top-icon" src="/src/images/phone.svg" alt="">
                 <span>028 90 111 111</span>
-                <img class="footer-top__icon" src="/src/images/email.svg" alt="">
+                <img class="footer__top-icon" src="/src/images/email.svg" alt="">
                 <span>info@company.com</span>
             </div>
-            <div class="footer-top__right">
-                <a href="#"><img class="footer-top__icon" src="/src/images/facebook.svg" alt=""></a>
-                <a href="#"><img class="footer-top__icon" src="/src/images/twitter.svg" alt=""></a>
-                <a href="#"><img class="footer-top__icon" src="/src/images/youtube.svg" alt=""></a>
-                <a href="#"><img class="footer-top__icon" src="/src/images/google.svg" alt=""></a>
+            <div class="footer__top__right">
+                <a href="#"><img class="footer__top-icon" src="/src/images/facebook.svg" alt=""></a>
+                <a href="#"><img class="footer__top-icon" src="/src/images/twitter.svg" alt=""></a>
+                <a href="#"><img class="footer__top-icon" src="/src/images/youtube.svg" alt=""></a>
+                <a href="#"><img class="footer__top-icon" src="/src/images/google.svg" alt=""></a>
             </div>
         </div>
-        <div class="footer-middle">
-            <div class="footer-middle__links">
+        <div class="footer__middle">
+            <div class="footer__middle__links">
                 <h3>Storage Type</h3>
                 <ul>
                     <li><a href="house.html">House Storage</a></li>
@@ -181,7 +181,7 @@
                     <li><a href="student.html">Student Storage</a></li>
                 </ul>
             </div>
-            <div class="footer-middle__links">
+            <div class="footer__middle__links">
                 <h3>Company Info</h3>
                 <ul>
                     <li><a href="about.html">About</a></li>
@@ -189,7 +189,7 @@
                     <li><a href="cookie.html">Cookie Policy</a></li>
                 </ul>
             </div>
-            <div class="footer-middle__links">
+            <div class="footer__middle__links">
                 <h3>Customer Support</h3>
                 <ul>
                     <li><a href="faq.html">FAQ's</a></li>
@@ -198,41 +198,13 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer__bottom">
             <small>&copy; Storage Company 2020</small>
             <small>Website created by <a href="#">Liam McAllister</a></small>
         </div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <button id="btn-to-top" class="btn-to-top">&#94;</button>
-
-
-
-
-
-
-
-
 
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>

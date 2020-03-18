@@ -41,27 +41,26 @@
 /*------------------------------- 2. Navigation ----*/
 
 /*-- 2.1. Navbar Top --*/
-.navbar-top {
+.navbar {
     @include grid-col-1;
-    padding: 0 2rem;
+    padding: 0;
+}
+
+.navbar__top {
+    padding: 0.5rem 1rem 0.5rem 1.8rem;
 }
 
 /*-- 2.2. Navbar Bottom --*/
-.navbar-bottom {
-    @extend .navbar-top;
-}
-
-/*-- 2.3. Navbar Inner --*/
-.navbar-inner {
-    @include flex-between-center;
-    max-width: $max-width;
-    margin: 0.8rem auto;
+.navbar__bottom {
+    @extend .navbar__top;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*-- 2.4. Navbar Menu --*/
-.navbar-inner__nav {
+.navbar__bottom__nav {
     display: flex;
-    align-items: center;
 }
 
 /*----------------------- 3. Home Page Sections ----*/
@@ -108,31 +107,36 @@
     margin: 4rem 10% 0 10%;
 }
 
-/*------------------ 3.4. About Section --*/
+/*------------------ 3.4. Info Section --*/
 
-/*-- 3.4.1. About --*/
-.about {
+/*-- 3.4.1. Info --*/
+.info {
     @include grid-col-1;
 }
 
-/*-- 3.4.2. About Container --*/
-.about__inner {
-    display: flex;
+/*-- 3.4.2. Info Container --*/
+.info__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     max-width: $max-width;
     margin: 0 auto;
 }
 
-/*-- 3.4.3. About Image --*/
-.about__inner__img {
-    width: 50%;
-    height: auto;
-    margin-left: 2rem;
+/*-- 3.4.3. Info Image --*/
+.info__inner__img {
+    grid-column: 1 / 2;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-/*-- 3.4.4. About Info --*/
-.about__inner__info {
-    width: 50%;
-    padding: 2rem;
+/*-- 3.4.4. Info Text --*/
+.info__inner__text {
+    grid-column: 2 / 3;
+    margin-left: 2rem;
 
     & h3 {
         margin-bottom: 2rem;
@@ -189,8 +193,19 @@
     padding: 0 2rem;
 }
 
-.list {
-    display: flex;
+.why-us__inner__lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    ul {
+        padding: 1rem;
+
+        & li {
+            background: url("/src/images/phone.svg") no-repeat;
+            background-position: left center;
+            padding: 10px 10px 10px 40px;
+        }
+    }
 }
 
 /*---------------- 4.3. Access Section --*/
@@ -244,7 +259,6 @@
     }
 }
 
-
 /*------------------------ 4. FAQ Page Sections ----*/
 
 .faq {
@@ -254,7 +268,6 @@
         margin-bottom: 4rem;
     }
 }
-
 
 /*------------------------ 4. Quote Page Sections ----*/
 .quote-container {
@@ -296,26 +309,60 @@
     @include grid-col-1;
 }
 
-/*-- 3.2.2. Services Container --*/
+/*-- 3.2.2.  Container --*/
 .packing__inner {
     @include grid-template-4;
 }
 
+/*---------------------- 4. About Page Sections ----*/
+.about {
+    @include grid-col-1;
+}
+
+.about__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+.about__info {
+    grid-column: 1 / 2;
+    margin-right: 2rem;
+}
+
+.about__img {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: auto;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.about__list {
+    grid-column: 1 / 3;
+    justify-self: center;
+    margin-top: 10rem;
+}
 
 /*----------------------------------- ?. Footer ----*/
-footer {
+.footer {
     @include grid-col-1;
 }
 
 /*--------------------- ?.?. Footer Top --*/
-.footer-top {
+.footer__top {
     @include flex-between-center;
     max-width: $max-width;
     margin: 0 auto;
 }
 
 /*-- ?.?.?. Footer Top Left --*/
-.footer-top__left {
+.footer__top__left {
     display: flex;
     align-items: center;
 
@@ -329,13 +376,13 @@ footer {
 }
 
 /*------------------ ?.?. Footer Middle --*/
-.footer-middle {
-    @extend .footer-top;
+.footer__middle {
+    @extend .footer__top;
     padding: 4rem 0;
 }
 
 /*-- ?.?.?. Footer Middle Links --*/
-.footer-middle__links {
+.footer__middle__links {
     margin-left: 2rem;
 
     &:first-of-type {
@@ -356,6 +403,6 @@ footer {
 }
 
 /*------------------ ?.?. Footer Bottom --*/
-.footer-bottom {
-    @extend .footer-top;
+.footer__bottom {
+    @extend .footer__top;
 }
