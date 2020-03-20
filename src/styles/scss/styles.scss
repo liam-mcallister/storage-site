@@ -1,5 +1,5 @@
 @import "variables", "mixins", "layout", "components", "animations",
-    "media-queries";
+  "media-queries";
 
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
@@ -25,136 +25,135 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*------------------------------------- 2. Body ----*/
 body {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    color: $grey;
-    text-rendering: optimizeLegibility;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: $grey;
+  text-rendering: optimizeLegibility;
 }
 
 /*------------------------------------- 3. Text ----*/
 
 /*-- 3.1. Headers --*/
 h1 {
-    font-weight: 900;
-    font-size: 4rem;
-    margin-bottom: 1rem;
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
-    @extend h1;
-    font-size: 3rem;
+  @extend h1;
+  font-size: 3rem;
 }
 
 h3 {
-    @extend h1;
-    font-size: 2rem;
+  @extend h1;
+  font-size: 2rem;
 }
 
 .header-top {
-    animation: header-translate 1s linear 1;
+  animation: header-translate 1s linear 1;
 }
 
 .header-middle {
-    @extend .header-top;
+  @extend .header-top;
 }
 
 .header-bottom {
-    @extend .header-top;
+  @extend .header-top;
 }
 
 /*-- 3.2. Paragraph --*/
 p {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 /*-- 3.3. Small --*/
 small {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 /*------------------------------- 4. Navigation ----*/
 
 /*-- 4.1. Navbar Top --*/
 .navbar__top {
-    background: $color1;
-    color: $grey;
+  background: $color1;
+  color: $grey;
 }
 
 /*-- 4.2. Navbar Bottom --*/
 .navbar__bottom {
-    background: $color3;
-    color: $white;
+  background: $color3;
+  color: $white;
 }
 
 /*-- 4.3. Navbar Phone --*/
 .navbar-inner__phone {
-    color: $white;
-    font-weight: bold;
+  color: $white;
+  font-weight: bold;
 }
 
 /*-------------------------------- 5. Home Page ----*/
 
 /*-- 5.1. Hero Section --*/
 .hero {
-    overflow: hidden;
-    color: $white;
+  overflow: hidden;
+  color: $white;
 }
 
 .hero::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient($grey-opac),
-        url("/src/images/1.jpg") center center no-repeat;
-    background-size: cover;
-    animation: bg-scale 20s linear infinite;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient($grey-opac),
+    url("/src/images/1.jpg") center center no-repeat;
+  background-size: cover;
+  animation: bg-scale 20s linear infinite;
 }
 
 /*-- 5.2. Info Section --*/
 .info {
-    background: $color5;
+  background: $color5;
 }
 
 /*----------------------- 6. House Storage Page ----*/
 .storage__inner__img {
-    background: url("/src/images/1.jpg") center center no-repeat;
-    background-size: cover;
+  background: url("/src/images/1.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 .why-us {
-    background: $color4;
-    color: $white;
+  background: $color4;
+  color: $white;
 }
 
 .flexible {
-    background: $color4;
-    color: $white;
-}
-
-.flexible__inner__img {
-    background: url("/src/images/1.jpg") center center no-repeat;
-    background-size: cover;
+  background: $color4;
+  color: $white;
 }
 
 .quote {
-    background: $color5;
+  background: $color5;
 }
-
 
 /*-------------------------------- 5. Quote Page ----*/
 .quote-form {
-    background: $color5;
-  }
+  background: $color5;
+}
+
+/*-------------------------------- 5. Quote Page ----*/
+.about__bottom {
+  background: $color5;
+}
 
 /*-------------------------------- 5. Footer ----*/
 footer {
-    background: $color3;
-    color: $white;
+  background: $color3;
+  color: $white;
 }

@@ -35,32 +35,32 @@
 
 /*-- 1.1. 12 Column Template --*/
 .grid {
-    @include grid-template-1;
+  @include grid-template-1;
 }
 
 /*------------------------------- 2. Navigation ----*/
 
 /*-- 2.1. Navbar Top --*/
 .navbar {
-    @include grid-col-1;
-    padding: 0;
+  @include grid-col-1;
+  padding: 0;
 }
 
 .navbar__top {
-    padding: 0.5rem 1rem 0.5rem 1.8rem;
+  padding: 0.5rem 1rem 0.5rem 1.8rem;
 }
 
 /*-- 2.2. Navbar Bottom --*/
 .navbar__bottom {
-    @extend .navbar__top;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @extend .navbar__top;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*-- 2.4. Navbar Menu --*/
 .navbar__bottom__nav {
-    display: flex;
+  display: flex;
 }
 
 /*----------------------- 3. Home Page Sections ----*/
@@ -69,340 +69,350 @@
 
 /*-- 3.1.1. Hero ----*/
 .hero {
-    @include grid-col-1;
-    position: relative;
-    padding: 0;
+  @include grid-col-1;
+  position: relative;
+  padding: 0;
 }
 
 /*-- 3.1.2. Hero Container --*/
 .hero__inner {
-    @include flex-col-start;
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 6rem 2rem;
+  @include flex-col-start;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 6rem 2rem;
 }
 
 /*------------- 3.2. Services Section ----*/
 
 /*-- 3.2.1. Services --*/
 .services {
-    @include grid-col-1;
+  @include grid-col-1;
 }
 
 /*-- 3.2.2. Services Container --*/
 .services__inner {
-    @include grid-template-4;
+  @include grid-template-4;
 }
 
 /*----------- 3.3. How It Works Section --*/
 
 /*-- 3.3.1. How It Works --*/
 .how-works {
-    @include grid-col-1;
+  @include grid-col-1;
 }
 
 /*-- 3.3.2. How It Works Container --*/
 .how-works__inner {
-    @include grid-template-4;
-    margin: 4rem 10% 0 10%;
+  @include grid-template-4;
+  margin: 4rem 10% 0 10%;
 }
 
 /*------------------ 3.4. Info Section --*/
 
 /*-- 3.4.1. Info --*/
 .info {
-    @include grid-col-1;
+  @include grid-col-1;
 }
 
 /*-- 3.4.2. Info Container --*/
 .info__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    max-width: $max-width;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 /*-- 3.4.3. Info Image --*/
 .info__inner__img {
-    grid-column: 1 / 2;
+  grid-column: 1 / 2;
 
-    & img {
-        width: 100%;
-        height: auto;
-    }
+  & img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /*-- 3.4.4. Info Text --*/
 .info__inner__text {
-    grid-column: 2 / 3;
-    margin-left: 2rem;
+  grid-column: 2 / 3;
+  margin-left: 2rem;
 
-    & h3 {
-        margin-bottom: 2rem;
-        color: darken($color: $color1, $amount: 10%);
-    }
+  & h3 {
+    margin-bottom: 2rem;
+    color: darken($color: $color1, $amount: 10%);
+  }
 
-    & p:first-of-type {
-        margin-bottom: 1rem;
-        font-weight: bold;
-    }
+  & p:first-of-type {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
 }
 
 /*-------------- 4. House Storage Page Sections ----*/
 
 /*----------------- 4.1. Header Section --*/
 .storage {
-    @include grid-col-1;
+  @include grid-col-1;
 }
 
 .storage__inner {
-    display: flex;
-    max-width: $max-width;
-    margin: 0 auto;
+  display: flex;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 .storage__inner__info {
-    width: 50%;
-    padding: 2rem;
+  width: 50%;
 
-    & h1 {
-        margin-bottom: 2rem;
-    }
+  & h1 {
+    margin-bottom: 2rem;
+  }
 
-    & p:first-of-type {
-        margin-bottom: 1rem;
-    }
+  & p:first-of-type {
+    margin-bottom: 1rem;
+  }
 }
 
 .storage__inner__img {
-    width: 50%;
-    height: auto;
-    margin-left: 2rem;
-    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
+  width: 50%;
+  height: auto;
+  margin-left: 2rem;
+  clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
 }
 
 /*---------------- 4.2. Why Us? Section --*/
 .why-us {
-    @include grid-col-1;
+  @include grid-col-1;
 }
 
 .why-us__inner {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 2rem;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 .why-us__inner__lists {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    ul {
-        padding: 1rem;
+  ul {
+    padding: 1rem;
 
-        & li {
-            background: url("/src/images/phone.svg") no-repeat;
-            background-position: left center;
-            padding: 10px 10px 10px 40px;
-        }
+    & li {
+      background: url("/src/images/phone.svg") no-repeat;
+      background-position: left center;
+      padding: 10px 10px 10px 40px;
     }
+  }
 }
 
 /*---------------- 4.3. Access Section --*/
 .access {
-    @include grid-col-1;
-    max-width: $max-width;
-    margin: 0 auto;
-    text-align: center;
+  @include grid-col-1;
+  max-width: $max-width;
+  margin: 0 auto;
+  text-align: center;
 
-    & p:last-of-type {
-        margin: 1rem 0;
-    }
+  & p:last-of-type {
+    margin: 1rem 0;
+  }
 }
 
 /*---------------- 4.4. Flexible Section --*/
 .flexible {
-    @include grid-col-1;
+  @include grid-col-1;
 }
 
 .flexible__inner {
-    display: flex;
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 .flexible__inner__img {
-    width: 50%;
+  grid-column: 1 / 2;
+
+  & img {
+    width: 100%;
     height: auto;
+  }
 }
 
 .flexible__inner__info {
-    width: 50%;
-    margin-left: 2rem;
+  grid-column: 2 / 3;
+  margin-left: 2rem;
 }
 
 /*---------------- 4.5. Security Section --*/
 .security {
-    @include grid-col-1;
-    max-width: $max-width;
-    margin: 0 auto;
+  @include grid-col-1;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 /*---------------- 4.6. Quote Section --*/
 .quote {
-    @include grid-col-1;
-    text-align: center;
+  @include grid-col-1;
+  text-align: center;
 
-    & button {
-        margin-top: 1rem;
-    }
+  & button {
+    margin-top: 1rem;
+  }
 }
 
 /*------------------------ 4. FAQ Page Sections ----*/
 
 .faq {
-    @include grid-col-1;
+  @include grid-col-1;
 
-    & h1 {
-        margin-bottom: 4rem;
-    }
+  & h1 {
+    margin-bottom: 4rem;
+  }
 }
 
 /*------------------------ 4. Quote Page Sections ----*/
 .quote-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .quote-info {
-    grid-column: 1 / 2;
-    padding: 4rem 2rem;
-    text-align: right;
+  grid-column: 1 / 2;
+  padding: 4rem 2rem;
+  text-align: right;
 }
 
 .quote-form {
-    grid-column: 2 / 3;
-    padding: 4rem 2rem;
+  grid-column: 2 / 3;
+  padding: 4rem 2rem;
 }
 
 .quote-form__inner {
-    display: flex;
+  display: flex;
 }
 
 .left {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 2rem;
 }
 
 .right {
-    @extend .left;
-    padding-right: 0;
+  @extend .left;
+  padding-right: 0;
 }
 
 /*----------- 4. Packing Supplies Page Sections ----*/
 
 /*-- 3.2.1. Packing --*/
 .packing {
-    @include grid-col-1;
+  @include grid-col-1;
 }
 
 /*-- 3.2.2.  Container --*/
 .packing__inner {
-    @include grid-template-4;
+  @include grid-template-4;
 }
 
 /*---------------------- 4. About Page Sections ----*/
 .about {
-    @include grid-col-1;
+  @include grid-col-1;
+  padding: 0;
 }
 
-.about__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    max-width: $max-width;
-    margin: 0 auto;
+.about__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 .about__info {
-    grid-column: 1 / 2;
-    margin-right: 2rem;
+  grid-column: 1 / 2;
+  margin-right: 2rem;
 }
 
 .about__img {
-    grid-column: 2 / 3;
+  grid-column: 2 / 3;
+  width: 100%;
+  height: auto;
+
+  & img {
     width: 100%;
     height: auto;
+  }
+}
 
-    & img {
-        width: 100%;
-        height: auto;
-    }
+.about__bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 2rem;
 }
 
 .about__list {
-    grid-column: 1 / 3;
-    justify-self: center;
-    margin-top: 10rem;
+  grid-column: 1 / 2;
+  justify-self: center;
 }
 
 /*----------------------------------- ?. Footer ----*/
 .footer {
-    @include grid-col-1;
+  @include grid-col-1;
 }
 
 /*--------------------- ?.?. Footer Top --*/
 .footer__top {
-    @include flex-between-center;
-    max-width: $max-width;
-    margin: 0 auto;
+  @include flex-between-center;
+  max-width: $max-width;
+  margin: 0 auto;
 }
 
 /*-- ?.?.?. Footer Top Left --*/
 .footer__top__left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    & span {
-        margin-left: 0.5rem;
-    }
+  & span {
+    margin-left: 0.5rem;
+  }
 
-    & span:first-of-type {
-        margin-right: 0.8rem;
-    }
+  & span:first-of-type {
+    margin-right: 0.8rem;
+  }
 }
 
 /*------------------ ?.?. Footer Middle --*/
 .footer__middle {
-    @extend .footer__top;
-    padding: 4rem 0;
+  @extend .footer__top;
+  padding: 4rem 0;
 }
 
 /*-- ?.?.?. Footer Middle Links --*/
 .footer__middle__links {
-    margin-left: 2rem;
+  margin-left: 2rem;
 
-    &:first-of-type {
-        margin-left: 0;
-    }
+  &:first-of-type {
+    margin-left: 0;
+  }
 
-    & h3 {
-        margin-bottom: 1.5rem;
-    }
+  & h3 {
+    margin-bottom: 1.5rem;
+  }
 
-    & ul li {
-        line-height: 1.7rem;
-    }
+  & ul li {
+    line-height: 1.7rem;
+  }
 
-    & a:hover {
-        text-decoration: underline;
-    }
+  & a:hover {
+    text-decoration: underline;
+  }
 }
 
 /*------------------ ?.?. Footer Bottom --*/
 .footer__bottom {
-    @extend .footer__top;
+  @extend .footer__top;
 }
