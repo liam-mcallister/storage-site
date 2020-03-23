@@ -61,12 +61,9 @@
   padding: 0;
 }
 
-.navbar__top, .navbar__bottom {
-  padding: 0.5rem 1rem 0.5rem 1.8rem;
-}
-
-/*-- 2.2. Navbar Bottom --*/
-.navbar__bottom {
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,6 +75,11 @@
           align-items: center;
 }
 
+.navbar__top, .navbar__bottom {
+  padding: 0.5rem 1rem 0.5rem 1.8rem;
+}
+
+/*-- 2.2. Navbar Bottom --*/
 /*-- 2.4. Navbar Menu --*/
 .navbar__bottom__nav {
   display: -webkit-box;
@@ -488,6 +490,63 @@
       justify-self: center;
 }
 
+/*---------------------- 4. Checklist Page Sections ----*/
+.checklist {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  padding: 4rem 2rem;
+}
+
+.checklist__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.checklist__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 2rem;
+}
+
+.checklist__grid__left {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.checklist__grid__right {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+}
+
+.checklist__grid__right:last-child {
+  margin-bottom: 0;
+}
+
+.checklist__grid__right input[type="checkbox"], .checklist__grid__right select[type="checkbox"], .checklist__grid__right textarea[type="checkbox"] {
+  margin: 0 10px 0 0;
+  width: 15px;
+  height: 15px;
+}
+
+.checklist__grid__right p {
+  margin-bottom: 2rem;
+}
+
+.checklist__item__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
 /*----------------------------------- ?. Footer ----*/
 .footer {
   -ms-grid-column: 1;
@@ -726,6 +785,11 @@ hr {
   width: 80%;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.178);
+}
+
+.checklist__hr {
+  width: 100%;
+  margin: 2rem 0;
 }
 
 /*-------------------------- 7. Icons ----*/
@@ -1402,6 +1466,11 @@ small {
 /*-------------------------------- 5. Quote Page ----*/
 .about__bottom {
   background: #d7cdcc;
+}
+
+/*-------------------------------- 5. Checklist Page ----*/
+.checklist label {
+  font-weight: bold;
 }
 
 /*-------------------------------- 5. Footer ----*/

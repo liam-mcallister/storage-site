@@ -46,6 +46,14 @@
   padding: 0;
 }
 
+.navbar__inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navbar__top {
   padding: 0.5rem 1rem 0.5rem 1.8rem;
 }
@@ -53,9 +61,6 @@
 /*-- 2.2. Navbar Bottom --*/
 .navbar__bottom {
   @extend .navbar__top;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /*-- 2.4. Navbar Menu --*/
@@ -357,6 +362,50 @@
 .about__list {
   grid-column: 1 / 2;
   justify-self: center;
+}
+
+/*---------------------- 4. Checklist Page Sections ----*/
+.checklist {
+  @include grid-col-1;
+}
+
+.checklist__inner {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.checklist__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 2rem;
+}
+
+.checklist__grid__left {
+  grid-column: 1 / 2;
+}
+
+.checklist__grid__right {
+  grid-column: 2 / 4;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & input[type="checkbox"] {
+    margin: 0 10px 0 0;
+    width: 15px;
+    height: 15px;
+  }
+
+  & p {
+    margin-bottom: 2rem;
+  }
+}
+
+.checklist__item__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 /*----------------------------------- ?. Footer ----*/
