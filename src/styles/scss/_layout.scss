@@ -387,10 +387,6 @@
 .checklist__grid__right {
   grid-column: 2 / 4;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   & input[type="checkbox"] {
     margin: 0 10px 0 0;
     width: 15px;
@@ -398,7 +394,11 @@
   }
 
   & p {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+  }
+
+  & p:last-child {
+    margin-bottom: 0;
   }
 }
 

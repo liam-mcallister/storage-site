@@ -523,10 +523,6 @@
   grid-column: 2 / 4;
 }
 
-.checklist__grid__right:last-child {
-  margin-bottom: 0;
-}
-
 .checklist__grid__right input[type="checkbox"], .checklist__grid__right select[type="checkbox"], .checklist__grid__right textarea[type="checkbox"] {
   margin: 0 10px 0 0;
   width: 15px;
@@ -534,7 +530,11 @@
 }
 
 .checklist__grid__right p {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+}
+
+.checklist__grid__right p:last-child {
+  margin-bottom: 0;
 }
 
 .checklist__item__header {
@@ -950,6 +950,15 @@ button[type="submit"] {
   width: 100%;
 }
 
+/*---------------------- 8. Checklist ----*/
+.checklist__grid__right input[type="checkbox"]:checked + label, .checklist__grid__right select[type="checkbox"]:checked + label, .checklist__grid__right textarea[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+.checklist__grid__right input[type="checkbox"]:checked + label + p, .checklist__grid__right select[type="checkbox"]:checked + label + p, .checklist__grid__right textarea[type="checkbox"]:checked + label + p {
+  text-decoration: line-through;
+}
+
 @-webkit-keyframes bg-scale {
   0% {
     -webkit-transform: scale(1, 1);
@@ -1124,6 +1133,21 @@ button[type="submit"] {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .checklist {
+    padding: 4rem 0;
+  }
+  .checklist__grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .checklist__grid__left {
+    margin-bottom: 2rem;
+  }
+  .checklist__grid__right {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
   }
 }
 

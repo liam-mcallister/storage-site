@@ -317,3 +317,13 @@ textarea {
 button[type="submit"] {
   width: 100%;
 }
+
+
+/*---------------------- 8. Checklist ----*/
+.checklist__grid__right input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+.checklist__grid__right input[type="checkbox"]:checked + label + p {
+  text-decoration: line-through;
+}
