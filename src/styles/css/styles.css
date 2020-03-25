@@ -547,6 +547,19 @@
   margin-bottom: 1rem;
 }
 
+/*---------------------- 4. Checklist Page Sections ----*/
+.sitemap {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  padding: 4rem 2rem;
+}
+
+.sitemap__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /*----------------------------------- ?. Footer ----*/
 .footer {
   -ms-grid-column: 1;
@@ -871,6 +884,16 @@ li {
 
 .about__list li {
   list-style: disc;
+}
+
+.sitemap__list a {
+  color: #3f3f3f;
+  line-height: 3rem;
+  text-decoration: underline;
+}
+
+.sitemap__list a:hover {
+  color: #dd6e42;
 }
 
 /*---------------------- 8. Accordian ----*/

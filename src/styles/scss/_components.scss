@@ -234,6 +234,16 @@ li {
   list-style: disc;
 }
 
+.sitemap__list a {
+  color: $grey;
+  line-height: 3rem;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color1;
+  }
+}
+
 /*---------------------- 8. Accordian ----*/
 
 .accordian {

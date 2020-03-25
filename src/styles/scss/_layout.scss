@@ -408,6 +408,18 @@
   margin-bottom: 1rem;
 }
 
+
+/*---------------------- 4. Checklist Page Sections ----*/
+.sitemap {
+  @include grid-col-1;
+}
+
+.sitemap__inner {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+
 /*----------------------------------- ?. Footer ----*/
 .footer {
   @include grid-col-1;
