@@ -222,6 +222,14 @@
         margin: 1rem 0 0 0;
     }
 
+    .contact-form {
+        grid-column: 1 / 4;
+    }
+
+    .contact-info {
+        grid-column: 1 / 4;
+    }
+
     .footer__top {
         display: flex;
         flex-direction: column;
