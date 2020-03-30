@@ -36,3 +36,16 @@ for (let i = 0; i < faqQuestion.length; i++) {
         }
     });
 }
+
+// Size Guide Tabs
+function tabClick(e) {
+    const paneActive = document.querySelectorAll('.pane-active');
+    for (let i = 0; i < paneActive.length; i++) {
+        paneActive[i].className = paneActive[i].className.replace('pane-active', '');
+    }
+    e.target.parentElement.className += ' pane-active';
+    document.getElementById(e.target.href.split('#')[1]).className += ' pane-active';
+}
+
+const tabNav = document.getElementById('tab-nav');
+tabNav.addEventListener('click', tabClick, false);

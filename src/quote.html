@@ -21,23 +21,28 @@
 
     <nav class="navbar">
         <div class="navbar__top">
-            <p>Want to speak with a human? Call: <span class="navbar-inner__phone">028 90 111 111</span></p>
+            <div class="navbar__inner">
+                <p>Want to speak with a human? Call: <span class="navbar-inner__phone">028 90 111 111</span></p>
+            </div>
         </div>
         <div class="navbar__bottom">
-            <a href="index.html"><img class="navbar-inner__logo" src="/src/images/box-white.svg" alt="Company Logo"></a>
-            <input class="burger-btn" type="checkbox" id="burger-btn" />
-            <label class="burger-label" for="burger-btn">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-            </label>
-            <ul class="navbar__bottom__nav">
-                <li class="nav-item"><a href="house.html" class="nav-link">House</a></li>
-                <li class="nav-item"><a href="business.html" class="nav-link">Business</a></li>
-                <li class="nav-item"><a href="student.html" class="nav-link">Student</a></li>
-                <li class="nav-item"><a href="packing.html" class="nav-link">Packing Supplies</a></li>
-                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ's</a></li>
-            </ul>
+            <div class="navbar__inner">
+                <a href="index.html"><img class="navbar-inner__logo" src="/src/images/box-white.svg"
+                        alt="Company Logo"></a>
+                <input class="burger-btn" type="checkbox" id="burger-btn" />
+                <label class="burger-label" for="burger-btn">
+                    <span class="bar top"></span>
+                    <span class="bar middle"></span>
+                    <span class="bar bottom"></span>
+                </label>
+                <ul class="navbar__bottom__nav">
+                    <li class="nav-item"><a href="house.html" class="nav-link">House</a></li>
+                    <li class="nav-item"><a href="business.html" class="nav-link">Business</a></li>
+                    <li class="nav-item"><a href="student.html" class="nav-link">Student</a></li>
+                    <li class="nav-item"><a href="packing.html" class="nav-link">Packing Supplies</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ's</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -46,9 +51,8 @@
         <div class="quote-info">
             <h1>Get a Quote</h1>
             <small>* Required Field</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum et quaerat eos ea neque officia
-                blanditiis! Laborum eligendi facere architecto quidem, deleniti qui reiciendis eius aliquam totam! Quos,
-                quis voluptates.</p>
+            <p>To enable us to give you our best possible price and stay in touch on fantastic offers, we just need a
+                few details about you and your requirements.</p>
         </div>
 
         <div class="quote-form">
@@ -75,14 +79,13 @@
                         <label for="sizes">* Choose a size:</label>
                         <select name="sizes" id="sizes">
                             <option value="">Please select an option</option>
-                            <option value="locker">Locker</option>
                             <option value="25sqft">25 square feet</option>
-                            <option value="35sqft">35 square feet</option>
                             <option value="50sqft">50 square feet</option>
                             <option value="75sqft">75 square feet</option>
                             <option value="100sqft">100 square feet</option>
-                            <option value="125sqft">125 square feet</option>
-                            <option value="150sqft">150 square feet</option>
+                            <option value="115sqft">115 square feet</option>
+                            <option value="120sqft">120 square feet</option>
+                            <option value="130sqft">130 square feet</option>
                         </select>
 
                         <label for="how-long">* How long for?</label>
@@ -106,24 +109,6 @@
             </form>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <footer class=footer>
         <div class="footer__top">
@@ -172,34 +157,7 @@
         </div>
     </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <button id="btn-to-top" class="btn-to-top">&#94;</button>
-
-
-
-
-
-
-
-
+    <button id="btn-to-top" class="btn btn-to-top">&#94;</button>
 
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>

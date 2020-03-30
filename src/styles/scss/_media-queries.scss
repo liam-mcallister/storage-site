@@ -4,11 +4,6 @@
         font-size: 12vw;
     }
 
-    .btn-large {
-        padding: 0.5rem 1rem;
-        margin-top: 2rem;
-    }
-
     h2 {
         font-size: 2rem;
     }
@@ -74,9 +69,11 @@
 
     .why-us__inner__lists {
         display: block;
+        margin-top: 2rem;
 
         & ul {
             padding: 0;
+            
         }
     }
 

@@ -122,6 +122,15 @@ small {
   background: $color5;
 }
 
+/*-- 5.2. Size Guide Section --*/
+.size-guide__tabs {
+  background: $color3;
+}
+
+.size-guide__panes {
+  background: $color5;
+}
+
 /*----------------------- 6. House Storage Page ----*/
 .storage__inner__img {
   background: url("/src/images/1.jpg") center center no-repeat;
@@ -147,7 +156,7 @@ small {
   background: $color5;
 }
 
-/*-------------------------------- 5. Quote Page ----*/
+/*-------------------------------- 5. About Page ----*/
 .about__bottom {
   background: $color5;
 }
@@ -171,6 +180,15 @@ small {
 .contact-map {
   background: $color5;
 }
+
+
+/*-------------------------------- 5. Error 404 Page ----*/
+.error-404 {
+  background: $color4;
+  color: $white;
+}
+
+
 
 /*-------------------------------- 5. Footer ----*/
 footer {

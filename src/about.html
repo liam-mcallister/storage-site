@@ -21,53 +21,78 @@
 
     <nav class="navbar">
         <div class="navbar__top">
-            <p>Want to speak with a human? Call: <span class="navbar-inner__phone">028 90 111 111</span></p>
+            <div class="navbar__inner">
+                <p>Want to speak with a human? Call: <span class="navbar-inner__phone">028 90 111 111</span></p>
+            </div>
         </div>
         <div class="navbar__bottom">
-            <a href="index.html"><img class="navbar-inner__logo" src="/src/images/box-white.svg" alt="Company Logo"></a>
-            <input class="burger-btn" type="checkbox" id="burger-btn" />
-            <label class="burger-label" for="burger-btn">
-                <span class="bar top"></span>
-                <span class="bar middle"></span>
-                <span class="bar bottom"></span>
-            </label>
-            <ul class="navbar__bottom__nav">
-                <li class="nav-item"><a href="house.html" class="nav-link">House</a></li>
-                <li class="nav-item"><a href="business.html" class="nav-link">Business</a></li>
-                <li class="nav-item"><a href="student.html" class="nav-link">Student</a></li>
-                <li class="nav-item"><a href="packing.html" class="nav-link">Packing Supplies</a></li>
-                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ's</a></li>
-            </ul>
+            <div class="navbar__inner">
+                <a href="index.html"><img class="navbar-inner__logo" src="/src/images/box-white.svg"
+                        alt="Company Logo"></a>
+                <input class="burger-btn" type="checkbox" id="burger-btn" />
+                <label class="burger-label" for="burger-btn">
+                    <span class="bar top"></span>
+                    <span class="bar middle"></span>
+                    <span class="bar bottom"></span>
+                </label>
+                <ul class="navbar__bottom__nav">
+                    <li class="nav-item"><a href="house.html" class="nav-link">House</a></li>
+                    <li class="nav-item"><a href="business.html" class="nav-link">Business</a></li>
+                    <li class="nav-item"><a href="student.html" class="nav-link">Student</a></li>
+                    <li class="nav-item"><a href="packing.html" class="nav-link">Packing Supplies</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ's</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <div class="about">
-        <div class="about__top">
-            <div class="about__info">
-                <h1>About Us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusantium, ut tempore soluta commodi
-                    tempora sed nulla facilis porro aliquam. Adipisci laudantium mollitia sit explicabo autem sunt ipsa
-                    cupiditate nesciunt!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam accusantium quam praesentium
-                    repellendus
-                    eius obcaecati quibusdam totam repellat necessitatibus expedita dolorem in qui, sit commodi minus
-                    dolorum quae quos suscipit.</p>
+        <div class="about__inner">
+
+            <div class="about__top">
+                <div class="about__info">
+                    <h1>About Us</h1>
+                    <p>Storage Company is arguably the leading self storage facility in the UK. We are approved by
+                        the Self Storage Association (UK) with both our facility and management practices meeting strict
+                        quality criteria. We are dedicated to giving the best of service in the self -storage sector.
+                    </p>
+                    <p>Our strength lies in our ability to combine a deep understanding of a rapidly expanding growth
+                        market
+                        with the commercial and operational skills to provide flexible self-storage solutions for an
+                        expanding customer base. We have the expertise, knowledge and skills to benefit from
+                        the evolving self storage market.</p>
+                </div>
+                <div class="about__img">
+                    <img src="/src/images/1.jpg" alt="">
+                </div>
             </div>
-            <div class="about__img">
-                <img src="/src/images/1.jpg" alt="">
+
+            <hr>
+
+            <div class="about__middle">
+                <div class="about__list">
+                    <p>If we had a motto it would be</p>
+                    <p>'Yes, we can store it'</p>
+                    <p>So whatever your storage requirement,</p>
+                    <ul>
+                        <li>from packing it,</li>
+                        <li>moving it,</li>
+                        <li>receiving it,</li>
+                        <li>shipping it,</li>
+                        <li>collecting it,</li>
+                        <li>delivering it or</li>
+                        <li>of course storing it,</li>
+                    </ul>
+                    <p>......we are confident we can give you a solution for whatever your storage requirement.</p>
+                </div>
             </div>
         </div>
-        <div class="about__bottom">
-            <div class="about__list">
-                <ul>
-                    <li>Some text</li>
-                    <li>Some text</li>
-                    <li>Some text</li>
-                    <li>Some text</li>
-                    <li>Some text</li>
-                </ul>
-            </div>
-        </div>
+    </div>
+
+    <div class="about__bottom">
+        <h3>Looking for space?</h3>
+        <p>We offer a wide range of sizes</p>
+        <a class="btn" href="quote.html">Quote</a>
     </div>
 
     <footer class=footer>
@@ -117,7 +142,7 @@
         </div>
     </footer>
 
-    <button id="btn-to-top" class="btn-to-top">&#94;</button>
+    <button id="btn-to-top" class="btn btn-to-top">&#94;</button>
 
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
