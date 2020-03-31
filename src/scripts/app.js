@@ -47,5 +47,5 @@ function tabClick(e) {
     document.getElementById(e.target.href.split('#')[1]).className += ' pane-active';
 }
 
-const tabNav = document.getElementById('tab-nav');
+let tabNav = document.getElementById('tab-nav');
 tabNav.addEventListener('click', tabClick, false);
