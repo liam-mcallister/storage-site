@@ -170,7 +170,7 @@
     grid-column: 1 / 3;
 }
 
-.size-guise__tabs {
+.size-guide__tabs {
     grid-column: 3 / 4;
 }
 
@@ -179,16 +179,19 @@
 /*----------------- 4.1. Header Section --*/
 .storage {
     @include grid-col-1;
+    justify-self: center;
 }
 
 .storage__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
     max-width: $max-width;
-    margin: 0 auto;
 }
 
 .storage__inner__info {
-    width: 50%;
+    grid-column: 1 / 2;
+    margin-right: 2rem;
 
     & h1 {
         margin-bottom: 2rem;
@@ -200,10 +203,14 @@
 }
 
 .storage__inner__img {
-    width: 50%;
-    height: auto;
-    margin-left: 2rem;
+    grid-column: 2 / 3;
+    justify-self: end;
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
+
+    & img {
+        width: auto;
+        height: 100%;
+    }
 }
 
 /*---------------- 4.2. Why Us? Section --*/
@@ -214,6 +221,10 @@
 .why-us__inner {
     max-width: $max-width;
     margin: 0 auto;
+
+    & h3, p {
+        text-align: center;
+    }
 }
 
 .why-us__inner__lists {
@@ -225,7 +236,7 @@
         margin: 0 auto;
 
         & li {
-            background: url("/src/images/phone.svg") no-repeat;
+            background: url("../../images/custom-icons/email.svg") no-repeat;
             background-position: left center;
             padding: 10px 10px 10px 40px;
         }

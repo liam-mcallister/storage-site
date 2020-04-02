@@ -203,7 +203,7 @@
 
 .info__inner__text h3 {
   margin-bottom: 2rem;
-  color: #c85324;
+  color: #a60548;
 }
 
 .info__inner__text p:first-of-type {
@@ -234,7 +234,7 @@
   grid-column: 1 / 3;
 }
 
-.size-guise__tabs {
+.size-guide__tabs {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
@@ -247,18 +247,25 @@
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
   padding: 4rem 2rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .storage__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .storage__inner__info {
-  width: 50%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  margin-right: 2rem;
 }
 
 .storage__inner__info h1, .storage__inner__info h2, .storage__inner__info h3 {
@@ -270,11 +277,18 @@
 }
 
 .storage__inner__img {
-  width: 50%;
-  height: auto;
-  margin-left: 2rem;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-column-align: end;
+      justify-self: end;
   -webkit-clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
           clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.storage__inner__img img {
+  width: auto;
+  height: 100%;
 }
 
 /*---------------- 4.2. Why Us? Section --*/
@@ -290,6 +304,10 @@
   margin: 0 auto;
 }
 
+.why-us__inner h3, .why-us__inner p {
+  text-align: center;
+}
+
 .why-us__inner__lists {
   display: -ms-grid;
   display: grid;
@@ -303,7 +321,7 @@
 }
 
 .why-us__inner__lists ul li {
-  background: url("/src/images/phone.svg") no-repeat;
+  background: url("../../images/custom-icons/email.svg") no-repeat;
   background-position: left center;
   padding: 10px 10px 10px 40px;
 }
@@ -798,14 +816,15 @@ a {
 }
 
 .nav-link:hover {
-  color: #16324f;
+  color: #191923;
   background: #ffffff;
 }
 
 /*---------------------------------- 1. Buttons ----*/
 .btn {
+  display: inline-block;
   border: none;
-  background: #dd6e42;
+  background: #d7075d;
   color: #ffffff;
   text-transform: uppercase;
   padding: 0.9rem 1.5rem;
@@ -816,7 +835,7 @@ a {
 }
 
 .btn:hover {
-  background: #c85324;
+  background: #a60548;
 }
 
 .btn:active {
@@ -855,7 +874,7 @@ a {
 .btn-to-top {
   display: none;
   position: fixed;
-  background: #dd6e42;
+  background: #d7075d;
   right: 10px;
   bottom: 10px;
   line-height: 0.5rem;
@@ -874,8 +893,8 @@ a {
   width: 100%;
   min-width: 250px;
   cursor: pointer;
-  -webkit-box-shadow: 0 4px 8px 0 #3f3f3f;
-          box-shadow: 0 4px 8px 0 #3f3f3f;
+  -webkit-box-shadow: 0 4px 8px 0 #353535;
+          box-shadow: 0 4px 8px 0 #353535;
   -webkit-transition: -webkit-box-shadow 0.3s;
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
@@ -883,9 +902,9 @@ a {
 }
 
 .card:hover {
-  -webkit-box-shadow: 0 8px 16px 0 #3f3f3f;
-          box-shadow: 0 8px 16px 0 #3f3f3f;
-  background: #dd6e42;
+  -webkit-box-shadow: 0 8px 16px 0 #353535;
+          box-shadow: 0 8px 16px 0 #353535;
+  background: #d7075d;
 }
 
 .card:hover .card__caption {
@@ -897,13 +916,13 @@ a {
 }
 
 .card__img img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
 .card__caption {
   padding: 1.2rem;
-  color: #3f3f3f;
+  color: #353535;
 }
 
 .card__caption__header {
@@ -932,7 +951,7 @@ a {
 
 .card--packing:hover .card__caption {
   background: #ffffff;
-  color: #3f3f3f;
+  color: #353535;
 }
 
 /*-------------------------- 6. Horizontal Rule ----*/
@@ -979,7 +998,7 @@ hr {
   height: auto;
   margin: 0;
   position: relative;
-  background: #16324f;
+  background: #191923;
   color: #ffffff;
   border-radius: 0 10rem 10rem 10rem;
 }
@@ -1009,7 +1028,7 @@ hr {
   height: 200px;
   margin: 0 1rem;
   padding: 0 3rem;
-  background: #16324f;
+  background: #191923;
   color: #ffffff;
   border-radius: 10rem;
 }
@@ -1030,19 +1049,20 @@ li {
 }
 
 .sitemap__list a {
-  color: #3f3f3f;
+  color: #353535;
   line-height: 3rem;
   text-decoration: underline;
 }
 
 .sitemap__list a:hover {
-  color: #dd6e42;
+  color: #d7075d;
 }
 
 /*---------------------- 8. Accordian ----*/
 .accordian {
   max-width: 1200px;
   margin: 0 auto;
+  color: #ffffff;
 }
 
 .question {
@@ -1055,7 +1075,7 @@ li {
   padding: 1rem 2rem;
   margin-top: 1rem;
   font-weight: bold;
-  background: #dd6e42;
+  background: #d7075d;
   position: relative;
   cursor: pointer;
 }
@@ -1066,7 +1086,6 @@ li {
 
 .question:after {
   content: "\002B";
-  color: #3f3f3f;
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -1079,13 +1098,13 @@ li {
 .active:after,
 .question:hover,
 .question:hover:after {
-  background: #c85324;
+  background: #a60548;
   color: #ffffff;
 }
 
 .answer {
   padding: 1rem 2rem;
-  background: #d7cdcc;
+  background: #89aae6;
 }
 
 .answer ul {
@@ -1097,14 +1116,14 @@ input, select, textarea {
   width: 100%;
   height: 2rem;
   border: none;
-  border-bottom: 1px solid #3f3f3f;
+  border-bottom: 1px solid #353535;
   margin-bottom: 2rem;
   padding-left: 1rem;
-  background: #d7cdcc;
+  background: #89aae6;
 }
 
 input:focus, select:focus, textarea:focus {
-  background: #c1b1af;
+  background: #5f8cdd;
 }
 
 input[type="checkbox"], select[type="checkbox"], textarea[type="checkbox"], input[type="checkbox"]:focus, select[type="checkbox"]:focus, textarea[type="checkbox"]:focus {
@@ -1136,6 +1155,15 @@ button[type="submit"], .btn-large[type="submit"] {
 
 .pane.pane-active {
   display: block;
+}
+
+.size-guide__tabs ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[7];
+      grid-template-rows: repeat(7, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 @-webkit-keyframes bg-scale {
@@ -1413,18 +1441,24 @@ button[type="submit"], .btn-large[type="submit"] {
     margin: 2rem 0 0 0;
   }
   .storage__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .storage__inner__info {
-    width: 100%;
-    padding: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    margin: 0 0 2rem 0;
   }
   .storage__inner__info h1, .storage__inner__info h2, .storage__inner__info h3 {
     font-size: 2.5rem;
+  }
+  .storage__inner__img {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .about__info {
     -ms-grid-column: 1;
@@ -1441,12 +1475,6 @@ button[type="submit"], .btn-large[type="submit"] {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / 3;
-  }
-  .storage__inner__img {
-    width: 100%;
-    min-height: 40vh;
-    margin-left: 0;
-    margin-top: 2rem;
   }
   .flexible__inner__img {
     -ms-grid-column: 1;
@@ -1538,6 +1566,15 @@ button[type="submit"], .btn-large[type="submit"] {
   }
 }
 
+/*--------------------------------------------------------------------------------------*/
+@media print {
+  nav,
+  header,
+  footer {
+    display: none !important;
+  }
+}
+
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
 ------------------------------------------------------
@@ -1569,7 +1606,7 @@ button[type="submit"], .btn-large[type="submit"] {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  color: #3f3f3f;
+  color: #353535;
   text-rendering: optimizeLegibility;
 }
 
@@ -1607,13 +1644,13 @@ small {
 /*------------------------------- 4. Navigation ----*/
 /*-- 4.1. Navbar Top --*/
 .navbar__top, .navbar__bottom {
-  background: #dd6e42;
-  color: #3f3f3f;
+  background: #d7075d;
+  color: #191923;
 }
 
 /*-- 4.2. Navbar Bottom --*/
 .navbar__bottom {
-  background: #13293d;
+  background: #191923;
   color: #ffffff;
 }
 
@@ -1636,8 +1673,8 @@ small {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.733))), url("/src/images/background.jpg") center center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.733)), url("/src/images/background.jpg") center center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.733))), url("../../images/units.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.733)), url("../../images/units.jpg") center center no-repeat;
   background-size: cover;
   -webkit-animation: bg-scale 20s linear infinite;
           animation: bg-scale 20s linear infinite;
@@ -1645,46 +1682,37 @@ small {
 
 /*-- 5.2. Info Section --*/
 .info {
-  background: #d7cdcc;
+  background: #89aae6;
 }
 
 /*-- 5.2. Size Guide Section --*/
 .size-guide__tabs {
-  background: #13293d;
-}
-
-.size-guide__panes {
-  background: #d7cdcc;
+  background: #345995;
 }
 
 /*----------------------- 6. House Storage Page ----*/
-.storage__inner__img {
-  background: url("/src/images/1.jpg") center center no-repeat;
-  background-size: cover;
-}
-
 .why-us {
-  background: #16324f;
+  background: #345995;
   color: #ffffff;
 }
 
 .flexible {
-  background: #16324f;
+  background: #345995;
   color: #ffffff;
 }
 
 .quote {
-  background: #d7cdcc;
+  background: #89aae6;
 }
 
 /*-------------------------------- 5. Quote Page ----*/
 .quote-form {
-  background: #d7cdcc;
+  background: #89aae6;
 }
 
 /*-------------------------------- 5. About Page ----*/
 .about__bottom {
-  background: #d7cdcc;
+  background: #89aae6;
 }
 
 /*-------------------------------- 5. Checklist Page ----*/
@@ -1694,27 +1722,27 @@ small {
 
 /*-------------------------------- 5. Contact Page ----*/
 .contact-form {
-  background: #d7cdcc;
+  background: #89aae6;
 }
 
 .contact-info {
-  background: #13293d;
+  background: #191923;
   color: #ffffff;
 }
 
 .contact-map {
-  background: #d7cdcc;
+  background: #89aae6;
 }
 
 /*-------------------------------- 5. Error 404 Page ----*/
 .error-404 {
-  background: #16324f;
+  background: #191923;
   color: #ffffff;
 }
 
 /*-------------------------------- 5. Footer ----*/
 footer {
-  background: #13293d;
+  background: #191923;
   color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -82,12 +82,12 @@ small {
 /*-- 4.1. Navbar Top --*/
 .navbar__top {
   background: $color1;
-  color: $grey;
+  color: $color4;
 }
 
 /*-- 4.2. Navbar Bottom --*/
 .navbar__bottom {
-  background: $color3;
+  background: $color4;
   color: $white;
 }
 
@@ -112,7 +112,7 @@ small {
   height: 100%;
   z-index: -1;
   background: linear-gradient($grey-opac),
-    url("/src/images/background.jpg") center center no-repeat;
+    url("../../images/units.jpg") center center no-repeat;
   background-size: cover;
   animation: bg-scale 20s linear infinite;
 }
@@ -128,22 +128,17 @@ small {
 }
 
 .size-guide__panes {
-  background: $color5;
+  //background: $color5;
 }
 
 /*----------------------- 6. House Storage Page ----*/
-.storage__inner__img {
-  background: url("/src/images/1.jpg") center center no-repeat;
-  background-size: cover;
-}
-
 .why-us {
-  background: $color4;
+  background: $color3;
   color: $white;
 }
 
 .flexible {
-  background: $color4;
+  background: $color3;
   color: $white;
 }
 
@@ -173,7 +168,7 @@ small {
 }
 
 .contact-info {
-  background: $color3;
+  background: $color4;
   color: $white;
 }
 
@@ -192,6 +187,6 @@ small {
 
 /*-------------------------------- 5. Footer ----*/
 footer {
-  background: $color3;
+  background: $color4;
   color: $white;
 }

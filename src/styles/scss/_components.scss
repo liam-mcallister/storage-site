@@ -34,6 +34,7 @@ a {
 
 /*---------------------------------- 1. Buttons ----*/
 .btn {
+  display: inline-block;
   border: none;
   background: $color1;
   color: $white;
@@ -108,7 +109,7 @@ a {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 $grey;
   transition: box-shadow 0.3s;
-  
+
   &:hover {
     box-shadow: 0 8px 16px 0 $grey;
     background: $color1;
@@ -124,7 +125,7 @@ a {
 }
 
 .card__img img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -246,12 +247,12 @@ li {
   }
 }
 
-
 /*---------------------- 8. Accordian ----*/
 
 .accordian {
   max-width: $max-width;
   margin: 0 auto;
+  color: $white;
 }
 
 .question {
@@ -271,7 +272,6 @@ li {
 
 .question:after {
   content: "\002B";
-  color: $grey;
   font-weight: bold;
   font-size: 1.5rem;
 }
@@ -331,7 +331,6 @@ button[type="submit"] {
   width: 100%;
 }
 
-
 /*---------------------- 8. Checklist ----*/
 .checklist__grid__right input[type="checkbox"]:checked + label {
   text-decoration: line-through;
@@ -341,7 +340,6 @@ button[type="submit"] {
   text-decoration: line-through;
 }
 
-
 /*--------------------------- 8. Tabs ----*/
 .pane {
   display: none;
@@ -349,4 +347,10 @@ button[type="submit"] {
 
 .pane.pane-active {
   display: block;
+}
+
+.size-guide__tabs ul {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 1fr;
 }
