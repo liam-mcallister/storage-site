@@ -112,7 +112,7 @@ small {
   height: 100%;
   z-index: -1;
   background: linear-gradient($grey-opac),
-    url("/src/images/1.jpg") center center no-repeat;
+    url("/src/images/background.jpg") center center no-repeat;
   background-size: cover;
   animation: bg-scale 20s linear infinite;
 }
