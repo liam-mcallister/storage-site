@@ -162,16 +162,19 @@
 .size-guide__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px;
     max-width: $max-width;
     margin: 0 auto;
 }
 
 .size-guide__panes {
     grid-column: 1 / 3;
+    grid-row: 1 / 2;
 }
 
 .size-guide__tabs {
     grid-column: 3 / 4;
+    grid-row: 1 / 2;
 }
 
 /*-------------- 4. House Storage Page Sections ----*/
