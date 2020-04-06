@@ -682,6 +682,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
+  margin-bottom: 2rem;
 }
 
 .contact-form {
@@ -1183,7 +1184,7 @@ button[type="submit"], .btn-large[type="submit"] {
   height: auto;
 }
 
-.pane.pane-active {
+.pane-active {
   display: block;
 }
 
@@ -1203,6 +1204,10 @@ button[type="submit"], .btn-large[type="submit"] {
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
   grid-row: span 1;
+  font-weight: bold;
+}
+
+.tab-item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1212,13 +1217,43 @@ button[type="submit"], .btn-large[type="submit"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: auto;
-  height: auto;
-  font-weight: bold;
+  width: 100%;
+  height: 100%;
 }
 
 .tab-item:hover {
   background: #27426f;
+}
+
+/*------------------------- 8. Cookie Box ----*/
+.cookie {
+  width: 200px;
+  height: 150px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  background: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 6px solid #d7075d;
+  -webkit-box-shadow: 0 4px 8px 0 #353535;
+          box-shadow: 0 4px 8px 0 #353535;
+}
+
+.cookie a {
+  color: #d7075d;
 }
 
 @-webkit-keyframes bg-scale {
@@ -1783,10 +1818,6 @@ small {
 .contact-info {
   background: #191923;
   color: #ffffff;
-}
-
-.contact-map {
-  background: #89aae6;
 }
 
 /*-------------------------------- 5. Error 404 Page ----*/

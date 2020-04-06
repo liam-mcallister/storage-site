@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html lang="en" class="no-js">
 <!--<![endif]-->
 
 <head>
@@ -71,20 +71,21 @@
         <div class="contact__inner">
             <div class="contact-header">
                 <h1>Contact Us</h1>
+                <small>* Required Field</small>
             </div>
             <div class="contact-form">
-                <form action="">
-                    <label for="">Name</label>
-                    <input type="text" />
+                <form action="post">
+                    <label for="contact-name">Name *</label>
+                    <input id="contact-name" type="text" minlength="3" maxlength="20" required />
 
-                    <label for="">Email</label>
-                    <input type="text" />
+                    <label for="contact-email">Email *</label>
+                    <input id="contact-email" type="email" required />
 
-                    <label for="">Phone</label>
-                    <input type="text" />
+                    <label for="contact-phone">Phone * (11 digits)</label>
+                    <input id="contact-phone" type="tel" pattern="[0-9]{11}" required />
 
-                    <label for="">Message</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <label for="contact-message">Message *</label>
+                    <textarea name="contact-message" id="contact-message" cols="30" rows="10" required></textarea>
 
                     <button class="btn" type="submit">Submit</button>
                 </form>
@@ -96,21 +97,21 @@
         </div>
     </div>
 
-    <div class="contact-map"></div>
+    <div id="contact-map" class="contact-map"></div>
 
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__top__left">
-                <img class="footer__top-icon" src="images/custom-icons/phone.svg" alt="">
+                <img class="footer__top-icon" src="images/custom-icons/phone.svg" alt="Phone icon">
                 <span>028 90 111 111</span>
-                <img class="footer__top-icon" src="images/custom-icons/email.svg" alt="">
+                <img class="footer__top-icon" src="images/custom-icons/email.svg" alt="Email Icon">
                 <span>info@company.com</span>
             </div>
             <div class="footer__top__right">
-                <a href="#"><img class="footer__top-icon" src="images/social/facebook.svg" alt=""></a>
-                <a href="#"><img class="footer__top-icon" src="images/social/twitter.svg" alt=""></a>
-                <a href="#"><img class="footer__top-icon" src="images/social/youtube.svg" alt=""></a>
-                <a href="#"><img class="footer__top-icon" src="images/social/google.svg" alt=""></a>
+                <a href="#"><img class="footer__top-icon" src="images/social/facebook.svg" alt="Facebook icon"></a>
+                <a href="#"><img class="footer__top-icon" src="images/social/twitter.svg" alt="Twitter icon"></a>
+                <a href="#"><img class="footer__top-icon" src="images/social/youtube.svg" alt="Youtube icon"></a>
+                <a href="#"><img class="footer__top-icon" src="images/social/google.svg" alt="Google icon"></a>
             </div>
         </div>
         <div class="footer__middle">
@@ -151,6 +152,8 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCYGtIp3Q8_8w0TL5HfZ1fxDSSfnk0bes&callback=initMap">
+    </script>
     <script src="/src/scripts/app.js" async defer></script>
 </body>
 

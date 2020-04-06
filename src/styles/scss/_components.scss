@@ -14,376 +14,403 @@
 /*------------------------------------ 1. Links ----*/
 
 a {
-  text-decoration: none;
-  color: $white;
-  cursor: pointer;
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
 }
 
 /*-- 1.1. Nav Links --*/
 .nav-link {
-  padding: 1rem;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: 700;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
 
-  &:hover {
-    color: $color4;
-    background: $white;
-  }
+    &:hover {
+        color: $color4;
+        background: $white;
+    }
 }
 
 /*---------------------------------- 1. Buttons ----*/
 .btn {
-  display: inline-block;
-  border: none;
-  background: $color1;
-  color: $white;
-  text-transform: uppercase;
-  padding: 0.9rem 1.5rem;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
+    display: inline-block;
+    border: none;
+    background: $color1;
+    color: $white;
+    text-transform: uppercase;
+    padding: 0.9rem 1.5rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
 
-  &:hover {
-    background: darken($color: $color1, $amount: 10%);
-  }
+    &:hover {
+        background: darken($color: $color1, $amount: 10%);
+    }
 
-  &:active {
-    transform: translateY(3px);
-  }
+    &:active {
+        transform: translateY(3px);
+    }
 }
 
 /*-- 2.1. Large Button --*/
 .btn-large {
-  @extend button;
-  margin-top: 2rem;
-  padding: 1.5rem 2rem;
-  animation: btn-translate 1s linear 1;
+    @extend button;
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+    animation: btn-translate 1s linear 1;
 }
 
 /*-- 2.1. Nav Button --*/
 .nav__btn {
-  margin-left: 1.5rem;
+    margin-left: 1.5rem;
 }
 
 /*-- 2.2. Burger Button --*/
 .burger-btn {
-  display: none;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  border: none;
-
-  &:focus,
-  &:active,
-  &:hover {
+    display: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
     border: none;
-    outline: none;
-  }
+
+    &:focus,
+    &:active,
+    &:hover {
+        border: none;
+        outline: none;
+    }
 }
 
 /*-- To Top Button --*/
 .btn-to-top {
-  display: none;
-  position: fixed;
-  background: $color1;
-  right: 10px;
-  bottom: 10px;
-  line-height: 0.5rem;
-  padding: 1rem;
+    display: none;
+    position: fixed;
+    background: $color1;
+    right: 10px;
+    bottom: 10px;
+    line-height: 0.5rem;
+    padding: 1rem;
 }
 
 /*------------------------------------- 3. Logo ----*/
 .navbar-inner__logo {
-  width: 150px;
-  height: auto;
+    width: 150px;
+    height: auto;
 }
 
 /*------------------------------------ 5. Cards ----*/
 
 .card {
-  height: auto;
-  width: 100%;
-  min-width: 250px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px 0 $grey;
-  transition: box-shadow 0.3s;
+    height: auto;
+    width: 100%;
+    min-width: 250px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 $grey;
+    transition: box-shadow 0.3s;
 
-  &:hover {
-    box-shadow: 0 8px 16px 0 $grey;
-    background: $color1;
-  }
+    &:hover {
+        box-shadow: 0 8px 16px 0 $grey;
+        background: $color1;
+    }
 
-  &:hover .card__caption {
-    color: $white;
-  }
+    &:hover .card__caption {
+        color: $white;
+    }
 }
 
 .card__img {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .card__img img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .card__caption {
-  padding: 1.2rem;
-  color: $grey;
+    padding: 1.2rem;
+    color: $grey;
 }
 
 .card__caption__header {
-  margin-bottom: 1rem;
-  font-weight: normal;
+    margin-bottom: 1rem;
+    font-weight: normal;
 }
 
 .card--packing {
-  cursor: default;
-  box-shadow: none;
-  border: 1px solid $light-grey;
-  overflow: hidden;
-
-  & h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  &:hover {
+    cursor: default;
     box-shadow: none;
-    background: $white;
-  }
+    border: 1px solid $light-grey;
+    overflow: hidden;
 
-  &:hover .card__caption {
-    background: $white;
-    color: $grey;
-  }
+    & h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    &:hover {
+        box-shadow: none;
+        background: $white;
+    }
+
+    &:hover .card__caption {
+        background: $white;
+        color: $grey;
+    }
 }
 
 /*-------------------------- 6. Horizontal Rule ----*/
 hr {
-  grid-column: span 12;
-  width: 80%;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.178);
+    grid-column: span 12;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.178);
 }
 
 .checklist__hr {
-  width: 100%;
-  margin: 2rem 0;
+    width: 100%;
+    margin: 2rem 0;
 }
 
 /*-------------------------- 7. Icons ----*/
 .footer__top-icon {
-  width: 50px;
-  height: 50px;
-  margin-left: 1rem;
+    width: 50px;
+    height: 50px;
+    margin-left: 1rem;
 
-  &:first-of-type {
-    margin-left: 0;
-  }
+    &:first-of-type {
+        margin-left: 0;
+    }
 }
 
 /*-------------------------- 8. Item ----*/
 .item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  position: relative;
-  background: $color4;
-  color: $white;
-  border-radius: 0 10rem 10rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: relative;
+    background: $color4;
+    color: $white;
+    border-radius: 0 10rem 10rem 10rem;
 }
 
 .item__header {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .item__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  margin: 0 1rem;
-  padding: 0 3rem;
-  background: $color4;
-  color: $white;
-  border-radius: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 0 1rem;
+    padding: 0 3rem;
+    background: $color4;
+    color: $white;
+    border-radius: 10rem;
 }
 
 .item__img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 1rem;
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 /*-------------------------- 8. Lists ----*/
 li {
-  line-height: 1.3rem;
+    line-height: 1.3rem;
 }
 
 .about__list li {
-  list-style: disc;
+    list-style: disc;
 }
 
 .sitemap__list a {
-  color: $grey;
-  line-height: 3rem;
-  text-decoration: underline;
+    color: $grey;
+    line-height: 3rem;
+    text-decoration: underline;
 
-  &:hover {
-    color: $color1;
-  }
+    &:hover {
+        color: $color1;
+    }
 }
 
 /*---------------------- 8. Accordian ----*/
 
 .accordian {
-  max-width: $max-width;
-  margin: 0 auto;
-  color: $white;
+    max-width: $max-width;
+    margin: 0 auto;
+    color: $white;
 }
 
 .question {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  margin-top: 1rem;
-  font-weight: bold;
-  background: $color1;
-  position: relative;
-  cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    background: $color1;
+    position: relative;
+    cursor: pointer;
 
-  &:first-of-type {
-    margin-top: 0;
-  }
+    &:first-of-type {
+        margin-top: 0;
+    }
 }
 
 .question:after {
-  content: "\002B";
-  font-weight: bold;
-  font-size: 1.5rem;
+    content: "\002B";
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .active:after {
-  content: "\2212";
+    content: "\2212";
 }
 
 .active,
 .active:after,
 .question:hover,
 .question:hover:after {
-  background: darken($color: $color1, $amount: 10%);
-  color: $white;
+    background: darken($color: $color1, $amount: 10%);
+    color: $white;
 }
 
 .answer {
-  padding: 1rem 2rem;
-  background: $color5;
+    padding: 1rem 2rem;
+    background: $color5;
 
-  & ul {
-    margin: 1rem 0;
-  }
+    & ul {
+        margin: 1rem 0;
+    }
 }
 
 /*--------------------------- 8. Form ----*/
 input {
-  width: 100%;
-  height: 2rem;
-  border: none;
-  border-bottom: 1px solid $grey;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-  background: $color5;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid $grey;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    background: $color5;
 
-  &:focus {
-    background: darken($color: $color5, $amount: 10%);
-  }
+    &:focus {
+        background: darken($color: $color5, $amount: 10%);
+    }
 
-  &[type="checkbox"],
-  &[type="checkbox"]:focus {
-    background: transparent;
-  }
+    &[type="checkbox"],
+    &[type="checkbox"]:focus {
+        background: transparent;
+    }
 }
 
 select {
-  @extend input;
+    @extend input;
 }
 
 textarea {
-  @extend input;
-  height: 150px;
-  padding: 0.5rem 1rem;
+    @extend input;
+    height: 150px;
+    padding: 0.5rem 1rem;
 }
 
 button[type="submit"] {
-  width: 100%;
+    width: 100%;
 }
 
 /*---------------------- 8. Checklist ----*/
 .checklist__grid__right input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .checklist__grid__right input[type="checkbox"]:checked + label + p {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 /*--------------------------- 8. Tabs ----*/
 .size-guide__panes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-  & h3 {
-    margin-top: 2rem;
-  }
+    & h3 {
+        margin-top: 2rem;
+    }
 }
 
 .pane {
-  display: none;
+    display: none;
 
-  & img {
-    width: 25rem;
-    height: auto;
-  }
+    & img {
+        width: 25rem;
+        height: auto;
+    }
 }
 
-.pane.pane-active {
-  display: block;
+.pane-active {
+    display: block;
 }
 
 .tab-nav {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(7, 1fr);
-  height: 100%;
-  cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    height: 100%;
+    cursor: pointer;
 }
 
 .tab-item {
-  grid-column: 1 / 2;
-  grid-row: span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  font-weight: bold;
+    grid-column: 1 / 2;
+    grid-row: span 1;
+    font-weight: bold;
 
-  &:hover {
-    background: darken($color: $color3, $amount: 10%);
-  }
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        background: darken($color: $color3, $amount: 10%);
+    }
+}
+
+
+/*------------------------- 8. Cookie Box ----*/
+.cookie {
+    width: 200px;
+    height: 150px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    background: $white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 6px solid $color1;
+    box-shadow: 0 4px 8px 0 $grey;
+
+    & a {
+        color: $color1;
+    }
 }
