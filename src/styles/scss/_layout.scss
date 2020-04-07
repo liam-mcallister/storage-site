@@ -162,7 +162,7 @@
 .size-guide__inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 500px;
+    grid-template-rows: 1fr;
     max-width: $max-width;
     margin: 0 auto;
 }

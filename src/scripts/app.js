@@ -84,6 +84,7 @@ function initMap() {
 
 /*------------------------------------Size Guide----*/
 function tabClick(e) {
+    e.preventDefault();
     let paneActive = document.querySelectorAll('.pane-active');
     for (let i = 0; i < paneActive.length; i++) {
         paneActive[i].className = paneActive[i].className.replace('pane-active', '');
@@ -94,6 +95,11 @@ function tabClick(e) {
 
 const tabNav = document.getElementById('tab-nav');
 tabNav.addEventListener('click', tabClick, false);
+
+
+
+
+
 
 
 

@@ -8,6 +8,10 @@
     font-size: 2rem;
   }
 
+  .size-guide {
+    padding: 4rem 0.5rem;
+  }
+
   .footer__top__left {
     display: flex;
     flex-direction: column;
@@ -291,7 +295,6 @@
     font-size: 6vw;
   }
 }
-
 
 /*--------------------------------------------------------------------------------------*/
 @media print {

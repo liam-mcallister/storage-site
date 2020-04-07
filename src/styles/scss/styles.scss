@@ -123,6 +123,10 @@ small {
 }
 
 /*-- 5.2. Size Guide Section --*/
+.size-guide__inner {
+  border: 2px solid $color3;
+}
+
 .size-guide__tabs {
   background: $color3;
 }

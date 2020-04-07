@@ -346,6 +346,12 @@ button[type="submit"] {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 1rem;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
 
     & h3 {
         margin-top: 2rem;
@@ -354,15 +360,19 @@ button[type="submit"] {
 
 .pane {
     display: none;
-
-    & img {
-        width: 25rem;
-        height: auto;
-    }
 }
 
 .pane-active {
     display: block;
+    background: $white;
+
+    & a {
+        color: $color3;
+    }
+
+    & a:hover {
+        color: $white;
+    }
 }
 
 .tab-nav {

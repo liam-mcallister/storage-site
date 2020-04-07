@@ -224,8 +224,8 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 500px;
-      grid-template-rows: 500px;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1169,6 +1169,12 @@ button[type="submit"], .btn-large[type="submit"] {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin: 1rem;
+}
+
+.size-guide__panes img {
+  width: 100%;
+  height: auto;
 }
 
 .size-guide__panes h3 {
@@ -1179,13 +1185,17 @@ button[type="submit"], .btn-large[type="submit"] {
   display: none;
 }
 
-.pane img {
-  width: 25rem;
-  height: auto;
-}
-
 .pane-active {
   display: block;
+  background: #ffffff;
+}
+
+.pane-active a {
+  color: #345995;
+}
+
+.pane-active a:hover {
+  color: #ffffff;
 }
 
 .tab-nav {
@@ -1336,6 +1346,9 @@ button[type="submit"], .btn-large[type="submit"] {
   }
   h2 {
     font-size: 2rem;
+  }
+  .size-guide {
+    padding: 4rem 0.5rem;
   }
   .footer__top__left {
     display: -webkit-box;
@@ -1776,6 +1789,10 @@ small {
 }
 
 /*-- 5.2. Size Guide Section --*/
+.size-guide__inner {
+  border: 2px solid #345995;
+}
+
 .size-guide__tabs {
   background: #345995;
 }
