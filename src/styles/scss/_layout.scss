@@ -4,13 +4,11 @@
 
 1. Page Templates
     1.1. 12 Column Template
-
 2. Navigation
     2.1. Navbar Top
     2.2. Navbar Bottom
     2.3. Navbar Container
     2.4. Navbar Menu
-
 3. Home Page Sections
     3.1. Hero Section
         3.1.1. Hero
@@ -512,19 +510,28 @@
     margin: 0 auto;
 }
 
-.contact-header {
+.contact__inner-header {
     grid-column: 1 / 4;
     margin-bottom: 2rem;
 }
 
-.contact-form {
+.contact__inner-form {
     grid-column: 1 / 3;
     padding: 2rem;
 }
 
-.contact-info {
+.contact__inner-info {
     grid-column: 3 / 4;
     padding: 2rem;
+
+    & img {
+        margin: 1rem;
+    }
+
+    & ul li {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .contact-map {

@@ -303,7 +303,6 @@ input {
     height: 2rem;
     border: none;
     border-bottom: 1px solid $grey;
-    margin-bottom: 2rem;
     padding-left: 1rem;
     background: $color5;
 
@@ -325,11 +324,30 @@ textarea {
     @extend input;
     height: 150px;
     padding: 0.5rem 1rem;
+    margin: 2rem 0;
 }
 
 button[type="submit"] {
     width: 100%;
 }
+
+.form-error {
+    border-bottom: 1px solid red;
+}
+
+.form-error-msg {
+    color: red;
+}
+
+.quote-form label {
+    margin-top: 2rem;
+}
+
+.contact-form input {
+    margin: 0 0 2rem 0;
+}
+
+
 
 /*---------------------- 8. Checklist ----*/
 .checklist__grid__right input[type="checkbox"]:checked + label {

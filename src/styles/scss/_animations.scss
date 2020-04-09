@@ -1,4 +1,15 @@
-// Hero Background Image Scaling
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
+
+1. Hero Background Image Scaling
+2. Hero Header Fade In
+3. Button Click Press
+
+*/
+
+
+/*--------------1. Hero Background Image Scaling----*/
 @keyframes bg-scale {
     0% {
         transform: scale(1, 1);
@@ -11,22 +22,22 @@
     }
 }
 
-// Button Click Press
-@keyframes btn-translate {
+/*------------------------2. Hero Header Fade In----*/
+@keyframes header-translate {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateX(-100px);
     }
     100% {
         opacity: 1;
     }
 }
 
-// Hero Header Fade In
-@keyframes header-translate {
+/*-------------------------3. Button Click Press----*/
+@keyframes btn-translate {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateY(50px);
     }
     100% {
         opacity: 1;

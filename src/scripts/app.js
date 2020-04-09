@@ -74,14 +74,6 @@ function initMap() {
 
 
 
-
-
-
-
-
-
-
-
 /*------------------------------------Size Guide----*/
 function tabClick(e) {
     e.preventDefault();
@@ -93,14 +85,4 @@ function tabClick(e) {
     document.getElementById(e.target.href.split('#')[1]).className += ' pane-active';
 };
 
-const tabNav = document.getElementById('tab-nav');
-tabNav.addEventListener('click', tabClick, false);
-
-
-
-
-
-
-
-
-/*-------------------------Quote Form Validation----*/
+document.getElementById('tab-nav').addEventListener('click', tabClick, false);

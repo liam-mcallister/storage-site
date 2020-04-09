@@ -77,20 +77,24 @@
         </div>
 
         <div class="quote-form">
-            <form action="post">
+            <form id="quoteForm" novalidate>
                 <div class="quote-form__inner">
                     <div class="left">
                         <label for="firstName">* First Name:</label>
                         <input type="text" id="firstName" />
+                        <small class="form-error-msg" id="firstNameError"></small>
 
                         <label for="lastName">* Last Name:</label>
                         <input type="text" id="lastName" />
+                        <small class="form-error-msg" id="lastNameError"></small>
 
                         <label for="email">* Email:</label>
                         <input type="email" id="email" />
+                        <small class="form-error-msg" id="emailError"></small>
 
                         <label for="phone">* Phone:</label>
                         <input type="tel" id="phone" />
+                        <small class="form-error-msg" id="phoneError"></small>
                     </div>
 
                     <div class="right">
@@ -108,9 +112,10 @@
                             <option value="120sqft">120 square feet</option>
                             <option value="130sqft">130 square feet</option>
                         </select>
+                        <small class="form-error-msg" id="sizesError"></small>
 
                         <label for="how-long">* How long for?</label>
-                        <select name="how-long" id="how-long">
+                        <select name="how-long" id="howLong">
                             <option value="">Please select an option</option>
                             <option value="1-4w">1 to 4 weeks</option>
                             <option value="1-3m">1 to 3 months</option>
@@ -118,15 +123,17 @@
                             <option value="6-12m">6 to 12 months</option>
                             <option value="12+m">12+ months</option>
                         </select>
+                        <small class="form-error-msg" id="howLongError"></small>
 
-                        <label for="date">* When do you need it?</label>
+                        <label for="date">* When do you need storage?</label>
                         <input type="date" id="date" />
+                        <small class="form-error-msg" id="dateError"></small>
                     </div>
                 </div>
 
                 <textarea name="message" id="message" placeholder="Message"></textarea>
 
-                <button type="submit" class="btn">Submit</button>
+                <button type="submit" id="submitForm" class="btn">Submit</button>
             </form>
         </div>
     </div>
@@ -185,6 +192,7 @@
         <![endif]-->
 
     <script src="/src/scripts/app.js" async defer></script>
+    <script src="/src/scripts/validate.js" async defer></script>
 </body>
 
 </html>

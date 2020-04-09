@@ -1,5 +1,5 @@
 @import "variables", "mixins", "layout", "components", "animations",
-  "media-queries";
+    "media-queries";
 
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
@@ -14,10 +14,23 @@
 4. Navigation
     4.1. Navbar Top
     4.2. Navbar Bottom
-    4.3. Navbar Phone
 5. Home Page
     5.1. Hero Section
-    5.2. About Section
+    5.2. Info Section
+    5.3. Size Guide Section
+6. Storage Page
+    6.1. Why Us Section
+    6.2. Flexible Section
+    6.3. Quote Section
+7. Quote Page
+    7.1. Quote Form Section
+8. About Page
+9. Checklist Page
+10. Contact Page
+    10.1. Contact Form Section
+    10.2. Contact Info Section
+11. Error 404 Page
+12. Footer
 
 */
 
@@ -25,164 +38,154 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*------------------------------------- 2. Body ----*/
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  color: $grey;
-  text-rendering: optimizeLegibility;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: $grey;
+    text-rendering: optimizeLegibility;
 }
 
 /*------------------------------------- 3. Text ----*/
-
 /*-- 3.1. Headers --*/
 h1 {
-  font-weight: 900;
-  font-size: 4rem;
-  margin-bottom: 1rem;
+    font-weight: 900;
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
-  @extend h1;
-  font-size: 3rem;
+    @extend h1;
+    font-size: 3rem;
 }
 
 h3 {
-  @extend h1;
-  font-size: 2rem;
+    @extend h1;
+    font-size: 2rem;
 }
 
 .header-top {
-  animation: header-translate 1s linear 1;
+    animation: header-translate 1s linear 1;
 }
 
 .header-middle {
-  @extend .header-top;
+    @extend .header-top;
 }
 
 .header-bottom {
-  @extend .header-top;
+    @extend .header-top;
 }
 
 /*-- 3.2. Paragraph --*/
 p {
-  line-height: 1.5rem;
+    line-height: 1.5rem;
 }
 
 /*-- 3.3. Small --*/
 small {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 /*------------------------------- 4. Navigation ----*/
-
 /*-- 4.1. Navbar Top --*/
 .navbar__top {
-  background: $color1;
-  color: $color4;
+    @include section-theme($color1, $color4);
+
+    & span {
+        color: $white;
+        font-weight: bold;
+    }
 }
 
 /*-- 4.2. Navbar Bottom --*/
 .navbar__bottom {
-  background: $color4;
-  color: $white;
-}
-
-/*-- 4.3. Navbar Phone --*/
-.navbar-inner__phone {
-  color: $white;
-  font-weight: bold;
+    @include section-theme($color4, $white);
 }
 
 /*-------------------------------- 5. Home Page ----*/
-
 /*-- 5.1. Hero Section --*/
 .hero {
-  overflow: hidden;
-  color: $white;
+    overflow: hidden;
+    color: $white;
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient($grey-opac),
-    url("../../images/units.jpg") center center no-repeat;
-  background-size: cover;
-  animation: bg-scale 20s linear infinite;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient($grey-opac),
+        url("../../images/units.jpg") center center no-repeat;
+    background-size: cover;
+    animation: bg-scale 20s linear infinite;
 }
 
 /*-- 5.2. Info Section --*/
 .info {
-  background: $color5;
+    @include section-theme($color5, $grey);
 }
 
-/*-- 5.2. Size Guide Section --*/
+/*-- 5.3. Size Guide Section --*/
 .size-guide__inner {
-  border: 2px solid $color3;
+    border: 2px solid $color3;
 }
 
 .size-guide__tabs {
-  background: $color3;
+    @include section-theme($color3, $white);
 }
 
-/*----------------------- 6. House Storage Page ----*/
+/*----------------------------- 6. Storage Page ----*/
+/*-- 6.1. Why Us Section --*/
 .why-us {
-  background: $color3;
-  color: $white;
+    @include section-theme($color3, $white);
 }
 
+/*-- 6.2. Flexible Section --*/
 .flexible {
-  background: $color3;
-  color: $white;
+    @include section-theme($color3, $white);
 }
 
+/*-- 6.3. Quote Section --*/
 .quote {
-  background: $color5;
+    @include section-theme($color5, $grey);
 }
 
-/*-------------------------------- 5. Quote Page ----*/
+/*------------------------------- 7. Quote Page ----*/
 .quote-form {
-  background: $color5;
+    @include section-theme($color5, $grey);
 }
 
-/*-------------------------------- 5. About Page ----*/
+/*------------------------------- 8. About Page ----*/
 .about__bottom {
-  background: $color5;
+    @include section-theme($color5, $grey);
 }
 
-
-/*-------------------------------- 5. Checklist Page ----*/
+/*--------------------------- 9. Checklist Page ----*/
 .checklist label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-/*-------------------------------- 5. Contact Page ----*/
-.contact-form {
-  background: $color5;
+/*---------------------------- 10. Contact Page ----*/
+/*-- 10.1. Contact Form Section --*/
+.contact__inner-form {
+    @include section-theme($color5, $grey);
 }
 
-.contact-info {
-  background: $color4;
-  color: $white;
+/*-- 10.2. Contact Info Section --*/
+.contact__inner-info {
+    @include section-theme($color4, $white);
 }
 
-
-/*-------------------------------- 5. Error 404 Page ----*/
+/*-------------------------- 11. Error 404 Page ----*/
 .error-404 {
-  background: $color4;
-  color: $white;
+    @include section-theme($color4, $white);
 }
 
-
-
-/*-------------------------------- 5. Footer ----*/
+/*---------------------------------- 12. Footer ----*/
 footer {
-  background: $color4;
-  color: $white;
+    @include section-theme($color4, $white);
 }
