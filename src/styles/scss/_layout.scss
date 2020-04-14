@@ -3,12 +3,13 @@
 ------------------------------------------------------
 
 1. Page Templates
-    1.1. 12 Column Template
+    1.1. 1 Column Template
 2. Navigation
-    2.1. Navbar Top
-    2.2. Navbar Bottom
-    2.3. Navbar Container
-    2.4. Navbar Menu
+    2.1. Navbar
+    2.2. Navbar Top
+    2.3. Navbar Bottom
+    2.4. Navbar Inner
+    2.5. Navbar Menu
 3. Home Page Sections
     3.1. Hero Section
         3.1.1. Hero
@@ -31,19 +32,30 @@
 
 /*--------------------------- 1. Page Templates ----*/
 
-/*-- 1.1. 12 Column Template --*/
+/*-- 1.1. 1 Column Template --*/
 .grid {
     @include grid-template-1;
 }
 
 /*------------------------------- 2. Navigation ----*/
 
-/*-- 2.1. Navbar Top --*/
+/*-- 2.1. Navbar --*/
 .navbar {
     @include grid-col-1;
     padding: 0;
 }
 
+/*-- 2.2. Navbar Top --*/
+.navbar__top {
+    padding: 0.5rem 1rem 0.5rem 1.8rem;
+}
+
+/*-- 2.3. Navbar Bottom --*/
+.navbar__bottom {
+    @extend .navbar__top;
+}
+
+/*-- 2.4. Navbar Inner --*/
 .navbar__inner {
     max-width: $max-width;
     margin: 0 auto;
@@ -52,16 +64,7 @@
     align-items: center;
 }
 
-.navbar__top {
-    padding: 0.5rem 1rem 0.5rem 1.8rem;
-}
-
-/*-- 2.2. Navbar Bottom --*/
-.navbar__bottom {
-    @extend .navbar__top;
-}
-
-/*-- 2.4. Navbar Menu --*/
+/*-- 2.5. Navbar Menu --*/
 .navbar__bottom__nav {
     display: flex;
 }
