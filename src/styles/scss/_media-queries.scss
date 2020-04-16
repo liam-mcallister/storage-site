@@ -1,5 +1,53 @@
-// Extra small devices (portrait phones, less than 576px)
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
+
+1. Less Than Media Queries
+  1.1. Extra Small
+    1.1.1. Headings
+    1.1.2. Size Guide Section
+    1.1.3. Quote Form Section
+    1.1.4. Footer
+  1.2. Small
+    1.2.1. Services Section
+    1.2.2. How It Works Section
+    1.2.3. Info Section
+    1.2.4. Why Us? Section
+    1.2.5. Packing Section
+    1.2.6. Checklist
+  1.3. Medium
+    1.3.1. Burger Button
+    1.3.2. Navigation
+    1.3.3. Info Section
+    1.3.4. Storage Section
+    1.3.5. About Section
+    1.3.6. Flexible Section
+    1.3.7. Contact Section
+    1.3.8. Footer
+  1.4. Large
+    1.4.1. Services Section
+    1.4.2. How It Works Section
+    1.4.3. Packing Section
+    1.4.4. Quote Section
+2. More Than Media Queries
+  2.1. Small
+    2.1.1. Headings
+  2.2. Large
+    2.2.1. Headings
+  2.3. Extra Large
+    2.3.1. Headings
+3. Print Media Query
+
+
+*/
+
+
+/*--------------------1. Less Than Media Queries----*/
+
+// 1.1. Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
+
+  /*-- 1.1.1. Headings --*/
   .hero h1 {
     font-size: 12vw;
   }
@@ -8,10 +56,21 @@
     font-size: 2rem;
   }
 
+  /*-- 1.1.2. Size Guide Section --*/
   .size-guide {
     padding: 4rem 0.5rem;
   }
 
+  /*-- 1.1.3. Quote Form Section --*/
+  .quote-form__inner {
+    display: block;
+  }
+
+  .left {
+    padding-right: 0;
+  }
+
+  /*-- 1.1.4. Footer --*/
   .footer__top__left {
     display: flex;
     flex-direction: column;
@@ -33,22 +92,17 @@
   .footer__top-icon {
     margin: 0;
   }
-
-  .quote-form__inner {
-    display: block;
-  }
-
-  .left {
-    padding-right: 0;
-  }
 }
 
-// Small devices (landscape phones, less than 768px)
+// 1.2. Small devices (landscape phones, less than 768px)
 @media (max-width: 767px) {
+
+  /*-- 1.2.1. Services Section --*/
   .services__inner {
     @include flex-col-center;
   }
 
+  /*-- 1.2.2. How It Works Section --*/
   .how-works__inner {
     @include flex-col-center;
   }
@@ -62,11 +116,13 @@
     }
   }
 
+  /*-- 1.2.3. Info Section --*/
   .info__inner {
     flex-direction: column;
     margin: 0;
   }
 
+  /*-- 1.2.4. Why Us? Section --*/
   .why-us__inner {
     padding: 0;
   }
@@ -80,10 +136,12 @@
     }
   }
 
+  /*-- 1.2.5. Packing Section --*/
   .packing__inner {
     @include flex-col-center;
   }
 
+  /*-- 1.2.6. Checklist --*/
   .checklist {
     padding: 4rem 0;
   }
@@ -101,8 +159,10 @@
   }
 }
 
-// Medium devices (tablets, less than 992px)
+// 1.3. Medium devices (tablets, less than 992px)
 @media (max-width: 991px) {
+
+  /*-- 1.3.1. Burger Button --*/
   .burger-btn {
     display: block;
     z-index: 2;
@@ -147,6 +207,7 @@
     transition: all 0.1s ease-in-out;
   }
 
+  /*-- 1.3.2. Navigation --*/
   .navbar__bottom__nav {
     display: flex;
     flex-direction: column;
@@ -170,6 +231,7 @@
     margin-left: 0;
   }
 
+  /*-- 1.3.3. Info Section --*/
   .info__inner__img {
     grid-column: 1 / 3;
   }
@@ -179,6 +241,7 @@
     margin: 2rem 0 0 0;
   }
 
+  /*-- 1.3.4. Storage Section --*/
   .storage__inner {
     grid-template-columns: 1fr;
   }
@@ -197,6 +260,7 @@
     justify-self: center;
   }
 
+  /*-- 1.3.5. About Section --*/
   .about__info {
     grid-column: 1 / 3;
     margin: 0 0 2rem 0;
@@ -210,6 +274,7 @@
     grid-column: 1 / 3;
   }
 
+  /*-- 1.3.6. Flexible Section --*/
   .flexible__inner__img {
     grid-column: 1 / 3;
   }
@@ -219,6 +284,7 @@
     margin: 1rem 0 0 0;
   }
 
+  /*-- 1.3.7. Contact Section --*/
   .contact__inner-form {
     grid-column: 1 / 4;
   }
@@ -227,6 +293,7 @@
     grid-column: 1 / 4;
   }
 
+  /*-- 1.3.8. Footer --*/
   .footer__top {
     display: flex;
     flex-direction: column;
@@ -243,22 +310,27 @@
   }
 }
 
-// Large devices (desktops, less than 1200px)
+// 1.4. Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
+
+  /*-- 1.4.1. Services Section --*/
   .services__inner {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /*-- 1.4.2. How It Works? Section --*/
   .how-works__inner {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /*-- 1.4.3. Packing Section --*/
   .packing__inner {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     grid-gap: 40px;
   }
 
+  /*-- 1.4.4. Quote Section --*/
   .quote-container {
     display: flex;
     flex-direction: column;
@@ -269,34 +341,38 @@
   }
 }
 
-/*--------------------------------------------------------------------------------------*/
 
-// Small devices (landscape phones, 576px and up)
+/*--------------------2. More Than Media Queries----*/
+
+// 2.1. Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+
+  /*-- 2.1.1. Headings --*/
   .hero h1 {
     font-size: 10vw;
   }
 }
 
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) {
-// }
-
-// Large devices (desktops, 992px and up)
+// 2.2. Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+
+  /*-- 2.2.1. Headings --*/
   .hero h1 {
     font-size: 8vw;
   }
 }
 
-// Extra large devices (large desktops, 1200px and up)
+// 2.3. Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+
+  /*-- 2.3.1. Headings --*/
   .hero h1 {
     font-size: 6vw;
   }
 }
 
-/*--------------------------------------------------------------------------------------*/
+
+/*--------------------3. Print Media Query----*/
 @media print {
   nav,
   header,

@@ -3,49 +3,135 @@
 ------------------------------------------------------
 
 1. Grid Mixins
+  1.1. Grid Template (1 Column)
+  1.2. Grid Template (4 Columns)
+  1.3. 1 Column Layout
 2. Flex Mixins
+  2.1. Space Between / Center
+  2.2. Column / Flex Start
+  2.3. Column / Center
 3. Color Mixin
+  3.1. Background / Font Colors
+
 
 */
 /*--------------------------------1. Grid Mixins----*/
-/*-- Grid Template (1 Column) --*/
-/*-- Grid Template (4 Columns) --*/
-/*--  --*/
+/*-- 1.1. Grid Template (1 Column) --*/
+/*-- 1.2. Grid Template (4 Columns) --*/
+/*-- 1.3. 1 Column Layout --*/
 /*--------------------------------2. Flex Mixins----*/
-/*--  --*/
+/*-- 2.1. Space Between / Center --*/
+/*-- 2.2. Column / Flex Start --*/
+/*-- 2.3. Column / Center --*/
 /*--------------------------------3. Color Mixin----*/
+/*-- 3.1. Background / Font Colors --*/
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
 ------------------------------------------------------
 
 1. Page Templates
-    1.1. 12 Column Template
-2. Navigation
-    2.1. Navbar Top
-    2.2. Navbar Bottom
-    2.3. Navbar Container
-    2.4. Navbar Menu
+    1.1. 1 Column Template
+2. Navigation Section
+    2.1. Navbar
+    2.2. Navbar Top
+    2.3. Navbar Bottom
+    2.4. Navbar Inner
+    2.5. Navbar Menu
 3. Home Page Sections
     3.1. Hero Section
         3.1.1. Hero
-        3.1.2. Hero Container
-        3.1.3. Hero Container Inner
+        3.1.2. Hero Inner
     3.2. Services Section
         3.2.1. Services
-        3.2.2. Services Container
+        3.2.2. Services Inner
     3.3. How It Works Section
         3.3.1. How It Works
-        3.3.2. How It Works Container
-    3.4. About Section
-        3.4.1. About
-        3.4.2. About Container
-        3.4.3. About Image
-        3.4.4. About Info
+        3.3.2. How It Works Inner
+    3.4. Info Section
+        3.4.1. Info
+        3.4.2. Info Inner
+        3.4.3. Info Image
+        3.4.4. Info Text
+    3.5. Size Guide Section
+        3.5.1. Size Guide
+        3.5.2. Size Guide Inner
+        3.5.3. Size Guide Panes
+        3.5.4. Size Guide Tabs
+4. Storage Page Sections
+    4.1. Storage Section
+        4.1.1. Storage
+        4.1.2. Storage Inner
+        4.1.3. Storage Inner Info
+        4.1.4. Storage Inner Image
+    4.2. Why Us? Section
+        4.2.1. Why Us?
+        4.2.2. Why Us? Inner
+        4.2.3. Why Us? Inner Lists
+    4.3. Access Section
+        4.3.1. Access
+    4.4. Flexible Section
+        4.4.1. Flexible
+        4.4.2. Flexible Inner
+        4.4.3. Flexible Inner Image
+        4.4.4. Flexible Inner Info
+    4.5. Security Section
+        4.5.1. Security
+    4.6. Quote Section
+        4.6.1. Quote
+5. FAQ Page Sections
+    5.1. FAQ
+    5.2. FAQ Inner
+6. Quote Page Sections
+    6.1. Quote Container
+    6.2. Quote Info
+    6.3. Quote Form
+    6.4. Quote Form Inner
+    6.5. Left
+    6.6. Right
+7. Packing Supplies Page Sections
+    7.1. Packing
+    7.2. Packing Inner
+8. About Page Sections
+    8.1. About
+    8.2. About Inner
+    8.3. About Top
+    8.4. About Info
+    8.5. About Image
+    8.6. About Middle
+    8.7. About Bottom
+    8.8. About List
+9. Checklist Page Sections
+    9.1. Checklist
+    9.2. Checklist Inner
+    9.3. Checklist Grid
+    9.4. Checklist Grid Left
+    9.5. Checklist Grid Right
+    9.6. Checklist Item Header
+10. Contact Page Sections
+    10.1. Contact
+    10.2. Contact Inner 
+    10.3. Contact Inner Header
+    10.4. Contact Inner Form
+    10.5. Contact Inner Info
+    10.6. Contact Map
+11. Site Map Page Sections
+    11.1. Site Map
+    11.2. Site Map Inner
+12. Error 404 Page Sections
+    12.1. Error 404
+    12.2. Error 404 Inner
+13. Footer Section
+    13.1. Footer
+    13.2. Footer Top
+    13.3. Footer Top Left
+    13.4. Footer Middle
+    13.5. Footer Middle Links
+    13.6. Footer Bottom
 
 
 */
 /*--------------------------- 1. Page Templates ----*/
-/*-- 1.1. 12 Column Template --*/
+/*-- 1.1. 1 Column Template --*/
 .grid {
   display: -ms-grid;
   display: grid;
@@ -53,8 +139,8 @@
       grid-template-columns: 1fr;
 }
 
-/*------------------------------- 2. Navigation ----*/
-/*-- 2.1. Navbar Top --*/
+/*----------------------- 2. Navigation Section ----*/
+/*-- 2.1. Navbar --*/
 .navbar {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -63,6 +149,13 @@
   padding: 0;
 }
 
+/*-- 2.2. Navbar Top --*/
+.navbar__top, .navbar__bottom {
+  padding: 0.5rem 1rem 0.5rem 1.8rem;
+}
+
+/*-- 2.3. Navbar Bottom --*/
+/*-- 2.4. Navbar Inner --*/
 .navbar__inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -77,12 +170,7 @@
           align-items: center;
 }
 
-.navbar__top, .navbar__bottom {
-  padding: 0.5rem 1rem 0.5rem 1.8rem;
-}
-
-/*-- 2.2. Navbar Bottom --*/
-/*-- 2.4. Navbar Menu --*/
+/*-- 2.5. Navbar Menu --*/
 .navbar__bottom__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,7 +189,7 @@
   padding: 0;
 }
 
-/*-- 3.1.2. Hero Container --*/
+/*-- 3.1.2. Hero Inner --*/
 .hero__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,7 +215,7 @@
   padding: 4rem 2rem;
 }
 
-/*-- 3.2.2. Services Container --*/
+/*-- 3.2.2. Services Inner --*/
 .services__inner {
   display: -ms-grid;
   display: grid;
@@ -148,7 +236,7 @@
   padding: 4rem 2rem;
 }
 
-/*-- 3.3.2. How It Works Container --*/
+/*-- 3.3.2. How It Works Inner --*/
 .how-works__inner {
   display: -ms-grid;
   display: grid;
@@ -170,7 +258,7 @@
   padding: 4rem 2rem;
 }
 
-/*-- 3.4.2. Info Container --*/
+/*-- 3.4.2. Info Inner --*/
 .info__inner {
   display: -ms-grid;
   display: grid;
@@ -214,6 +302,7 @@
 }
 
 /*------------------ 3.5. Size Guide Section --*/
+/*-- 3.5.1. Size Guide --*/
 .size-guide {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -221,6 +310,7 @@
   padding: 4rem 2rem;
 }
 
+/*-- 3.5.2. Size Guide Inner --*/
 .size-guide__inner {
   display: -ms-grid;
   display: grid;
@@ -232,6 +322,7 @@
   margin: 0 auto;
 }
 
+/*-- 3.5.3. Size Guide Panes --*/
 .size-guide__panes {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -241,6 +332,7 @@
   grid-row: 1 / 2;
 }
 
+/*-- 3.5.4. Size Guide Tabs --*/
 .size-guide__tabs {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
@@ -250,8 +342,9 @@
   grid-row: 1 / 2;
 }
 
-/*-------------- 4. House Storage Page Sections ----*/
-/*----------------- 4.1. Header Section --*/
+/*-------------------- 4. Storage Page Sections ----*/
+/*----------------- 4.1. Storage Section --*/
+/*-- 4.1.1. Storage --*/
 .storage {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -261,6 +354,7 @@
       justify-self: center;
 }
 
+/*-- 4.1.2. Storage Inner --*/
 .storage__inner {
   display: -ms-grid;
   display: grid;
@@ -271,6 +365,7 @@
   max-width: 1200px;
 }
 
+/*-- 4.1.3. Storage Inner Info --*/
 .storage__inner__info {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -286,6 +381,7 @@
   margin-bottom: 1rem;
 }
 
+/*-- 4.1.4. Storage Inner Image --*/
 .storage__inner__img {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -302,6 +398,7 @@
 }
 
 /*---------------- 4.2. Why Us? Section --*/
+/*-- 4.2.1. Why Us? --*/
 .why-us {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -309,6 +406,7 @@
   padding: 4rem 2rem;
 }
 
+/*-- 4.2.2. Why Us? Inner --*/
 .why-us__inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -318,6 +416,7 @@
   text-align: center;
 }
 
+/*-- 4.2.3. Why Us? Inner Lists --*/
 .why-us__inner__lists {
   display: -ms-grid;
   display: grid;
@@ -337,6 +436,7 @@
 }
 
 /*---------------- 4.3. Access Section --*/
+/*-- 4.3.1. Access --*/
 .access {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -352,6 +452,7 @@
 }
 
 /*---------------- 4.4. Flexible Section --*/
+/*-- 4.4.1. Flexible --*/
 .flexible {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -359,6 +460,7 @@
   padding: 4rem 2rem;
 }
 
+/*-- 4.4.2. Flexible Inner --*/
 .flexible__inner {
   display: -ms-grid;
   display: grid;
@@ -371,6 +473,7 @@
   margin: 0 auto;
 }
 
+/*-- 4.4.3. Flexible Inner Image --*/
 .flexible__inner__img {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -382,6 +485,7 @@
   height: auto;
 }
 
+/*-- 4.4.4. Flexible Inner Info --*/
 .flexible__inner__info {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -398,6 +502,7 @@
 }
 
 /*---------------- 4.5. Security Section --*/
+/*-- 4.5.1. Security --*/
 .security {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -412,6 +517,7 @@
 }
 
 /*---------------- 4.6. Quote Section --*/
+/*-- 4.6.1. Quote --*/
 .quote {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -424,7 +530,8 @@
   margin-bottom: 2rem;
 }
 
-/*------------------------ 4. FAQ Page Sections ----*/
+/*------------------------ 5. FAQ Page Sections ----*/
+/*-- 5.1. FAQ --*/
 .faq {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -432,6 +539,7 @@
   padding: 4rem 2rem;
 }
 
+/*-- 5.2. FAQ Inner --*/
 .faq__inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -441,7 +549,8 @@
   margin-bottom: 4rem;
 }
 
-/*------------------------ 4. Quote Page Sections ----*/
+/*------------------------ 6. Quote Page Sections ----*/
+/*-- 6.1. Quote Container --*/
 .quote-container {
   display: -ms-grid;
   display: grid;
@@ -449,6 +558,7 @@
       grid-template-columns: 1fr 1fr;
 }
 
+/*-- 6.2. Quote Info --*/
 .quote-info {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -461,6 +571,7 @@
   margin-top: 1rem;
 }
 
+/*-- 6.3. Quote Form --*/
 .quote-form {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -468,12 +579,14 @@
   padding: 4rem 2rem;
 }
 
+/*-- 6.4. Quote Form Inner --*/
 .quote-form__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+/*-- 6.5. Left --*/
 .left, .right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -486,12 +599,13 @@
   padding-right: 2rem;
 }
 
+/*-- 6.6. Right --*/
 .right {
   padding-right: 0;
 }
 
-/*----------- 4. Packing Supplies Page Sections ----*/
-/*-- 3.2.1. Packing --*/
+/*----------- 7. Packing Supplies Page Sections ----*/
+/*-- 7.1. Packing --*/
 .packing {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -499,7 +613,7 @@
   padding: 4rem 2rem;
 }
 
-/*-- 3.2.2.  Container --*/
+/*-- 7.2. Packing Inner --*/
 .packing__inner {
   display: -ms-grid;
   display: grid;
@@ -511,7 +625,8 @@
           justify-content: center;
 }
 
-/*---------------------- 4. About Page Sections ----*/
+/*---------------------- 8. About Page Sections ----*/
+/*-- 8.1. About --*/
 .about {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -519,11 +634,13 @@
   padding: 4rem 2rem;
 }
 
+/*-- 8.2. About Inner --*/
 .about__inner {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/*-- 8.3. About Top --*/
 .about__top {
   display: -ms-grid;
   display: grid;
@@ -535,6 +652,7 @@
   margin-bottom: 4rem;
 }
 
+/*-- 8.4. About Info --*/
 .about__info {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -546,6 +664,7 @@
   margin-bottom: 1rem;
 }
 
+/*-- 8.5. About Image --*/
 .about__img {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -559,6 +678,7 @@
   height: auto;
 }
 
+/*-- 8.6. About Middle --*/
 .about__middle {
   margin-top: 4rem;
 }
@@ -576,6 +696,7 @@
   margin-bottom: 0;
 }
 
+/*-- 8.7. About Bottom --*/
 .about__bottom {
   padding: 4rem 2rem;
   text-align: center;
@@ -585,6 +706,7 @@
   margin-bottom: 2rem;
 }
 
+/*-- 8.8. About List --*/
 .about__list {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -593,7 +715,8 @@
       justify-self: center;
 }
 
-/*---------------------- 4. Checklist Page Sections ----*/
+/*------------------ 9. Checklist Page Sections ----*/
+/*-- 9.1. Checklist --*/
 .checklist {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -601,11 +724,13 @@
   padding: 4rem 2rem;
 }
 
+/*-- 9.2. Checklist Inner --*/
 .checklist__inner {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/*-- 9.3. Checklist Grid --*/
 .checklist__grid {
   display: -ms-grid;
   display: grid;
@@ -614,12 +739,14 @@
   margin-top: 2rem;
 }
 
+/*-- 9.4. Checklist Grid Left --*/
 .checklist__grid__left {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
 }
 
+/*-- 9.5. Checklist Grid Right --*/
 .checklist__grid__right {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
@@ -640,6 +767,7 @@
   margin-bottom: 0;
 }
 
+/*-- 9.6. Checklist Item Header --*/
 .checklist__item__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,20 +778,8 @@
   margin-bottom: 1rem;
 }
 
-/*---------------------- 4. Checklist Page Sections ----*/
-.sitemap {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  padding: 4rem 2rem;
-}
-
-.sitemap__inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/*---------------------- 4. Contact Page Sections ----*/
+/*------------------- 10. Contact Page Sections ----*/
+/*-- 10.1. Contact --*/
 .contact {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -671,6 +787,7 @@
   padding: 4rem 2rem;
 }
 
+/*-- 10.2. Contact Inner --*/
 .contact__inner {
   display: -ms-grid;
   display: grid;
@@ -680,6 +797,7 @@
   margin: 0 auto;
 }
 
+/*-- 10.3. Contact Inner Header --*/
 .contact__inner-header {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -687,6 +805,7 @@
   margin-bottom: 2rem;
 }
 
+/*-- 10.4. Contact Inner Form --*/
 .contact__inner-form {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -694,6 +813,7 @@
   padding: 2rem;
 }
 
+/*-- 10.5. Contact Inner Info --*/
 .contact__inner-info {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
@@ -714,12 +834,29 @@
           align-items: center;
 }
 
+/*-- 10.6. Contact Map --*/
 .contact-map {
   width: 100%;
   height: 500px;
 }
 
-/*---------------------- 4. Error 404 Page Sections ----*/
+/*------------------ 11. Site Map Page Sections ----*/
+/*-- 11.1. Site Map --*/
+.sitemap {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  padding: 4rem 2rem;
+}
+
+/*-- 11.2. Site Map Inner --*/
+.sitemap__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*----------------- 12. Error 404 Page Sections ----*/
+/*-- 12.1. Error 404 --*/
 .error-404 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -735,6 +872,7 @@
   text-align: center;
 }
 
+/*-- 12.2. Error 404 Inner --*/
 .error-404__inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -744,7 +882,8 @@
   margin: 2rem 0;
 }
 
-/*----------------------------------- ?. Footer ----*/
+/*-------------------------- 13. Footer Section ----*/
+/*-- 13.1. Footer --*/
 .footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -752,7 +891,7 @@
   padding: 4rem 2rem;
 }
 
-/*--------------------- ?.?. Footer Top --*/
+/*-- 13.2. Footer Top --*/
 .footer__top, .footer__middle, .footer__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -767,7 +906,7 @@
   margin: 0 auto;
 }
 
-/*-- ?.?.?. Footer Top Left --*/
+/*-- 13.3. Footer Top Left --*/
 .footer__top__left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -785,12 +924,12 @@
   margin-right: 0.8rem;
 }
 
-/*------------------ ?.?. Footer Middle --*/
+/*-- 13.4. Footer Middle --*/
 .footer__middle {
   padding: 4rem 0;
 }
 
-/*-- ?.?.?. Footer Middle Links --*/
+/*-- 13.5. Footer Middle Links --*/
 .footer__middle__links {
   margin-left: 2rem;
 }
@@ -811,27 +950,75 @@
   text-decoration: underline;
 }
 
-/*------------------ ?.?. Footer Bottom --*/
+/*-- 13.6. Footer Bottom --*/
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
 ------------------------------------------------------
 
 1. Links
-    1.1. Nav Links
+    1.1. General Links 
+    1.1. Navigation Links
 2.Buttons
-    2.1. Nav Button
-    2.2. Burger Button
+    2.1. General Button
+    2.2. Large Button
+    2.3. Navigation Button
+    2.4. Burger Button
+    2.5. To Top Button
 3. Logo
+4. Cards
+    4.1. Card
+    4.2. Card Image
+    4.3. Card Caption
+    4.4. Card Caption Header
+    4.5. Packing Card
+5. Horizontal Rule
+    5.1. General Hr
+    5.2. Checklist Hr
+6. Icons
+7. Items
+    7.1. Item
+    7.2. Item Header
+    7.3. Item Content
+    7.4. Item Image
+8. Lists
+    8.1. List Items
+    8.2. About List
+    8.3. Site Map List
+9. Accordians
+    9.1. Accordian
+    9.2. Question
+    9.3. Active
+    9.4. Answer
+10. Forms
+    10.1. Input
+    10.2. Select
+    10.3. Textarea
+    10.4. Submit Button
+    10.5. Form Error
+    10.6. Form Error message
+    10.7. Quote Form Label
+    10.8. Contact Form Input
+11. Checklists
+    11.1. Checklist Grid Right Label
+    11.2. Checklist Grid Right Paragraph
+12. Tabs
+    12.1. Size Guide Panes
+    12.2. Pane
+    12.3. Active Pane
+    12.4. Tab Navigation
+    12.5. Tab Item
+13. Cookie Box
 
 */
 /*------------------------------------ 1. Links ----*/
+/*-- 1.1. General Links --*/
 a {
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
 }
 
-/*-- 1.1. Nav Links --*/
+/*-- 1.2. Navigation Links --*/
 .nav-link {
   padding: 1rem;
   text-transform: uppercase;
@@ -844,7 +1031,8 @@ a {
   background: #ffffff;
 }
 
-/*---------------------------------- 1. Buttons ----*/
+/*---------------------------------- 2. Buttons ----*/
+/*-- 2.1. General Button --*/
 .btn {
   display: inline-block;
   border: none;
@@ -867,7 +1055,7 @@ a {
           transform: translateY(3px);
 }
 
-/*-- 2.1. Large Button --*/
+/*-- 2.2. Large Button --*/
 .btn-large {
   margin-top: 2rem;
   padding: 1.5rem 2rem;
@@ -875,12 +1063,12 @@ a {
           animation: btn-translate 1s linear 1;
 }
 
-/*-- 2.1. Nav Button --*/
+/*-- 2.3. Navigation Button --*/
 .nav__btn {
   margin-left: 1.5rem;
 }
 
-/*-- 2.2. Burger Button --*/
+/*-- 2.4. Burger Button --*/
 .burger-btn {
   display: none;
   height: 30px;
@@ -894,7 +1082,7 @@ a {
   outline: none;
 }
 
-/*-- To Top Button --*/
+/*-- 2.5. To Top Button --*/
 .btn-to-top {
   display: none;
   position: fixed;
@@ -911,7 +1099,8 @@ a {
   height: auto;
 }
 
-/*------------------------------------ 5. Cards ----*/
+/*------------------------------------ 4. Cards ----*/
+/*-- 4.1. Card --*/
 .card {
   height: auto;
   width: 100%;
@@ -935,6 +1124,7 @@ a {
   color: #ffffff;
 }
 
+/*-- 4.2. Card Image --*/
 .card__img {
   overflow: hidden;
 }
@@ -944,16 +1134,19 @@ a {
   height: auto;
 }
 
+/*-- 4.3. Card Caption --*/
 .card__caption {
   padding: 1.2rem;
   color: #353535;
 }
 
+/*-- 4.4. Card Caption Header --*/
 .card__caption__header {
   margin-bottom: 1rem;
   font-weight: normal;
 }
 
+/*-- 4.5. Packing Card --*/
 .card--packing {
   cursor: default;
   -webkit-box-shadow: none;
@@ -978,7 +1171,8 @@ a {
   color: #353535;
 }
 
-/*-------------------------- 6. Horizontal Rule ----*/
+/*-------------------------- 5. Horizontal Rule ----*/
+/*-- 5.1. General Hr --*/
 hr {
   grid-column: span 12;
   width: 80%;
@@ -986,12 +1180,13 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.178);
 }
 
+/*-- 5.2. Checklist Hr --*/
 .checklist__hr {
   width: 100%;
   margin: 2rem 0;
 }
 
-/*-------------------------- 7. Icons ----*/
+/*------------------------------------ 6. Icons ----*/
 .footer__top-icon {
   width: 50px;
   height: 50px;
@@ -1002,7 +1197,8 @@ hr {
   margin-left: 0;
 }
 
-/*-------------------------- 8. Item ----*/
+/*------------------------------------ 7. Items ----*/
+/*-- 7.1. Item --*/
 .item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1027,12 +1223,14 @@ hr {
   border-radius: 0 10rem 10rem 10rem;
 }
 
+/*-- 7.2. Item Header --*/
 .item__header {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
+/*-- 7.3. Item Content --*/
 .item__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1057,21 +1255,25 @@ hr {
   border-radius: 10rem;
 }
 
+/*-- 7.4. Item Image --*/
 .item__img {
   width: 100px;
   height: auto;
   margin-bottom: 1rem;
 }
 
-/*-------------------------- 8. Lists ----*/
+/*------------------------------------ 8. Lists ----*/
+/*-- 8.1. List Items --*/
 li {
   line-height: 1.3rem;
 }
 
+/*-- 8.2. About List --*/
 .about__list li {
   list-style: disc;
 }
 
+/*-- 8.3. Site Map List --*/
 .sitemap__list a {
   color: #353535;
   line-height: 3rem;
@@ -1082,13 +1284,15 @@ li {
   color: #d7075d;
 }
 
-/*---------------------- 8. Accordian ----*/
+/*------------------------------- 9. Accordians ----*/
+/*-- 9.1. Accordian --*/
 .accordian {
   max-width: 1200px;
   margin: 0 auto;
   color: #ffffff;
 }
 
+/*-- 9.2. Question --*/
 .question {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1114,6 +1318,7 @@ li {
   font-size: 1.5rem;
 }
 
+/*-- 9.3. Active --*/
 .active:after {
   content: "\2212";
 }
@@ -1126,6 +1331,7 @@ li {
   color: #ffffff;
 }
 
+/*-- 9.4. Answer --*/
 .answer {
   padding: 1rem 2rem;
   background: #89aae6;
@@ -1135,7 +1341,8 @@ li {
   margin: 1rem 0;
 }
 
-/*--------------------------- 8. Form ----*/
+/*----------------------------------- 10. Forms ----*/
+/*-- 10.1. Input --*/
 input, select, textarea {
   width: 100%;
   height: 2rem;
@@ -1153,42 +1360,52 @@ input[type="checkbox"], select[type="checkbox"], textarea[type="checkbox"], inpu
   background: transparent;
 }
 
+/*-- 10.2. Select --*/
+/*-- 10.3. Textarea --*/
 textarea {
   height: 150px;
   padding: 0.5rem 1rem;
   margin: 2rem 0;
 }
 
+/*-- 10.4. Submit Button --*/
 button[type="submit"], .btn-large[type="submit"] {
   width: 100%;
 }
 
+/*-- 10.5. Form Error --*/
 .form-error {
   border-bottom: 1px solid red;
 }
 
+/*-- 10.6. Form Error Message --*/
 .form-error-msg {
   color: red;
 }
 
+/*-- 10.7. Quote Form Label --*/
 .quote-form label {
   margin-top: 2rem;
 }
 
+/*-- 10.8. Contact Form Input --*/
 .contact-form input, .contact-form select, .contact-form textarea {
   margin: 0 0 2rem 0;
 }
 
-/*---------------------- 8. Checklist ----*/
+/*------------------------------ 11. Checklists ----*/
+/*-- 11.1. Checklist Grid Right Label --*/
 .checklist__grid__right input[type="checkbox"]:checked + label, .checklist__grid__right select[type="checkbox"]:checked + label, .checklist__grid__right textarea[type="checkbox"]:checked + label {
   text-decoration: line-through;
 }
 
+/*-- 11.2. Checklist Grid Right Paragraph --*/
 .checklist__grid__right input[type="checkbox"]:checked + label + p, .checklist__grid__right select[type="checkbox"]:checked + label + p, .checklist__grid__right textarea[type="checkbox"]:checked + label + p {
   text-decoration: line-through;
 }
 
-/*--------------------------- 8. Tabs ----*/
+/*------------------------------------ 12. Tabs ----*/
+/*-- 12.1. Size Guide Panes --*/
 .size-guide__panes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1212,10 +1429,12 @@ button[type="submit"], .btn-large[type="submit"] {
   margin-top: 2rem;
 }
 
+/*-- 12.2. Pane --*/
 .pane {
   display: none;
 }
 
+/*-- 12.3. Active Pane --*/
 .pane-active {
   display: block;
   background: #ffffff;
@@ -1229,6 +1448,7 @@ button[type="submit"], .btn-large[type="submit"] {
   color: #ffffff;
 }
 
+/*-- 12.4. Tab Navigation --*/
 .tab-nav {
   display: -ms-grid;
   display: grid;
@@ -1240,6 +1460,7 @@ button[type="submit"], .btn-large[type="submit"] {
   cursor: pointer;
 }
 
+/*-- 12.5. Tab Item --*/
 .tab-item {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -1266,7 +1487,7 @@ button[type="submit"], .btn-large[type="submit"] {
   background: #27426f;
 }
 
-/*------------------------- 8. Cookie Box ----*/
+/*------------------------------ 13. Cookie Box ----*/
 .cookie {
   width: 200px;
   height: 150px;
@@ -1303,7 +1524,7 @@ button[type="submit"], .btn-large[type="submit"] {
 
 1. Hero Background Image Scaling
 2. Hero Header Fade In
-3. Button Click Press
+3. Button Click
 
 */
 /*--------------1. Hero Background Image Scaling----*/
@@ -1358,7 +1579,7 @@ button[type="submit"], .btn-large[type="submit"] {
   }
 }
 
-/*-------------------------3. Button Click Press----*/
+/*-------------------------------3. Button Click----*/
 @-webkit-keyframes btn-translate {
   0% {
     opacity: 0;
@@ -1380,16 +1601,69 @@ button[type="submit"], .btn-large[type="submit"] {
   }
 }
 
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
+
+1. Less Than Media Queries
+  1.1. Extra Small
+    1.1.1. Headings
+    1.1.2. Size Guide Section
+    1.1.3. Quote Form Section
+    1.1.4. Footer
+  1.2. Small
+    1.2.1. Services Section
+    1.2.2. How It Works Section
+    1.2.3. Info Section
+    1.2.4. Why Us? Section
+    1.2.5. Packing Section
+    1.2.6. Checklist
+  1.3. Medium
+    1.3.1. Burger Button
+    1.3.2. Navigation
+    1.3.3. Info Section
+    1.3.4. Storage Section
+    1.3.5. About Section
+    1.3.6. Flexible Section
+    1.3.7. Contact Section
+    1.3.8. Footer
+  1.4. Large
+    1.4.1. Services Section
+    1.4.2. How It Works Section
+    1.4.3. Packing Section
+    1.4.4. Quote Section
+2. More Than Media Queries
+  2.1. Small
+    2.1.1. Headings
+  2.2. Large
+    2.2.1. Headings
+  2.3. Extra Large
+    2.3.1. Headings
+3. Print Media Query
+
+
+*/
+/*--------------------1. Less Than Media Queries----*/
 @media (max-width: 575px) {
+  /*-- 1.1.1. Headings --*/
   .hero h1, .hero h2, .hero h3 {
     font-size: 12vw;
   }
   h2 {
     font-size: 2rem;
   }
+  /*-- 1.1.2. Size Guide Section --*/
   .size-guide {
     padding: 4rem 0.5rem;
   }
+  /*-- 1.1.3. Quote Form Section --*/
+  .quote-form__inner {
+    display: block;
+  }
+  .left, .right {
+    padding-right: 0;
+  }
+  /*-- 1.1.4. Footer --*/
   .footer__top__left {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1412,15 +1686,10 @@ button[type="submit"], .btn-large[type="submit"] {
   .footer__top-icon {
     margin: 0;
   }
-  .quote-form__inner {
-    display: block;
-  }
-  .left, .right {
-    padding-right: 0;
-  }
 }
 
 @media (max-width: 767px) {
+  /*-- 1.2.1. Services Section --*/
   .services__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1433,6 +1702,7 @@ button[type="submit"], .btn-large[type="submit"] {
         -ms-flex-align: center;
             align-items: center;
   }
+  /*-- 1.2.2. How It Works Section --*/
   .how-works__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1452,6 +1722,7 @@ button[type="submit"], .btn-large[type="submit"] {
   .how-works h2 {
     margin: 0 2rem;
   }
+  /*-- 1.2.3. Info Section --*/
   .info__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1459,6 +1730,7 @@ button[type="submit"], .btn-large[type="submit"] {
             flex-direction: column;
     margin: 0;
   }
+  /*-- 1.2.4. Why Us? Section --*/
   .why-us__inner {
     padding: 0;
   }
@@ -1469,6 +1741,7 @@ button[type="submit"], .btn-large[type="submit"] {
   .why-us__inner__lists ul {
     padding: 0;
   }
+  /*-- 1.2.5. Packing Section --*/
   .packing__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1481,6 +1754,7 @@ button[type="submit"], .btn-large[type="submit"] {
         -ms-flex-align: center;
             align-items: center;
   }
+  /*-- 1.2.6. Checklist --*/
   .checklist {
     padding: 4rem 0;
   }
@@ -1499,6 +1773,7 @@ button[type="submit"], .btn-large[type="submit"] {
 }
 
 @media (max-width: 991px) {
+  /*-- 1.3.1. Burger Button --*/
   .burger-btn {
     display: block;
     z-index: 2;
@@ -1542,6 +1817,7 @@ button[type="submit"], .btn-large[type="submit"] {
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
   }
+  /*-- 1.3.2. Navigation --*/
   .navbar__bottom__nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1572,6 +1848,7 @@ button[type="submit"], .btn-large[type="submit"] {
   .nav__btn {
     margin-left: 0;
   }
+  /*-- 1.3.3. Info Section --*/
   .info__inner__img {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -1583,6 +1860,7 @@ button[type="submit"], .btn-large[type="submit"] {
     grid-column: 1 / 3;
     margin: 2rem 0 0 0;
   }
+  /*-- 1.3.4. Storage Section --*/
   .storage__inner {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1603,6 +1881,7 @@ button[type="submit"], .btn-large[type="submit"] {
     -ms-grid-column-align: center;
         justify-self: center;
   }
+  /*-- 1.3.5. About Section --*/
   .about__info {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -1619,6 +1898,7 @@ button[type="submit"], .btn-large[type="submit"] {
     -ms-grid-column-span: 2;
     grid-column: 1 / 3;
   }
+  /*-- 1.3.6. Flexible Section --*/
   .flexible__inner__img {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -1630,6 +1910,7 @@ button[type="submit"], .btn-large[type="submit"] {
     grid-column: 1 / 3;
     margin: 1rem 0 0 0;
   }
+  /*-- 1.3.7. Contact Section --*/
   .contact__inner-form {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -1640,6 +1921,7 @@ button[type="submit"], .btn-large[type="submit"] {
     -ms-grid-column-span: 3;
     grid-column: 1 / 4;
   }
+  /*-- 1.3.8. Footer --*/
   .footer__top, .footer__middle, .footer__bottom {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1662,20 +1944,24 @@ button[type="submit"], .btn-large[type="submit"] {
 }
 
 @media (max-width: 1199px) {
+  /*-- 1.4.1. Services Section --*/
   .services__inner {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  /*-- 1.4.2. How It Works? Section --*/
   .how-works__inner {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  /*-- 1.4.3. Packing Section --*/
   .packing__inner {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     grid-gap: 40px;
   }
+  /*-- 1.4.4. Quote Section --*/
   .quote-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1690,26 +1976,29 @@ button[type="submit"], .btn-large[type="submit"] {
   }
 }
 
-/*--------------------------------------------------------------------------------------*/
+/*--------------------2. More Than Media Queries----*/
 @media (min-width: 576px) {
+  /*-- 2.1.1. Headings --*/
   .hero h1, .hero h2, .hero h3 {
     font-size: 10vw;
   }
 }
 
 @media (min-width: 992px) {
+  /*-- 2.2.1. Headings --*/
   .hero h1, .hero h2, .hero h3 {
     font-size: 8vw;
   }
 }
 
 @media (min-width: 1200px) {
+  /*-- 2.3.1. Headings --*/
   .hero h1, .hero h2, .hero h3 {
     font-size: 6vw;
   }
 }
 
-/*--------------------------------------------------------------------------------------*/
+/*--------------------3. Print Media Query----*/
 @media print {
   nav,
   header,

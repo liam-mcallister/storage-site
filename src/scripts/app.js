@@ -1,5 +1,20 @@
-/*------------------------------------Cookie Box----*/
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
+
+1. Cookie Box
+2. Back To Top Button
+3. FAQ Accordian
+4. Google Maps
+5. Size Guide
+
+
+*/
+
+
+/*---------------------------------1. Cookie Box----*/
 (function () {
+    // If the cookieAccept key can't be found in local storage, display the Cookie Box
     if (!localStorage.getItem('cookieAccept')) {
         document.body.innerHTML += '\
 		<div id="cookie" class="cookie">\
@@ -8,6 +23,7 @@
 		</div>\
         ';
 
+        // When the OK button is clicked, add the cookieAccept key to local storage and remove the Cookie Box
         function cookieClick(e) {
             e.preventDefault();
             document.getElementById('cookie').style.display = 'none';
@@ -19,10 +35,11 @@
 })();
 
 
-
-/*----------------------------Back To Top Button----*/
+/*-------------------------2. Back To Top Button----*/
 const btnToTop = document.getElementById('btn-to-top');
 
+// When page is scrolled more then 100 pixels from the top, display the to top button
+// Otherwise don't display the button
 window.addEventListener('scroll', function () {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         btnToTop.style.display = 'block';
@@ -31,6 +48,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// When the To Top button is clicked, scroll smoothly to the top of the page
 btnToTop.addEventListener('click', function () {
     window.scrollTo({
         top: 0,
@@ -39,15 +57,18 @@ btnToTop.addEventListener('click', function () {
 });
 
 
-
-/*---------------------------------FAQ Accordian----*/
+/*------------------------------3. FAQ Accordian----*/
 const faqQuestion = document.querySelectorAll('.question');
 const faqAnswer = document.querySelectorAll('.answer');
 
+// Loop through all the FAQ Answer elements and hide them
 for (let i = 0; i < faqAnswer.length; i++) {
     faqAnswer[i].style.display = 'none';
 }
 
+// Loop through all the FAQ Question elements
+// When a question element is clicked, if the next answer element is displayed, hide it
+// Otherwise show it when the question element is clicked
 for (let i = 0; i < faqQuestion.length; i++) {
     faqQuestion[i].addEventListener('click', function () {
         this.classList.toggle("active");
@@ -61,26 +82,33 @@ for (let i = 0; i < faqQuestion.length; i++) {
 }
 
 
-
-/*-----------------------------------Google Maps----*/
+/*--------------------------------4. Google Maps----*/
 function initMap() {
+    // Store coordinates in a variable
     const belfast = { lat: 54.607868, lng: -5.926437 };
+
+    // Create a map in the contact-map element, zoomed and centered to our coordinates
     const map = new google.maps.Map(document.getElementById('contact-map'), {
         zoom: 15,
         center: belfast
     });
+
+    // Display a marker on our coordinates
     const marker = new google.maps.Marker({ position: belfast, map: map });
 };
 
 
-
-/*------------------------------------Size Guide----*/
+/*---------------------------------5. Size Guide----*/
 function tabClick(e) {
     e.preventDefault();
     let paneActive = document.querySelectorAll('.pane-active');
+
+    // Loop through all active panes and remove the pane-active class
     for (let i = 0; i < paneActive.length; i++) {
         paneActive[i].className = paneActive[i].className.replace('pane-active', '');
     }
+
+    // Add the pane-active class to the clicked tab and related pane
     e.target.parentElement.className += ' pane-active';
     document.getElementById(e.target.href.split('#')[1]).className += ' pane-active';
 };

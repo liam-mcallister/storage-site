@@ -3,23 +3,71 @@
 ------------------------------------------------------
 
 1. Links
-    1.1. Nav Links
+    1.1. General Links 
+    1.1. Navigation Links
 2.Buttons
-    2.1. Nav Button
-    2.2. Burger Button
+    2.1. General Button
+    2.2. Large Button
+    2.3. Navigation Button
+    2.4. Burger Button
+    2.5. To Top Button
 3. Logo
+4. Cards
+    4.1. Card
+    4.2. Card Image
+    4.3. Card Caption
+    4.4. Card Caption Header
+    4.5. Packing Card
+5. Horizontal Rule
+    5.1. General Hr
+    5.2. Checklist Hr
+6. Icons
+7. Items
+    7.1. Item
+    7.2. Item Header
+    7.3. Item Content
+    7.4. Item Image
+8. Lists
+    8.1. List Items
+    8.2. About List
+    8.3. Site Map List
+9. Accordians
+    9.1. Accordian
+    9.2. Question
+    9.3. Active
+    9.4. Answer
+10. Forms
+    10.1. Input
+    10.2. Select
+    10.3. Textarea
+    10.4. Submit Button
+    10.5. Form Error
+    10.6. Form Error message
+    10.7. Quote Form Label
+    10.8. Contact Form Input
+11. Checklists
+    11.1. Checklist Grid Right Label
+    11.2. Checklist Grid Right Paragraph
+12. Tabs
+    12.1. Size Guide Panes
+    12.2. Pane
+    12.3. Active Pane
+    12.4. Tab Navigation
+    12.5. Tab Item
+13. Cookie Box
 
 */
 
 /*------------------------------------ 1. Links ----*/
 
+/*-- 1.1. General Links --*/
 a {
     text-decoration: none;
     color: $white;
     cursor: pointer;
 }
 
-/*-- 1.1. Nav Links --*/
+/*-- 1.2. Navigation Links --*/
 .nav-link {
     padding: 1rem;
     text-transform: uppercase;
@@ -32,7 +80,9 @@ a {
     }
 }
 
-/*---------------------------------- 1. Buttons ----*/
+/*---------------------------------- 2. Buttons ----*/
+
+/*-- 2.1. General Button --*/
 .btn {
     display: inline-block;
     border: none;
@@ -54,7 +104,7 @@ a {
     }
 }
 
-/*-- 2.1. Large Button --*/
+/*-- 2.2. Large Button --*/
 .btn-large {
     @extend button;
     margin-top: 2rem;
@@ -62,12 +112,12 @@ a {
     animation: btn-translate 1s linear 1;
 }
 
-/*-- 2.1. Nav Button --*/
+/*-- 2.3. Navigation Button --*/
 .nav__btn {
     margin-left: 1.5rem;
 }
 
-/*-- 2.2. Burger Button --*/
+/*-- 2.4. Burger Button --*/
 .burger-btn {
     display: none;
     height: 30px;
@@ -83,7 +133,7 @@ a {
     }
 }
 
-/*-- To Top Button --*/
+/*-- 2.5. To Top Button --*/
 .btn-to-top {
     display: none;
     position: fixed;
@@ -100,8 +150,9 @@ a {
     height: auto;
 }
 
-/*------------------------------------ 5. Cards ----*/
+/*------------------------------------ 4. Cards ----*/
 
+/*-- 4.1. Card --*/
 .card {
     height: auto;
     width: 100%;
@@ -120,25 +171,29 @@ a {
     }
 }
 
+/*-- 4.2. Card Image --*/
 .card__img {
     overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
 }
 
-.card__img img {
-    width: 100%;
-    height: auto;
-}
-
+/*-- 4.3. Card Caption --*/
 .card__caption {
     padding: 1.2rem;
     color: $grey;
 }
 
+/*-- 4.4. Card Caption Header --*/
 .card__caption__header {
     margin-bottom: 1rem;
     font-weight: normal;
 }
 
+/*-- 4.5. Packing Card --*/
 .card--packing {
     cursor: default;
     box-shadow: none;
@@ -161,7 +216,9 @@ a {
     }
 }
 
-/*-------------------------- 6. Horizontal Rule ----*/
+/*-------------------------- 5. Horizontal Rule ----*/
+
+/*-- 5.1. General Hr --*/
 hr {
     grid-column: span 12;
     width: 80%;
@@ -169,12 +226,13 @@ hr {
     border-top: 1px solid rgba(0, 0, 0, 0.178);
 }
 
+/*-- 5.2. Checklist Hr --*/
 .checklist__hr {
     width: 100%;
     margin: 2rem 0;
 }
 
-/*-------------------------- 7. Icons ----*/
+/*------------------------------------ 6. Icons ----*/
 .footer__top-icon {
     width: 50px;
     height: 50px;
@@ -185,7 +243,9 @@ hr {
     }
 }
 
-/*-------------------------- 8. Item ----*/
+/*------------------------------------ 7. Items ----*/
+
+/*-- 7.1. Item --*/
 .item {
     display: flex;
     flex-direction: column;
@@ -201,12 +261,14 @@ hr {
     border-radius: 0 10rem 10rem 10rem;
 }
 
+/*-- 7.2. Item Header --*/
 .item__header {
     position: absolute;
     top: 10px;
     left: 10px;
 }
 
+/*-- 7.3. Item Content --*/
 .item__content {
     display: flex;
     flex-direction: column;
@@ -222,21 +284,26 @@ hr {
     border-radius: 10rem;
 }
 
+/*-- 7.4. Item Image --*/
 .item__img {
     width: 100px;
     height: auto;
     margin-bottom: 1rem;
 }
 
-/*-------------------------- 8. Lists ----*/
+/*------------------------------------ 8. Lists ----*/
+
+/*-- 8.1. List Items --*/
 li {
     line-height: 1.3rem;
 }
 
+/*-- 8.2. About List --*/
 .about__list li {
     list-style: disc;
 }
 
+/*-- 8.3. Site Map List --*/
 .sitemap__list a {
     color: $grey;
     line-height: 3rem;
@@ -247,14 +314,16 @@ li {
     }
 }
 
-/*---------------------- 8. Accordian ----*/
+/*------------------------------- 9. Accordians ----*/
 
+/*-- 9.1. Accordian --*/
 .accordian {
     max-width: $max-width;
     margin: 0 auto;
     color: $white;
 }
 
+/*-- 9.2. Question --*/
 .question {
     display: flex;
     justify-content: space-between;
@@ -276,6 +345,7 @@ li {
     font-size: 1.5rem;
 }
 
+/*-- 9.3. Active --*/
 .active:after {
     content: "\2212";
 }
@@ -288,6 +358,7 @@ li {
     color: $white;
 }
 
+/*-- 9.4. Answer --*/
 .answer {
     padding: 1rem 2rem;
     background: $color5;
@@ -297,7 +368,9 @@ li {
     }
 }
 
-/*--------------------------- 8. Form ----*/
+/*----------------------------------- 10. Forms ----*/
+
+/*-- 10.1. Input --*/
 input {
     width: 100%;
     height: 2rem;
@@ -316,10 +389,12 @@ input {
     }
 }
 
+/*-- 10.2. Select --*/
 select {
     @extend input;
 }
 
+/*-- 10.3. Textarea --*/
 textarea {
     @extend input;
     height: 150px;
@@ -327,38 +402,47 @@ textarea {
     margin: 2rem 0;
 }
 
+/*-- 10.4. Submit Button --*/
 button[type="submit"] {
     width: 100%;
 }
 
+/*-- 10.5. Form Error --*/
 .form-error {
     border-bottom: 1px solid red;
 }
 
+/*-- 10.6. Form Error Message --*/
 .form-error-msg {
     color: red;
 }
 
+/*-- 10.7. Quote Form Label --*/
 .quote-form label {
     margin-top: 2rem;
 }
 
+/*-- 10.8. Contact Form Input --*/
 .contact-form input {
     margin: 0 0 2rem 0;
 }
 
 
+/*------------------------------ 11. Checklists ----*/
 
-/*---------------------- 8. Checklist ----*/
+/*-- 11.1. Checklist Grid Right Label --*/
 .checklist__grid__right input[type="checkbox"]:checked + label {
     text-decoration: line-through;
 }
 
+/*-- 11.2. Checklist Grid Right Paragraph --*/
 .checklist__grid__right input[type="checkbox"]:checked + label + p {
     text-decoration: line-through;
 }
 
-/*--------------------------- 8. Tabs ----*/
+/*------------------------------------ 12. Tabs ----*/
+
+/*-- 12.1. Size Guide Panes --*/
 .size-guide__panes {
     display: flex;
     justify-content: center;
@@ -376,10 +460,12 @@ button[type="submit"] {
     }
 }
 
+/*-- 12.2. Pane --*/
 .pane {
     display: none;
 }
 
+/*-- 12.3. Active Pane --*/
 .pane-active {
     display: block;
     background: $white;
@@ -393,6 +479,7 @@ button[type="submit"] {
     }
 }
 
+/*-- 12.4. Tab Navigation --*/
 .tab-nav {
     display: grid;
     grid-template-columns: 1fr;
@@ -401,6 +488,7 @@ button[type="submit"] {
     cursor: pointer;
 }
 
+/*-- 12.5. Tab Item --*/
 .tab-item {
     grid-column: 1 / 2;
     grid-row: span 1;
@@ -420,7 +508,7 @@ button[type="submit"] {
 }
 
 
-/*------------------------- 8. Cookie Box ----*/
+/*------------------------------ 13. Cookie Box ----*/
 .cookie {
     width: 200px;
     height: 150px;
