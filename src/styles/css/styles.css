@@ -120,13 +120,16 @@
 12. Error 404 Page Sections
     12.1. Error 404
     12.2. Error 404 Inner
-13. Footer Section
-    13.1. Footer
-    13.2. Footer Top
-    13.3. Footer Top Left
-    13.4. Footer Middle
-    13.5. Footer Middle Links
-    13.6. Footer Bottom
+13. Cookie Policy Page Sections
+    13.1. Cookie Policy
+    13.2. Cookie Policy Inner
+14. Footer Section
+    14.1. Footer
+    14.2. Footer Top
+    14.3. Footer Top Left
+    14.4. Footer Middle
+    14.5. Footer Middle Links
+    14.6. Footer Bottom
 
 
 */
@@ -390,10 +393,11 @@
       justify-self: end;
   -webkit-clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
           clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
+  overflow: hidden;
 }
 
 .storage__inner__img img {
-  width: auto;
+  width: 100%;
   height: 100%;
 }
 
@@ -430,7 +434,7 @@
 }
 
 .why-us__inner__lists ul li {
-  background: url("../../images/custom-icons/email.svg") no-repeat;
+  background: url("../../images/custom-icons/thumb.svg") no-repeat;
   background-position: left center;
   padding: 10px 10px 10px 40px;
 }
@@ -882,8 +886,35 @@
   margin: 2rem 0;
 }
 
-/*-------------------------- 13. Footer Section ----*/
-/*-- 13.1. Footer --*/
+/*------------- 13. Cookie Policy Page Sections ----*/
+/*-- 13.1. Cookie Policy --*/
+.cookie-policy {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  padding: 4rem 2rem;
+}
+
+/*-- 13.2. Cookie Policy Inner --*/
+.cookie-policy__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cookie-policy__inner h2 {
+  margin-top: 2rem;
+}
+
+.cookie-policy__inner p {
+  margin-bottom: 1rem;
+}
+
+.cookie-policy__inner li {
+  margin-bottom: 0.5rem;
+}
+
+/*-------------------------- 14. Footer Section ----*/
+/*-- 14.1. Footer --*/
 .footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -891,7 +922,7 @@
   padding: 4rem 2rem;
 }
 
-/*-- 13.2. Footer Top --*/
+/*-- 14.2. Footer Top --*/
 .footer__top, .footer__middle, .footer__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -906,7 +937,7 @@
   margin: 0 auto;
 }
 
-/*-- 13.3. Footer Top Left --*/
+/*-- 14.3. Footer Top Left --*/
 .footer__top__left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -924,12 +955,12 @@
   margin-right: 0.8rem;
 }
 
-/*-- 13.4. Footer Middle --*/
+/*-- 14.4. Footer Middle --*/
 .footer__middle {
   padding: 4rem 0;
 }
 
-/*-- 13.5. Footer Middle Links --*/
+/*-- 14.5. Footer Middle Links --*/
 .footer__middle__links {
   margin-left: 2rem;
 }
@@ -950,7 +981,7 @@
   text-decoration: underline;
 }
 
-/*-- 13.6. Footer Bottom --*/
+/*-- 14.6. Footer Bottom --*/
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
 ------------------------------------------------------
@@ -958,6 +989,7 @@
 1. Links
     1.1. General Links 
     1.1. Navigation Links
+    1.3. Cookie Policy Links
 2.Buttons
     2.1. General Button
     2.2. Large Button
@@ -1029,6 +1061,11 @@ a {
 .nav-link:hover {
   color: #191923;
   background: #ffffff;
+}
+
+/*-- 1.3. Cookie Policy Links --*/
+.cookie-policy a {
+  color: #d7075d;
 }
 
 /*---------------------------------- 2. Buttons ----*/
@@ -1649,6 +1686,12 @@ button[type="submit"], .btn-large[type="submit"] {
   .hero h1, .hero h2, .hero h3 {
     font-size: 12vw;
   }
+  .cookie-policy h1, .cookie-policy h2, .cookie-policy h3 {
+    font-size: 3rem;
+  }
+  .cookie-policy h2 {
+    font-size: 2rem;
+  }
   h2 {
     font-size: 2rem;
   }
@@ -1755,8 +1798,8 @@ button[type="submit"], .btn-large[type="submit"] {
             align-items: center;
   }
   /*-- 1.2.6. Checklist --*/
-  .checklist {
-    padding: 4rem 0;
+  .checklist-header {
+    font-size: 3rem;
   }
   .checklist__grid {
     -ms-grid-columns: 1fr;
@@ -1920,6 +1963,8 @@ button[type="submit"], .btn-large[type="submit"] {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1 / 4;
+    padding: 1rem;
+    font-size: 0.9rem;
   }
   /*-- 1.3.8. Footer --*/
   .footer__top, .footer__middle, .footer__bottom {

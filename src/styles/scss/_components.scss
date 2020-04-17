@@ -5,6 +5,7 @@
 1. Links
     1.1. General Links 
     1.1. Navigation Links
+    1.3. Cookie Policy Links
 2.Buttons
     2.1. General Button
     2.2. Large Button
@@ -78,6 +79,11 @@ a {
         color: $color4;
         background: $white;
     }
+}
+
+/*-- 1.3. Cookie Policy Links --*/
+.cookie-policy a {
+    color: $color1;
 }
 
 /*---------------------------------- 2. Buttons ----*/

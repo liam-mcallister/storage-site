@@ -93,13 +93,16 @@
 12. Error 404 Page Sections
     12.1. Error 404
     12.2. Error 404 Inner
-13. Footer Section
-    13.1. Footer
-    13.2. Footer Top
-    13.3. Footer Top Left
-    13.4. Footer Middle
-    13.5. Footer Middle Links
-    13.6. Footer Bottom
+13. Cookie Policy Page Sections
+    13.1. Cookie Policy
+    13.2. Cookie Policy Inner
+14. Footer Section
+    14.1. Footer
+    14.2. Footer Top
+    14.3. Footer Top Left
+    14.4. Footer Middle
+    14.5. Footer Middle Links
+    14.6. Footer Bottom
 
 
 */
@@ -295,9 +298,10 @@
     grid-column: 2 / 3;
     justify-self: end;
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
+    overflow: hidden;
 
     & img {
-        width: auto;
+        width: 100%;
         height: 100%;
     }
 }
@@ -329,7 +333,7 @@
         margin: 0 auto;
 
         & li {
-            background: url("../../images/custom-icons/email.svg") no-repeat;
+            background: url("../../images/custom-icons/thumb.svg") no-repeat;
             background-position: left center;
             padding: 10px 10px 10px 40px;
         }
@@ -701,21 +705,48 @@
     }
 }
 
-/*-------------------------- 13. Footer Section ----*/
 
-/*-- 13.1. Footer --*/
+/*------------- 13. Cookie Policy Page Sections ----*/
+
+/*-- 13.1. Cookie Policy --*/
+.cookie-policy {
+    @include grid-col-1;
+}
+
+/*-- 13.2. Cookie Policy Inner --*/
+.cookie-policy__inner {
+    max-width: $max-width;
+    margin: 0 auto;
+
+    & h2 {
+        margin-top: 2rem;
+    }
+
+    & p {
+        margin-bottom: 1rem;
+    }
+
+    & li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+/*-------------------------- 14. Footer Section ----*/
+
+/*-- 14.1. Footer --*/
 .footer {
     @include grid-col-1;
 }
 
-/*-- 13.2. Footer Top --*/
+/*-- 14.2. Footer Top --*/
 .footer__top {
     @include flex-between-center;
     max-width: $max-width;
     margin: 0 auto;
 }
 
-/*-- 13.3. Footer Top Left --*/
+/*-- 14.3. Footer Top Left --*/
 .footer__top__left {
     display: flex;
     align-items: center;
@@ -729,13 +760,13 @@
     }
 }
 
-/*-- 13.4. Footer Middle --*/
+/*-- 14.4. Footer Middle --*/
 .footer__middle {
     @extend .footer__top;
     padding: 4rem 0;
 }
 
-/*-- 13.5. Footer Middle Links --*/
+/*-- 14.5. Footer Middle Links --*/
 .footer__middle__links {
     margin-left: 2rem;
 
@@ -756,7 +787,7 @@
     }
 }
 
-/*-- 13.6. Footer Bottom --*/
+/*-- 14.6. Footer Bottom --*/
 .footer__bottom {
     @extend .footer__top;
 }
