@@ -1728,13 +1728,6 @@ button[type="submit"], .btn-large[type="submit"] {
   .footer__top__left .footer__top-icon {
     margin-bottom: 0.5rem;
   }
-  .footer__top__left span {
-    margin-left: 0rem;
-  }
-  .footer__top__left span:first-of-type {
-    margin-right: 0;
-    margin-bottom: 1.5rem;
-  }
   .footer__top-icon {
     margin: 0;
   }
