@@ -48,8 +48,7 @@
         </div>
         <div class="navbar__bottom">
             <div class="navbar__inner">
-                <a href="index.html"><img class="navbar-inner__logo" src="images/box-white.svg"
-                        alt="Company Logo"></a>
+                <a href="index.html"><img class="navbar-inner__logo" src="images/box-white.svg" alt="Company Logo"></a>
                 <input class="burger-btn" type="checkbox" id="burger-btn" />
                 <label class="burger-label" for="burger-btn">
                     <span class="bar top"></span>
@@ -84,18 +83,25 @@
                     <label for="contact-phone">Phone * (11 digits)</label>
                     <input id="contact-phone" type="tel" pattern="[0-9]{11}" required />
 
-                    <textarea name="contact-message" id="contact-message" cols="30" rows="10" placeholder="Message" required></textarea>
+                    <textarea name="contact-message" id="contact-message" cols="30" rows="10" placeholder="Message"
+                        required></textarea>
 
                     <button class="btn" type="submit">Submit</button>
                 </form>
             </div>
             <div class="contact__inner-info">
                 <ul>
-                    <li><img class="footer__top-icon" src="images/custom-icons/phone.svg" alt="Phone icon">
-                        <span>028 90 111 111</span>
+                    <li>
+                        <a href="tel:+01273123456">
+                            <img class="footer__top-icon" src="images/custom-icons/phone.svg" alt="Phone icon">
+                            <span>028 90 111 111</span>
+                        </a>
                     </li>
-                    <li><img class="footer__top-icon" src="images/custom-icons/email.svg" alt="Email Icon">
-                        <span>info@company.com</span></li>
+                    <li>
+                        <a href="mailto:somone@example.com">
+                            <img class="footer__top-icon" src="images/custom-icons/email.svg" alt="Email Icon">
+                            <span>info@company.com</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -107,10 +113,14 @@
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__top__left">
-                <img class="footer__top-icon" src="images/custom-icons/phone.svg" alt="Phone icon">
-                <span>028 90 111 111</span>
-                <img class="footer__top-icon" src="images/custom-icons/email.svg" alt="Email Icon">
-                <span>info@company.com</span>
+                <a href="tel:+01273123456">
+                    <img class="footer__top-icon" src="images/custom-icons/phone.svg" alt="Phone icon">
+                    <span>028 90 111 111</span>
+                </a>
+                <a href="mailto:somone@example.com">
+                    <img class="footer__top-icon" src="images/custom-icons/email.svg" alt="Email Icon">
+                    <span>info@company.com</span>
+                </a>
             </div>
             <div class="footer__top__right">
                 <a href="#"><img class="footer__top-icon" src="images/social/facebook.svg" alt="Facebook icon"></a>
@@ -157,8 +167,9 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCYGtIp3Q8_8w0TL5HfZ1fxDSSfnk0bes&callback=initMap">
-    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCYGtIp3Q8_8w0TL5HfZ1fxDSSfnk0bes&callback=initMap">
+        </script>
     <script src="scripts/app.js" async defer></script>
 </body>
 
