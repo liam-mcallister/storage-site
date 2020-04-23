@@ -1745,6 +1745,12 @@ button[type="submit"], .btn-large[type="submit"] {
         -ms-flex-align: center;
             align-items: center;
   }
+  .card {
+    -webkit-margin-after: 4rem;
+  }
+  .card:last-of-type {
+    -webkit-margin-after: 0;
+  }
   /*-- 1.2.2. How It Works Section --*/
   .how-works__inner {
     display: -webkit-box;
@@ -1764,6 +1770,12 @@ button[type="submit"], .btn-large[type="submit"] {
   }
   .how-works h2 {
     margin: 0 2rem;
+  }
+  .item {
+    -webkit-margin-after: 4rem;
+  }
+  .item:last-of-type {
+    -webkit-margin-after: 0;
   }
   /*-- 1.2.3. Info Section --*/
   .info__inner {
