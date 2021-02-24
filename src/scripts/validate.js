@@ -25,7 +25,7 @@ const emailRegex = /^\S+@\S+\.\S+$/;
 const phoneRegex = /^[1-9]\d/;
 const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
 
-function formValidate(e) {
+const formValidate = (e) => {
     // Validate First Name (Between 3 and 15 letters)
     if (firstName.value.length < 3 || firstName.value.length > 15 || textRegex.test(firstName.value) === false) {
         e.preventDefault();

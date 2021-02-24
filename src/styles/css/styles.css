@@ -131,7 +131,6 @@
     14.5. Footer Middle Links
     14.6. Footer Bottom
 
-
 */
 /*--------------------------- 1. Page Templates ----*/
 /*-- 1.1. 1 Column Template --*/
@@ -434,7 +433,7 @@
 }
 
 .why-us__inner__lists ul li {
-  background: url("../../images/custom-icons/thumb.svg") no-repeat;
+  background: url(../../../images/custom-icons/thumb.svg) no-repeat;
   background-position: left center;
   padding: 10px 10px 10px 40px;
 }
@@ -829,7 +828,7 @@
   margin: 1rem;
 }
 
-.contact__inner-info ul li {
+.contact__inner-info a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,6 +938,15 @@
 
 /*-- 14.3. Footer Top Left --*/
 .footer__top__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__top__left a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1642,6 +1650,200 @@ button[type="submit"], .btn-large[type="submit"] {
 ------------------------------- Table of Contents ----
 ------------------------------------------------------
 
+1. Universal
+2. Body
+3. Text
+    3.1. Headers
+    3.2. Paragraph
+    3.3. Small
+4. Navigation
+    4.1. Navbar Top
+    4.2. Navbar Bottom
+5. Home Page
+    5.1. Hero Section
+    5.2. Info Section
+    5.3. Size Guide Section
+6. Storage Page
+    6.1. Why Us Section
+    6.2. Flexible Section
+    6.3. Quote Section
+7. Quote Page
+    7.1. Quote Form Section
+8. About Page
+9. Checklist Page
+10. Contact Page
+    10.1. Contact Form Section
+    10.2. Contact Info Section
+11. Error 404 Page
+12. Footer
+
+*/
+/*-------------------------------- 1. Universal ----*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*------------------------------------- 2. Body ----*/
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #353535;
+  text-rendering: optimizeLegibility;
+}
+
+/*------------------------------------- 3. Text ----*/
+/*-- 3.1. Headers --*/
+h1, h2, h3 {
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.header-top, .header-middle, .header-bottom {
+  -webkit-animation: header-translate 1s linear 1;
+          animation: header-translate 1s linear 1;
+}
+
+/*-- 3.2. Paragraph --*/
+p {
+  line-height: 1.5rem;
+}
+
+/*-- 3.3. Small --*/
+small {
+  font-size: 0.8rem;
+}
+
+/*------------------------------- 4. Navigation ----*/
+/*-- 4.1. Navbar Top --*/
+.navbar__top, .navbar__bottom {
+  background: #d7075d;
+  color: #191923;
+}
+
+.navbar__top span, .navbar__bottom span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/*-- 4.2. Navbar Bottom --*/
+.navbar__bottom {
+  background: #191923;
+  color: #ffffff;
+}
+
+/*-------------------------------- 5. Home Page ----*/
+/*-- 5.1. Hero Section --*/
+.hero {
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.733))), url(../../../images/units.jpg) center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.733)), url(../../../images/units.jpg) center center no-repeat;
+  background-size: cover;
+  -webkit-animation: bg-scale 20s linear infinite;
+          animation: bg-scale 20s linear infinite;
+}
+
+/*-- 5.2. Info Section --*/
+.info {
+  background: #89aae6;
+  color: #353535;
+}
+
+/*-- 5.3. Size Guide Section --*/
+.size-guide__inner {
+  border: 2px solid #345995;
+}
+
+.size-guide__tabs {
+  background: #345995;
+  color: #ffffff;
+}
+
+/*----------------------------- 6. Storage Page ----*/
+/*-- 6.1. Why Us Section --*/
+.why-us {
+  background: #345995;
+  color: #ffffff;
+}
+
+/*-- 6.2. Flexible Section --*/
+.flexible {
+  background: #345995;
+  color: #ffffff;
+}
+
+/*-- 6.3. Quote Section --*/
+.quote {
+  background: #89aae6;
+  color: #353535;
+}
+
+/*------------------------------- 7. Quote Page ----*/
+.quote-form {
+  background: #89aae6;
+  color: #353535;
+}
+
+/*------------------------------- 8. About Page ----*/
+.about__bottom {
+  background: #89aae6;
+  color: #353535;
+}
+
+/*--------------------------- 9. Checklist Page ----*/
+.checklist label {
+  font-weight: bold;
+}
+
+/*---------------------------- 10. Contact Page ----*/
+/*-- 10.1. Contact Form Section --*/
+.contact__inner-form {
+  background: #89aae6;
+  color: #353535;
+}
+
+/*-- 10.2. Contact Info Section --*/
+.contact__inner-info {
+  background: #191923;
+  color: #ffffff;
+}
+
+/*-------------------------- 11. Error 404 Page ----*/
+.error-404 {
+  background: #191923;
+  color: #ffffff;
+}
+
+/*---------------------------------- 12. Footer ----*/
+footer {
+  background: #191923;
+  color: #ffffff;
+}
+
+/*----------------------------------------------------
+------------------------------- Table of Contents ----
+------------------------------------------------------
+
 1. Less Than Media Queries
   1.1. Extra Small
     1.1.1. Headings
@@ -1677,7 +1879,6 @@ button[type="submit"], .btn-large[type="submit"] {
   2.3. Extra Large
     2.3.1. Headings
 3. Print Media Query
-
 
 */
 /*--------------------1. Less Than Media Queries----*/
@@ -1719,13 +1920,6 @@ button[type="submit"], .btn-large[type="submit"] {
   .footer__top__left .footer__top-icon {
     margin-bottom: 0.5rem;
   }
-  .footer__top__left span {
-    margin-left: 0rem;
-  }
-  .footer__top__left span:first-of-type {
-    margin-right: 0;
-    margin-bottom: 1.5rem;
-  }
   .footer__top-icon {
     margin: 0;
   }
@@ -1748,7 +1942,7 @@ button[type="submit"], .btn-large[type="submit"] {
   .card {
     -webkit-margin-after: 4rem;
   }
-  .card :last-of-type {
+  .card:last-of-type {
     -webkit-margin-after: 0;
   }
   /*-- 1.2.2. How It Works Section --*/
@@ -1774,7 +1968,7 @@ button[type="submit"], .btn-large[type="submit"] {
   .item {
     -webkit-margin-after: 4rem;
   }
-  .item :last-of-type {
+  .item:last-of-type {
     -webkit-margin-after: 0;
   }
   /*-- 1.2.3. Info Section --*/
@@ -2062,199 +2256,5 @@ button[type="submit"], .btn-large[type="submit"] {
   footer {
     display: none !important;
   }
-}
-
-/*----------------------------------------------------
-------------------------------- Table of Contents ----
-------------------------------------------------------
-
-1. Universal
-2. Body
-3. Text
-    3.1. Headers
-    3.2. Paragraph
-    3.3. Small
-4. Navigation
-    4.1. Navbar Top
-    4.2. Navbar Bottom
-5. Home Page
-    5.1. Hero Section
-    5.2. Info Section
-    5.3. Size Guide Section
-6. Storage Page
-    6.1. Why Us Section
-    6.2. Flexible Section
-    6.3. Quote Section
-7. Quote Page
-    7.1. Quote Form Section
-8. About Page
-9. Checklist Page
-10. Contact Page
-    10.1. Contact Form Section
-    10.2. Contact Info Section
-11. Error 404 Page
-12. Footer
-
-*/
-/*-------------------------------- 1. Universal ----*/
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-/*------------------------------------- 2. Body ----*/
-body {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  color: #353535;
-  text-rendering: optimizeLegibility;
-}
-
-/*------------------------------------- 3. Text ----*/
-/*-- 3.1. Headers --*/
-h1, h2, h3 {
-  font-weight: 900;
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-.header-top, .header-middle, .header-bottom {
-  -webkit-animation: header-translate 1s linear 1;
-          animation: header-translate 1s linear 1;
-}
-
-/*-- 3.2. Paragraph --*/
-p {
-  line-height: 1.5rem;
-}
-
-/*-- 3.3. Small --*/
-small {
-  font-size: 0.8rem;
-}
-
-/*------------------------------- 4. Navigation ----*/
-/*-- 4.1. Navbar Top --*/
-.navbar__top, .navbar__bottom {
-  background: #d7075d;
-  color: #191923;
-}
-
-.navbar__top span, .navbar__bottom span {
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/*-- 4.2. Navbar Bottom --*/
-.navbar__bottom {
-  background: #191923;
-  color: #ffffff;
-}
-
-/*-------------------------------- 5. Home Page ----*/
-/*-- 5.1. Hero Section --*/
-.hero {
-  overflow: hidden;
-  color: #ffffff;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.733))), url("../../images/units.jpg") center center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.733)), url("../../images/units.jpg") center center no-repeat;
-  background-size: cover;
-  -webkit-animation: bg-scale 20s linear infinite;
-          animation: bg-scale 20s linear infinite;
-}
-
-/*-- 5.2. Info Section --*/
-.info {
-  background: #89aae6;
-  color: #353535;
-}
-
-/*-- 5.3. Size Guide Section --*/
-.size-guide__inner {
-  border: 2px solid #345995;
-}
-
-.size-guide__tabs {
-  background: #345995;
-  color: #ffffff;
-}
-
-/*----------------------------- 6. Storage Page ----*/
-/*-- 6.1. Why Us Section --*/
-.why-us {
-  background: #345995;
-  color: #ffffff;
-}
-
-/*-- 6.2. Flexible Section --*/
-.flexible {
-  background: #345995;
-  color: #ffffff;
-}
-
-/*-- 6.3. Quote Section --*/
-.quote {
-  background: #89aae6;
-  color: #353535;
-}
-
-/*------------------------------- 7. Quote Page ----*/
-.quote-form {
-  background: #89aae6;
-  color: #353535;
-}
-
-/*------------------------------- 8. About Page ----*/
-.about__bottom {
-  background: #89aae6;
-  color: #353535;
-}
-
-/*--------------------------- 9. Checklist Page ----*/
-.checklist label {
-  font-weight: bold;
-}
-
-/*---------------------------- 10. Contact Page ----*/
-/*-- 10.1. Contact Form Section --*/
-.contact__inner-form {
-  background: #89aae6;
-  color: #353535;
-}
-
-/*-- 10.2. Contact Info Section --*/
-.contact__inner-info {
-  background: #191923;
-  color: #ffffff;
-}
-
-/*-------------------------- 11. Error 404 Page ----*/
-.error-404 {
-  background: #191923;
-  color: #ffffff;
-}
-
-/*---------------------------------- 12. Footer ----*/
-footer {
-  background: #191923;
-  color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */

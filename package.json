@@ -1,0 +1,15 @@
+{
+  "name": "storage-site",
+  "version": "1.0.0",
+  "description": "Website template for a self storage company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liam-mcallister/storage-site"
+  },
+  "author": "Liam McAllister",
+  "license": "ISC"
+}

@@ -16,58 +16,55 @@
 
 */
 
-
 /*--------------------------------1. Grid Mixins----*/
 
 /*-- 1.1. Grid Template (1 Column) --*/
 @mixin grid-template-1 {
-  display: grid;
-  grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 /*-- 1.2. Grid Template (4 Columns) --*/
 @mixin grid-template-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    justify-content: center;
 }
 
 /*-- 1.3. 1 Column Layout --*/
 @mixin grid-col-1 {
-  grid-column: 1 / 2;
-  padding: 4rem 2rem;
+    grid-column: 1 / 2;
+    padding: 4rem 2rem;
 }
-
 
 /*--------------------------------2. Flex Mixins----*/
 
 /*-- 2.1. Space Between / Center --*/
 @mixin flex-between-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*-- 2.2. Column / Flex Start --*/
 @mixin flex-col-start {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 /*-- 2.3. Column / Center --*/
 @mixin flex-col-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 /*--------------------------------3. Color Mixin----*/
 
 /*-- 3.1. Background / Font Colors --*/
 @mixin section-theme($background, $color) {
-  background: $background;
-  color: $color;
+    background: $background;
+    color: $color;
 }

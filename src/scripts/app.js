@@ -8,12 +8,11 @@
 4. Google Maps
 5. Size Guide
 
-
 */
 
 
 /*---------------------------------1. Cookie Box----*/
-(function () {
+(() => {
     // If the cookieAccept key can't be found in local storage, display the Cookie Box
     if (!localStorage.getItem('cookieAccept')) {
         document.body.innerHTML += '\
@@ -24,7 +23,7 @@
         ';
 
         // When the OK button is clicked, add the cookieAccept key to local storage and remove the Cookie Box
-        function cookieClick(e) {
+        const cookieClick = (e) => {
             e.preventDefault();
             document.getElementById('cookie').style.display = 'none';
             localStorage.setItem('cookieAccept', true);
@@ -40,7 +39,7 @@ const btnToTop = document.getElementById('btn-to-top');
 
 // When page is scrolled more then 100 pixels from the top, display the to top button
 // Otherwise don't display the button
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         btnToTop.style.display = 'block';
     } else {
@@ -49,7 +48,7 @@ window.addEventListener('scroll', function () {
 });
 
 // When the To Top button is clicked, scroll smoothly to the top of the page
-btnToTop.addEventListener('click', function () {
+btnToTop.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -99,7 +98,7 @@ function initMap() {
 
 
 /*---------------------------------5. Size Guide----*/
-function tabClick(e) {
+const tabClick = (e) => {
     e.preventDefault();
     let paneActive = document.querySelectorAll('.pane-active');
 

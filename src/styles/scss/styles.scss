@@ -1,5 +1,4 @@
-@import "variables", "mixins", "layout", "components", "animations",
-    "media-queries";
+@import "variables", "mixins", "layout", "components", "animations";
 
 /*----------------------------------------------------
 ------------------------------- Table of Contents ----
@@ -122,7 +121,7 @@ small {
     height: 100%;
     z-index: -1;
     background: linear-gradient($grey-opac),
-        url("../../images/units.jpg") center center no-repeat;
+        url(../../../images/units.jpg) center center no-repeat;
     background-size: cover;
     animation: bg-scale 20s linear infinite;
 }
@@ -194,3 +193,5 @@ small {
 footer {
     @include section-theme($color4, $white);
 }
+
+@import "media-queries";
