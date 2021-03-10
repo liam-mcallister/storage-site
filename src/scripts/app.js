@@ -3,10 +3,11 @@
 ------------------------------------------------------
 
 1. Cookie Box
-2. Back To Top Button
-3. FAQ Accordian
-4. Google Maps
-5. Size Guide
+2. Disable Scroll
+3. Back To Top Button
+4. FAQ Accordian
+5. Google Maps
+6. Size Guide
 
 */
 
@@ -33,8 +34,19 @@
     }
 })();
 
+/*-----------------------------2. Disable Scroll----*/
+const burger = document.getElementById("burger-btn");
 
-/*-------------------------2. Back To Top Button----*/
+// Disable scrolling when navigation menu is open
+burger.addEventListener("click", function () {
+    if (burger.checked) {
+        document.body.classList.add("no-scroll");
+    } else {
+        document.body.classList.remove("no-scroll");
+    }
+});
+
+/*-------------------------3. Back To Top Button----*/
 const btnToTop = document.getElementById('btn-to-top');
 
 // When page is scrolled more then 100 pixels from the top, display the to top button
@@ -56,7 +68,7 @@ btnToTop.addEventListener('click', () => {
 });
 
 
-/*------------------------------3. FAQ Accordian----*/
+/*------------------------------4. FAQ Accordian----*/
 const faqQuestion = document.querySelectorAll('.question');
 const faqAnswer = document.querySelectorAll('.answer');
 
@@ -81,7 +93,7 @@ for (let i = 0; i < faqQuestion.length; i++) {
 }
 
 
-/*--------------------------------4. Google Maps----*/
+/*--------------------------------5. Google Maps----*/
 function initMap() {
     // Store coordinates in a variable
     const belfast = { lat: 54.607868, lng: -5.926437 };
@@ -97,7 +109,7 @@ function initMap() {
 };
 
 
-/*---------------------------------5. Size Guide----*/
+/*---------------------------------6. Size Guide----*/
 const tabClick = (e) => {
     e.preventDefault();
     let paneActive = document.querySelectorAll('.pane-active');

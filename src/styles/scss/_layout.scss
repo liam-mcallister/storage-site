@@ -259,7 +259,6 @@
     grid-row: 1 / 2;
 }
 
-
 /*-------------------- 4. Storage Page Sections ----*/
 
 /*----------------- 4.1. Storage Section --*/
@@ -295,14 +294,17 @@
 /*-- 4.1.4. Storage Inner Image --*/
 .storage__inner__img {
     grid-column: 2 / 3;
-    justify-self: end;
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
-    overflow: hidden;
+    background-image: url(../../../images/services/household.jpg);
+    background-size: cover;
+}
 
-    & img {
-        width: 100%;
-        height: 100%;
-    }
+.business-img {
+    background-image: url(../../../images/services/business.jpg);
+}
+
+.student-img {
+    background-image: url(../../../images/services/student.jpg);
 }
 
 /*---------------- 4.2. Why Us? Section --*/
@@ -317,7 +319,8 @@
     max-width: $max-width;
     margin: 0 auto;
 
-    & h3, p {
+    & h3,
+    p {
         text-align: center;
     }
 }
@@ -619,7 +622,6 @@
     margin-bottom: 1rem;
 }
 
-
 /*------------------- 10. Contact Page Sections ----*/
 
 /*-- 10.1. Contact --*/
@@ -668,7 +670,6 @@
     height: 500px;
 }
 
-
 /*------------------ 11. Site Map Page Sections ----*/
 
 /*-- 11.1. Site Map --*/
@@ -681,7 +682,6 @@
     max-width: $max-width;
     margin: 0 auto;
 }
-
 
 /*----------------- 12. Error 404 Page Sections ----*/
 
@@ -703,7 +703,6 @@
         margin: 2rem 0;
     }
 }
-
 
 /*------------- 13. Cookie Policy Page Sections ----*/
 
@@ -730,12 +729,12 @@
     }
 }
 
-
 /*-------------------------- 14. Footer Section ----*/
 
 /*-- 14.1. Footer --*/
 .footer {
     @include grid-col-1;
+    padding: 4rem 1rem;
 }
 
 /*-- 14.2. Footer Top --*/
@@ -755,12 +754,12 @@
         align-items: center;
     }
 
-    & span {
-        margin-left: 0.5rem;
+    & a:first-of-type {
+        margin-right: 0.8rem;
     }
 
-    & span:first-of-type {
-        margin-right: 0.8rem;
+    & span {
+        margin-left: 0.5rem;
     }
 }
 

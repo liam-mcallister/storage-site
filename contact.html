@@ -36,10 +36,12 @@
     <meta name="twitter:site" content="@thestoragenook" />
     <meta property="og:image" content="" />
     <meta name="twitter:creator" content="@liammcallister" />
-    <!--STYLESHEETS-->
+    <!--CDN's-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/styles/css/reset.css">
-    <link rel="stylesheet" href="src/styles/css/styles.css">
+    <!--STYLESHEETS-->
+    <!-- <link rel="stylesheet" href="src/styles/css/reset.css">
+    <link rel="stylesheet" href="src/styles/css/styles.css"> -->
+    <link rel="stylesheet" href="build/styles/styles.min.css">
 </head>
 
 <body class="grid">
@@ -47,7 +49,7 @@
     <nav class="navbar">
         <div class="navbar__top">
             <div class="navbar__inner">
-                <p>Want to speak with a human? Call: <span class="navbar-inner__phone">028 90 111 111</span></p>
+                <p>Want to speak with a human? <span class="navbar__inner__phone">Call: 028 90 111 111</span></p>
             </div>
         </div>
         <div class="navbar__bottom">
@@ -123,7 +125,7 @@
                 </a>
                 <a href="mailto:somone@example.com">
                     <img class="footer__top-icon" src="images/custom-icons/email.svg" alt="Email Icon">
-                    <span>info@company.com</span>
+                    <span>info@thestoragenook.com</span>
                 </a>
             </div>
             <div class="footer__top__right">
@@ -175,7 +177,8 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCYGtIp3Q8_8w0TL5HfZ1fxDSSfnk0bes&callback=initMap">
         </script>
-    <script src="src/scripts/app.js" async defer></script>
+    <!-- <script src="src/scripts/app.js" async defer></script> -->
+    <script src="build/scripts/app.min.js" async defer></script>
 </body>
 
 </html>
