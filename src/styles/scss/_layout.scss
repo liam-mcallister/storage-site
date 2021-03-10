@@ -295,16 +295,16 @@
 .storage__inner__img {
     grid-column: 2 / 3;
     clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
-    background-image: url(../../../images/services/household.jpg);
+    background-image: url(../../images/services/household.jpg);
     background-size: cover;
 }
 
 .business-img {
-    background-image: url(../../../images/services/business.jpg);
+    background-image: url(../../images/services/business.jpg);
 }
 
 .student-img {
-    background-image: url(../../../images/services/student.jpg);
+    background-image: url(../../images/services/student.jpg);
 }
 
 /*---------------- 4.2. Why Us? Section --*/
@@ -335,7 +335,7 @@
         margin: 0 auto;
 
         & li {
-            background: url(../../../images/custom-icons/thumb.svg) no-repeat;
+            background: url(../../images/custom-icons/thumb.svg) no-repeat;
             background-position: left center;
             padding: 10px 10px 10px 40px;
         }

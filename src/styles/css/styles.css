@@ -390,16 +390,16 @@
   grid-column: 2 / 3;
   -webkit-clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
           clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0 100%);
-  background-image: url(../../../images/services/household.jpg);
+  background-image: url(../../images/services/household.jpg);
   background-size: cover;
 }
 
 .business-img {
-  background-image: url(../../../images/services/business.jpg);
+  background-image: url(../../images/services/business.jpg);
 }
 
 .student-img {
-  background-image: url(../../../images/services/student.jpg);
+  background-image: url(../../images/services/student.jpg);
 }
 
 /*---------------- 4.2. Why Us? Section --*/
@@ -436,7 +436,7 @@
 }
 
 .why-us__inner__lists ul li {
-  background: url(../../../images/custom-icons/thumb.svg) no-repeat;
+  background: url(../../images/custom-icons/thumb.svg) no-repeat;
   background-position: left center;
   padding: 10px 10px 10px 40px;
 }
@@ -1764,8 +1764,8 @@ small {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.733))), url(../../../images/units.jpg) center center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.733)), url(../../../images/units.jpg) center center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.733))), url(../../images/units.jpg) center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.733)), url(../../images/units.jpg) center center no-repeat;
   background-size: cover;
   -webkit-animation: bg-scale 20s linear infinite;
           animation: bg-scale 20s linear infinite;
